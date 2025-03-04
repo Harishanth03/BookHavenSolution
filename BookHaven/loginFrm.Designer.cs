@@ -106,6 +106,7 @@
             this.signinButton.Size = new System.Drawing.Size(514, 82);
             this.signinButton.TabIndex = 4;
             this.signinButton.Text = "Sign in account";
+            this.signinButton.Click += new System.EventHandler(this.signinButton_Click);
             // 
             // eyeIcon
             // 

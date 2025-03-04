@@ -53,5 +53,12 @@ namespace BookHaven
         {
             clear();
         }
+
+        private void signinButton_Click(object sender, EventArgs e)
+        {
+            DashboardBookHaven dashboard = new DashboardBookHaven();
+            dashboard.Show();
+            this.Hide();
+        }
     }
 }
