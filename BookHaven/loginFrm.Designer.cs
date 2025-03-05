@@ -74,7 +74,6 @@
             // clearButton
             // 
             this.clearButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.clearButton.BorderRadius = 6;
             this.clearButton.BorderThickness = 1;
             this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clearButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -93,7 +92,6 @@
             // 
             // signinButton
             // 
-            this.signinButton.BorderRadius = 6;
             this.signinButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signinButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.signinButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -124,7 +122,6 @@
             // PasswordTextBox
             // 
             this.PasswordTextBox.BorderColor = System.Drawing.Color.Gray;
-            this.PasswordTextBox.BorderRadius = 6;
             this.PasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.PasswordTextBox.DefaultText = "";
             this.PasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -148,7 +145,6 @@
             // usernameTextBox
             // 
             this.usernameTextBox.BorderColor = System.Drawing.Color.Gray;
-            this.usernameTextBox.BorderRadius = 6;
             this.usernameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.usernameTextBox.DefaultText = "";
             this.usernameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
