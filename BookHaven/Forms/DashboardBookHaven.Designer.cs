@@ -47,16 +47,14 @@
             // mainPanel
             // 
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Location = new System.Drawing.Point(200, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1200, 679);
+            this.mainPanel.Size = new System.Drawing.Size(1000, 679);
             this.mainPanel.TabIndex = 1;
             // 
             // sideBarPanel
             // 
-            this.sideBarPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.sideBarPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.sideBarPanel.BackColor = System.Drawing.Color.White;
             this.sideBarPanel.Controls.Add(this.pictureBox1);
@@ -69,11 +67,12 @@
             this.sideBarPanel.Controls.Add(this.supplierButton);
             this.sideBarPanel.Controls.Add(this.reportButton);
             this.sideBarPanel.Controls.Add(this.logOutBtn);
+            this.sideBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBarPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.sideBarPanel.Location = new System.Drawing.Point(0, 0);
             this.sideBarPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.sideBarPanel.Name = "sideBarPanel";
-            this.sideBarPanel.Size = new System.Drawing.Size(202, 831);
+            this.sideBarPanel.Size = new System.Drawing.Size(200, 679);
             this.sideBarPanel.TabIndex = 0;
             // 
             // pictureBox1
@@ -342,8 +341,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 687);
-            this.Controls.Add(this.sideBarPanel);
             this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.sideBarPanel);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MinimumSize = new System.Drawing.Size(1154, 669);
             this.Name = "DashboardBookHaven";
