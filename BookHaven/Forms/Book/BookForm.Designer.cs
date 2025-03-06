@@ -308,6 +308,7 @@
             this.clearButton.BorderColor = System.Drawing.Color.Gray;
             this.clearButton.BorderRadius = 4;
             this.clearButton.BorderThickness = 1;
+            this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clearButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.clearButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.clearButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -324,6 +325,7 @@
             // addCustomerButton
             // 
             this.addCustomerButton.BorderRadius = 4;
+            this.addCustomerButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addCustomerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.addCustomerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.addCustomerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
