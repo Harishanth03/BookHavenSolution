@@ -52,24 +52,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DashboardBookHaven.cs">
+    <Compile Include="Forms\DashboardBookHaven.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashboardBookHaven.Designer.cs">
+    <Compile Include="Forms\DashboardBookHaven.Designer.cs">
       <DependentUpon>DashboardBookHaven.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginFrm.cs">
+    <Compile Include="Forms\Authendication\loginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loginFrm.Designer.cs">
+    <Compile Include="Forms\Authendication\loginFrm.Designer.cs">
       <DependentUpon>loginFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DashboardBookHaven.resx">
+    <EmbeddedResource Include="Forms\DashboardBookHaven.resx">
       <DependentUpon>DashboardBookHaven.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loginFrm.resx">
+    <EmbeddedResource Include="Forms\Authendication\loginFrm.resx">
       <DependentUpon>loginFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -108,6 +108,69 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BH Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\space_dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\space_dashboard_Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group_Gary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book_Checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Order_Checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Order_Checked1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory_Checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Supplier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report_Checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS_CHecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Return_Checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Return_Money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignOut.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
