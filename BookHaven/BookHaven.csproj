@@ -72,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Customer\Costomer.resx">
+      <DependentUpon>Costomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashboardBookHaven.resx">
       <DependentUpon>DashboardBookHaven.cs</DependentUpon>
     </EmbeddedResource>
