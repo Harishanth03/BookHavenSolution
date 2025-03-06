@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BookHaven.Forms.Customer;
+using BookHaven.Forms.Dashboard;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,16 +17,25 @@ namespace BookHaven
         public DashboardBookHaven()
         {
             InitializeComponent();
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-
+            DashbaordForm DashbaordFrm = new DashbaordForm();
+            DashbaordFrm.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(DashbaordFrm);
         }
 
         private void customerButton_Click(object sender, EventArgs e)
         {
+            mainPanel.Controls.Clear();
+            CustomerForm cus = new CustomerForm();
+            cus.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(cus);
+        }
 
+        private void dashboardButton_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear();
+            DashbaordForm DashbaordFrm = new DashbaordForm();
+            DashbaordFrm.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(DashbaordFrm);
         }
     }
 }

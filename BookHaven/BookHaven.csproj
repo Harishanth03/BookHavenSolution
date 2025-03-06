@@ -70,13 +70,25 @@
     <Compile Include="Forms\Authendication\loginFrm.Designer.cs">
       <DependentUpon>loginFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Dashboard\DashbaordForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\DashbaordForm.Designer.cs">
+      <DependentUpon>DashbaordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Customer\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashboardBookHaven.resx">
       <DependentUpon>DashboardBookHaven.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Authendication\loginFrm.resx">
       <DependentUpon>loginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\DashbaordForm.resx">
+      <DependentUpon>DashbaordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -178,6 +190,11 @@
   <ItemGroup>
     <None Include="Resources\SignOut.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

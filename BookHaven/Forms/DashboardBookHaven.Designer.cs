@@ -47,15 +47,14 @@
             // mainPanel
             // 
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Location = new System.Drawing.Point(200, 0);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1924, 1023);
+            this.mainPanel.Size = new System.Drawing.Size(1000, 679);
             this.mainPanel.TabIndex = 1;
             // 
             // sideBarPanel
             // 
-            this.sideBarPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.sideBarPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.sideBarPanel.BackColor = System.Drawing.Color.White;
             this.sideBarPanel.Controls.Add(this.pictureBox1);
@@ -68,19 +67,21 @@
             this.sideBarPanel.Controls.Add(this.supplierButton);
             this.sideBarPanel.Controls.Add(this.reportButton);
             this.sideBarPanel.Controls.Add(this.logOutBtn);
+            this.sideBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBarPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.sideBarPanel.Location = new System.Drawing.Point(0, 0);
+            this.sideBarPanel.Margin = new System.Windows.Forms.Padding(2);
             this.sideBarPanel.Name = "sideBarPanel";
-            this.sideBarPanel.Size = new System.Drawing.Size(269, 1023);
+            this.sideBarPanel.Size = new System.Drawing.Size(200, 679);
             this.sideBarPanel.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BookHaven.Properties.Resources.BH_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(30, 25, 30, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(22, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(22, 20, 22, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 54);
+            this.pictureBox1.Size = new System.Drawing.Size(156, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -105,14 +106,15 @@
             this.dashboardButton.FillColor = System.Drawing.Color.Transparent;
             this.dashboardButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
             this.dashboardButton.ForeColor = System.Drawing.Color.Gray;
-            this.dashboardButton.Location = new System.Drawing.Point(10, 107);
-            this.dashboardButton.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.dashboardButton.Location = new System.Drawing.Point(8, 86);
+            this.dashboardButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.dashboardButton.Name = "dashboardButton";
-            this.dashboardButton.Size = new System.Drawing.Size(249, 56);
+            this.dashboardButton.Size = new System.Drawing.Size(187, 46);
             this.dashboardButton.TabIndex = 1;
             this.dashboardButton.Text = "Dashboard";
             this.dashboardButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.dashboardButton.TextOffset = new System.Drawing.Point(30, 0);
+            this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
             // 
             // customerButton
             // 
@@ -133,10 +135,10 @@
             this.customerButton.FillColor = System.Drawing.Color.Transparent;
             this.customerButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
             this.customerButton.ForeColor = System.Drawing.Color.Gray;
-            this.customerButton.Location = new System.Drawing.Point(10, 169);
-            this.customerButton.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.customerButton.Location = new System.Drawing.Point(8, 136);
+            this.customerButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.customerButton.Name = "customerButton";
-            this.customerButton.Size = new System.Drawing.Size(249, 56);
+            this.customerButton.Size = new System.Drawing.Size(187, 46);
             this.customerButton.TabIndex = 2;
             this.customerButton.Text = "Customer";
             this.customerButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -162,10 +164,10 @@
             this.BookButton.FillColor = System.Drawing.Color.Transparent;
             this.BookButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
             this.BookButton.ForeColor = System.Drawing.Color.Gray;
-            this.BookButton.Location = new System.Drawing.Point(10, 231);
-            this.BookButton.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.BookButton.Location = new System.Drawing.Point(8, 186);
+            this.BookButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.BookButton.Name = "BookButton";
-            this.BookButton.Size = new System.Drawing.Size(249, 56);
+            this.BookButton.Size = new System.Drawing.Size(187, 46);
             this.BookButton.TabIndex = 3;
             this.BookButton.Text = "Book";
             this.BookButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -190,15 +192,14 @@
             this.orderButton.FillColor = System.Drawing.Color.Transparent;
             this.orderButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
             this.orderButton.ForeColor = System.Drawing.Color.Gray;
-            this.orderButton.Location = new System.Drawing.Point(10, 293);
-            this.orderButton.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.orderButton.Location = new System.Drawing.Point(8, 236);
+            this.orderButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.orderButton.Name = "orderButton";
-            this.orderButton.Size = new System.Drawing.Size(249, 56);
+            this.orderButton.Size = new System.Drawing.Size(187, 46);
             this.orderButton.TabIndex = 4;
             this.orderButton.Text = "Order";
             this.orderButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.orderButton.TextOffset = new System.Drawing.Point(30, 0);
-            this.orderButton.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // pointOfSaleButton
             // 
@@ -219,10 +220,10 @@
             this.pointOfSaleButton.FillColor = System.Drawing.Color.Transparent;
             this.pointOfSaleButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
             this.pointOfSaleButton.ForeColor = System.Drawing.Color.Gray;
-            this.pointOfSaleButton.Location = new System.Drawing.Point(10, 355);
-            this.pointOfSaleButton.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.pointOfSaleButton.Location = new System.Drawing.Point(8, 286);
+            this.pointOfSaleButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.pointOfSaleButton.Name = "pointOfSaleButton";
-            this.pointOfSaleButton.Size = new System.Drawing.Size(249, 56);
+            this.pointOfSaleButton.Size = new System.Drawing.Size(187, 46);
             this.pointOfSaleButton.TabIndex = 7;
             this.pointOfSaleButton.Text = "Point Of Sales";
             this.pointOfSaleButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -247,10 +248,10 @@
             this.refundButton.FillColor = System.Drawing.Color.Transparent;
             this.refundButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
             this.refundButton.ForeColor = System.Drawing.Color.Gray;
-            this.refundButton.Location = new System.Drawing.Point(10, 417);
-            this.refundButton.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.refundButton.Location = new System.Drawing.Point(8, 336);
+            this.refundButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.refundButton.Name = "refundButton";
-            this.refundButton.Size = new System.Drawing.Size(249, 56);
+            this.refundButton.Size = new System.Drawing.Size(187, 46);
             this.refundButton.TabIndex = 8;
             this.refundButton.Text = "Return / Refund";
             this.refundButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -275,10 +276,10 @@
             this.supplierButton.FillColor = System.Drawing.Color.Transparent;
             this.supplierButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
             this.supplierButton.ForeColor = System.Drawing.Color.Gray;
-            this.supplierButton.Location = new System.Drawing.Point(10, 479);
-            this.supplierButton.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.supplierButton.Location = new System.Drawing.Point(8, 386);
+            this.supplierButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.supplierButton.Name = "supplierButton";
-            this.supplierButton.Size = new System.Drawing.Size(249, 56);
+            this.supplierButton.Size = new System.Drawing.Size(187, 46);
             this.supplierButton.TabIndex = 5;
             this.supplierButton.Text = "Supplier";
             this.supplierButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -303,10 +304,10 @@
             this.reportButton.FillColor = System.Drawing.Color.Transparent;
             this.reportButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
             this.reportButton.ForeColor = System.Drawing.Color.Gray;
-            this.reportButton.Location = new System.Drawing.Point(10, 541);
-            this.reportButton.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.reportButton.Location = new System.Drawing.Point(8, 436);
+            this.reportButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(249, 56);
+            this.reportButton.Size = new System.Drawing.Size(187, 46);
             this.reportButton.TabIndex = 6;
             this.reportButton.Text = "Report";
             this.reportButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -326,10 +327,10 @@
             this.logOutBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
             this.logOutBtn.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOutBtn.ForeColor = System.Drawing.Color.White;
-            this.logOutBtn.Location = new System.Drawing.Point(10, 605);
-            this.logOutBtn.Margin = new System.Windows.Forms.Padding(10, 5, 10, 3);
+            this.logOutBtn.Location = new System.Drawing.Point(8, 488);
+            this.logOutBtn.Margin = new System.Windows.Forms.Padding(8, 4, 8, 2);
             this.logOutBtn.Name = "logOutBtn";
-            this.logOutBtn.Size = new System.Drawing.Size(249, 56);
+            this.logOutBtn.Size = new System.Drawing.Size(187, 46);
             this.logOutBtn.TabIndex = 10;
             this.logOutBtn.Text = "Logout Account";
             this.logOutBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -337,14 +338,15 @@
             // 
             // DashboardBookHaven
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1033);
-            this.Controls.Add(this.sideBarPanel);
+            this.ClientSize = new System.Drawing.Size(1200, 687);
             this.Controls.Add(this.mainPanel);
-            this.MinimumSize = new System.Drawing.Size(1918, 1018);
+            this.Controls.Add(this.sideBarPanel);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1154, 669);
             this.Name = "DashboardBookHaven";
-            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardBookHaven";
             this.sideBarPanel.ResumeLayout(false);
