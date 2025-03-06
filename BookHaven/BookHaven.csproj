@@ -52,12 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Customer\Costomer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\Customer\Costomer.Designer.cs">
-      <DependentUpon>Costomer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\DashboardBookHaven.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,9 +66,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Customer\Costomer.resx">
-      <DependentUpon>Costomer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashboardBookHaven.resx">
       <DependentUpon>DashboardBookHaven.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +171,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SignOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\Customer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
