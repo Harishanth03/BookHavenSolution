@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Customer\Costomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\Costomer.Designer.cs">
+      <DependentUpon>Costomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DashboardBookHaven.cs">
       <SubType>Form</SubType>
     </Compile>
