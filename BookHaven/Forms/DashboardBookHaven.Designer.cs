@@ -30,16 +30,16 @@
         {
             this.mainPanel = new System.Windows.Forms.Panel();
             this.sideBarPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dashboardButton = new Guna.UI2.WinForms.Guna2Button();
             this.customerButton = new Guna.UI2.WinForms.Guna2Button();
             this.BookButton = new Guna.UI2.WinForms.Guna2Button();
-            this.orderButton = new Guna.UI2.WinForms.Guna2Button();
             this.pointOfSaleButton = new Guna.UI2.WinForms.Guna2Button();
+            this.orderButton = new Guna.UI2.WinForms.Guna2Button();
             this.refundButton = new Guna.UI2.WinForms.Guna2Button();
             this.supplierButton = new Guna.UI2.WinForms.Guna2Button();
             this.reportButton = new Guna.UI2.WinForms.Guna2Button();
             this.logOutBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sideBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,17 @@
             this.sideBarPanel.Name = "sideBarPanel";
             this.sideBarPanel.Size = new System.Drawing.Size(200, 679);
             this.sideBarPanel.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BookHaven.Properties.Resources.BH_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(22, 20, 22, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(156, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // dashboardButton
             // 
@@ -164,34 +175,6 @@
             this.BookButton.TextOffset = new System.Drawing.Point(30, 0);
             this.BookButton.Click += new System.EventHandler(this.BookButton_Click);
             // 
-            // orderButton
-            // 
-            this.orderButton.BorderRadius = 5;
-            this.orderButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.orderButton.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            this.orderButton.CheckedState.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderButton.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.orderButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.orderButton.CustomImages.CheckedImage = global::BookHaven.Properties.Resources.Order_Checked;
-            this.orderButton.CustomImages.Image = global::BookHaven.Properties.Resources.Order;
-            this.orderButton.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.orderButton.CustomImages.ImageSize = new System.Drawing.Size(23, 23);
-            this.orderButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.orderButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.orderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.orderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.orderButton.FillColor = System.Drawing.Color.Transparent;
-            this.orderButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
-            this.orderButton.ForeColor = System.Drawing.Color.Gray;
-            this.orderButton.Location = new System.Drawing.Point(8, 286);
-            this.orderButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
-            this.orderButton.Name = "orderButton";
-            this.orderButton.Size = new System.Drawing.Size(187, 46);
-            this.orderButton.TabIndex = 4;
-            this.orderButton.Text = "Order";
-            this.orderButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.orderButton.TextOffset = new System.Drawing.Point(30, 0);
-            // 
             // pointOfSaleButton
             // 
             this.pointOfSaleButton.BorderRadius = 5;
@@ -219,6 +202,35 @@
             this.pointOfSaleButton.Text = "Point Of Sales";
             this.pointOfSaleButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.pointOfSaleButton.TextOffset = new System.Drawing.Point(30, 0);
+            this.pointOfSaleButton.Click += new System.EventHandler(this.pointOfSaleButton_Click);
+            // 
+            // orderButton
+            // 
+            this.orderButton.BorderRadius = 5;
+            this.orderButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.orderButton.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            this.orderButton.CheckedState.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderButton.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.orderButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.orderButton.CustomImages.CheckedImage = global::BookHaven.Properties.Resources.Order_Checked;
+            this.orderButton.CustomImages.Image = global::BookHaven.Properties.Resources.Order;
+            this.orderButton.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.orderButton.CustomImages.ImageSize = new System.Drawing.Size(23, 23);
+            this.orderButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.orderButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.orderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.orderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.orderButton.FillColor = System.Drawing.Color.Transparent;
+            this.orderButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
+            this.orderButton.ForeColor = System.Drawing.Color.Gray;
+            this.orderButton.Location = new System.Drawing.Point(8, 286);
+            this.orderButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
+            this.orderButton.Name = "orderButton";
+            this.orderButton.Size = new System.Drawing.Size(187, 46);
+            this.orderButton.TabIndex = 4;
+            this.orderButton.Text = "Order";
+            this.orderButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.orderButton.TextOffset = new System.Drawing.Point(30, 0);
             // 
             // refundButton
             // 
@@ -326,17 +338,6 @@
             this.logOutBtn.Text = "Logout Account";
             this.logOutBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.logOutBtn.TextOffset = new System.Drawing.Point(30, 0);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BookHaven.Properties.Resources.BH_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(22, 20, 22, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 44);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // DashboardBookHaven
             // 

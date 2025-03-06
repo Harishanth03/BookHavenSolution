@@ -1,6 +1,7 @@
 ﻿using BookHaven.Forms.Book;
 using BookHaven.Forms.Customer;
 using BookHaven.Forms.Dashboard;
+using BookHaven.Forms.POS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,6 +58,14 @@ namespace BookHaven
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pointOfSaleButton_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear();
+            POS pos = new POS();
+            pos.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(pos);
         }
     }
 }
