@@ -21,5 +21,10 @@ namespace BookHaven
         {
 
         }
+
+        private void customerButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

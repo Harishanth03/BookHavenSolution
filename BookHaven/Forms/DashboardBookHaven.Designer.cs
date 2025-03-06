@@ -30,6 +30,7 @@
         {
             this.mainPanel = new System.Windows.Forms.Panel();
             this.sideBarPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dashboardButton = new Guna.UI2.WinForms.Guna2Button();
             this.customerButton = new Guna.UI2.WinForms.Guna2Button();
             this.BookButton = new Guna.UI2.WinForms.Guna2Button();
@@ -39,7 +40,6 @@
             this.supplierButton = new Guna.UI2.WinForms.Guna2Button();
             this.reportButton = new Guna.UI2.WinForms.Guna2Button();
             this.logOutBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sideBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +73,17 @@
             this.sideBarPanel.Name = "sideBarPanel";
             this.sideBarPanel.Size = new System.Drawing.Size(269, 1023);
             this.sideBarPanel.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BookHaven.Properties.Resources.BH_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(30, 25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(30, 25, 30, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(208, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // dashboardButton
             // 
@@ -130,6 +141,7 @@
             this.customerButton.Text = "Customer";
             this.customerButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.customerButton.TextOffset = new System.Drawing.Point(30, 0);
+            this.customerButton.Click += new System.EventHandler(this.customerButton_Click);
             // 
             // BookButton
             // 
@@ -322,17 +334,6 @@
             this.logOutBtn.Text = "Logout Account";
             this.logOutBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.logOutBtn.TextOffset = new System.Drawing.Point(30, 0);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BookHaven.Properties.Resources.BH_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(30, 25, 30, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // DashboardBookHaven
             // 
