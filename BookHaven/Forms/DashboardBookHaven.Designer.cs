@@ -48,7 +48,7 @@
             // 
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(200, 0);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1000, 679);
             this.mainPanel.TabIndex = 1;
@@ -70,7 +70,7 @@
             this.sideBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBarPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.sideBarPanel.Location = new System.Drawing.Point(0, 0);
-            this.sideBarPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sideBarPanel.Margin = new System.Windows.Forms.Padding(2);
             this.sideBarPanel.Name = "sideBarPanel";
             this.sideBarPanel.Size = new System.Drawing.Size(200, 679);
             this.sideBarPanel.TabIndex = 0;
@@ -343,7 +343,7 @@
             this.ClientSize = new System.Drawing.Size(1200, 687);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.sideBarPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1154, 669);
             this.Name = "DashboardBookHaven";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);

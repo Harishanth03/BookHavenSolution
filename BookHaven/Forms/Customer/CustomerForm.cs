@@ -15,6 +15,22 @@ namespace BookHaven.Forms.Customer
         public CustomerForm()
         {
             InitializeComponent();
+            addCustomerPanel.Visible = false;
+        }
+
+        private void CustomerForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customerAddButton_Click(object sender, EventArgs e)
+        {
+            addCustomerPanel.Visible = true;
+        }
+
+        private void closePictureBoc_Click(object sender, EventArgs e)
+        {
+            addCustomerPanel.Visible = false;
         }
     }
 }
