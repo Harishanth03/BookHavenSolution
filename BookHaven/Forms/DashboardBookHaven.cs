@@ -46,5 +46,17 @@ namespace BookHaven
             book.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(book);
         }
+        //=============================================== Dynamically Load The User Control =================================================
+        public void LoadUserControl(UserControl userControl)
+        {
+            mainPanel.Controls.Clear();
+            userControl.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(userControl);
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

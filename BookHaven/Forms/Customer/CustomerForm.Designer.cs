@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -52,11 +52,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.emailTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.customerSearchTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.CustomerButton = new Guna.UI2.WinForms.Guna2Button();
+            this.PurchaseButton = new Guna.UI2.WinForms.Guna2Button();
             this.closePictureBoc = new System.Windows.Forms.PictureBox();
+            this.customerSearchTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.addCustomerPanel.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBoc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,38 +90,38 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 50;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CusName});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(26, 136);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(26, 143);
             this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 100;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(948, 525);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(948, 518);
             this.guna2DataGridView1.TabIndex = 2;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -192,7 +196,7 @@
             this.addCustomerPanel.ShadowDepth = 30;
             this.addCustomerPanel.ShadowShift = 2;
             this.addCustomerPanel.Size = new System.Drawing.Size(479, 612);
-            this.addCustomerPanel.TabIndex = 3;
+            this.addCustomerPanel.TabIndex = 5;
             // 
             // whoAddedtextBox
             // 
@@ -429,6 +433,73 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Customer Name";
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.BorderRadius = 5;
+            this.guna2Panel1.BorderThickness = 2;
+            this.guna2Panel1.Controls.Add(this.PurchaseButton);
+            this.guna2Panel1.Controls.Add(this.CustomerButton);
+            this.guna2Panel1.Location = new System.Drawing.Point(26, 73);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(379, 62);
+            this.guna2Panel1.TabIndex = 6;
+            // 
+            // CustomerButton
+            // 
+            this.CustomerButton.BorderRadius = 3;
+            this.CustomerButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.CustomerButton.Checked = true;
+            this.CustomerButton.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.CustomerButton.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.CustomerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CustomerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CustomerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CustomerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CustomerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CustomerButton.FillColor = System.Drawing.Color.Transparent;
+            this.CustomerButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.CustomerButton.ForeColor = System.Drawing.Color.Gray;
+            this.CustomerButton.Location = new System.Drawing.Point(6, 10);
+            this.CustomerButton.Name = "CustomerButton";
+            this.CustomerButton.Size = new System.Drawing.Size(180, 43);
+            this.CustomerButton.TabIndex = 0;
+            this.CustomerButton.Text = "Customer";
+            this.CustomerButton.Click += new System.EventHandler(this.CustomerButton_Click);
+            // 
+            // PurchaseButton
+            // 
+            this.PurchaseButton.BorderRadius = 3;
+            this.PurchaseButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.PurchaseButton.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.PurchaseButton.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.PurchaseButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PurchaseButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.PurchaseButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.PurchaseButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.PurchaseButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.PurchaseButton.FillColor = System.Drawing.Color.White;
+            this.PurchaseButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurchaseButton.ForeColor = System.Drawing.Color.Gray;
+            this.PurchaseButton.Location = new System.Drawing.Point(192, 10);
+            this.PurchaseButton.Name = "PurchaseButton";
+            this.PurchaseButton.Size = new System.Drawing.Size(180, 43);
+            this.PurchaseButton.TabIndex = 1;
+            this.PurchaseButton.Text = "Purchase History";
+            this.PurchaseButton.Click += new System.EventHandler(this.PurchaseButton_Click);
+            // 
+            // closePictureBoc
+            // 
+            this.closePictureBoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closePictureBoc.Image = global::BookHaven.Properties.Resources.close;
+            this.closePictureBoc.Location = new System.Drawing.Point(13, 12);
+            this.closePictureBoc.Name = "closePictureBoc";
+            this.closePictureBoc.Size = new System.Drawing.Size(24, 24);
+            this.closePictureBoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.closePictureBoc.TabIndex = 0;
+            this.closePictureBoc.TabStop = false;
+            this.closePictureBoc.Click += new System.EventHandler(this.closePictureBoc_Click_1);
+            // 
             // customerSearchTextBox
             // 
             this.customerSearchTextBox.BorderRadius = 6;
@@ -444,7 +515,7 @@
             this.customerSearchTextBox.IconRight = global::BookHaven.Properties.Resources.search;
             this.customerSearchTextBox.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.customerSearchTextBox.IconRightSize = new System.Drawing.Size(24, 24);
-            this.customerSearchTextBox.Location = new System.Drawing.Point(26, 79);
+            this.customerSearchTextBox.Location = new System.Drawing.Point(482, 79);
             this.customerSearchTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.customerSearchTextBox.Name = "customerSearchTextBox";
             this.customerSearchTextBox.PasswordChar = '\0';
@@ -453,25 +524,14 @@
             this.customerSearchTextBox.Size = new System.Drawing.Size(332, 45);
             this.customerSearchTextBox.TabIndex = 4;
             // 
-            // closePictureBoc
-            // 
-            this.closePictureBoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closePictureBoc.Image = global::BookHaven.Properties.Resources.close;
-            this.closePictureBoc.Location = new System.Drawing.Point(13, 12);
-            this.closePictureBoc.Name = "closePictureBoc";
-            this.closePictureBoc.Size = new System.Drawing.Size(24, 24);
-            this.closePictureBoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.closePictureBoc.TabIndex = 0;
-            this.closePictureBoc.TabStop = false;
-            this.closePictureBoc.Click += new System.EventHandler(this.closePictureBoc_Click);
-            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Controls.Add(this.customerSearchTextBox);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.addCustomerPanel);
+            this.Controls.Add(this.customerSearchTextBox);
             this.Controls.Add(this.customerAddButton);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.panel1);
@@ -484,6 +544,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.addCustomerPanel.ResumeLayout(false);
             this.addCustomerPanel.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBoc)).EndInit();
             this.ResumeLayout(false);
 
@@ -496,12 +557,13 @@
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CusName;
         private Guna.UI2.WinForms.Guna2Button customerAddButton;
-        private Guna.UI2.WinForms.Guna2ShadowPanel addCustomerPanel;
-        private System.Windows.Forms.PictureBox closePictureBoc;
         private Guna.UI2.WinForms.Guna2TextBox customerSearchTextBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox emailTextBox;
+        private Guna.UI2.WinForms.Guna2ShadowPanel addCustomerPanel;
+        private Guna.UI2.WinForms.Guna2ComboBox whoAddedtextBox;
+        private Guna.UI2.WinForms.Guna2TextBox phoneNumberTextBox;
+        private Guna.UI2.WinForms.Guna2ComboBox memberShipStatusTextBox;
+        private Guna.UI2.WinForms.Guna2Button clearButton;
+        private Guna.UI2.WinForms.Guna2Button addCustomerButton;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
@@ -509,10 +571,12 @@
         private Guna.UI2.WinForms.Guna2TextBox customerNameTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Button clearButton;
-        private Guna.UI2.WinForms.Guna2Button addCustomerButton;
-        private Guna.UI2.WinForms.Guna2ComboBox memberShipStatusTextBox;
-        private Guna.UI2.WinForms.Guna2TextBox phoneNumberTextBox;
-        private Guna.UI2.WinForms.Guna2ComboBox whoAddedtextBox;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox emailTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox closePictureBoc;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button PurchaseButton;
+        private Guna.UI2.WinForms.Guna2Button CustomerButton;
     }
 }

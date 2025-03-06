@@ -52,6 +52,7 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1000, 679);
             this.mainPanel.TabIndex = 1;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // sideBarPanel
             // 
@@ -61,8 +62,8 @@
             this.sideBarPanel.Controls.Add(this.dashboardButton);
             this.sideBarPanel.Controls.Add(this.customerButton);
             this.sideBarPanel.Controls.Add(this.BookButton);
-            this.sideBarPanel.Controls.Add(this.orderButton);
             this.sideBarPanel.Controls.Add(this.pointOfSaleButton);
+            this.sideBarPanel.Controls.Add(this.orderButton);
             this.sideBarPanel.Controls.Add(this.refundButton);
             this.sideBarPanel.Controls.Add(this.supplierButton);
             this.sideBarPanel.Controls.Add(this.reportButton);
@@ -182,7 +183,7 @@
             this.orderButton.FillColor = System.Drawing.Color.Transparent;
             this.orderButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
             this.orderButton.ForeColor = System.Drawing.Color.Gray;
-            this.orderButton.Location = new System.Drawing.Point(8, 236);
+            this.orderButton.Location = new System.Drawing.Point(8, 286);
             this.orderButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.orderButton.Name = "orderButton";
             this.orderButton.Size = new System.Drawing.Size(187, 46);
@@ -210,7 +211,7 @@
             this.pointOfSaleButton.FillColor = System.Drawing.Color.Transparent;
             this.pointOfSaleButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
             this.pointOfSaleButton.ForeColor = System.Drawing.Color.Gray;
-            this.pointOfSaleButton.Location = new System.Drawing.Point(8, 286);
+            this.pointOfSaleButton.Location = new System.Drawing.Point(8, 236);
             this.pointOfSaleButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.pointOfSaleButton.Name = "pointOfSaleButton";
             this.pointOfSaleButton.Size = new System.Drawing.Size(187, 46);

@@ -1,6 +1,6 @@
-﻿namespace BookHaven.Forms.Book
+﻿namespace BookHaven.Forms.Orders
 {
-    partial class BookForm
+    partial class Order
     {
         /// <summary> 
         /// Required designer variable.
@@ -70,7 +70,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 67);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 2;
             // 
             // label1
             // 
@@ -81,9 +81,9 @@
             this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 34);
+            this.label1.Size = new System.Drawing.Size(197, 34);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Book Managment";
+            this.label1.Text = "Order Managment";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // bookDataGridView
@@ -120,7 +120,7 @@
             this.bookDataGridView.RowHeadersVisible = false;
             this.bookDataGridView.RowHeadersWidth = 100;
             this.bookDataGridView.Size = new System.Drawing.Size(948, 525);
-            this.bookDataGridView.TabIndex = 3;
+            this.bookDataGridView.TabIndex = 4;
             this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -163,9 +163,8 @@
             this.bookAddButton.Location = new System.Drawing.Point(821, 79);
             this.bookAddButton.Name = "bookAddButton";
             this.bookAddButton.Size = new System.Drawing.Size(153, 45);
-            this.bookAddButton.TabIndex = 5;
+            this.bookAddButton.TabIndex = 7;
             this.bookAddButton.Text = "Add Book";
-            this.bookAddButton.Click += new System.EventHandler(this.bookAddButton_Click);
             // 
             // addBookPanel
             // 
@@ -196,7 +195,7 @@
             this.addBookPanel.ShadowDepth = 30;
             this.addBookPanel.ShadowShift = 2;
             this.addBookPanel.Size = new System.Drawing.Size(481, 612);
-            this.addBookPanel.TabIndex = 7;
+            this.addBookPanel.TabIndex = 9;
             // 
             // label7
             // 
@@ -482,7 +481,6 @@
             this.closePictureBoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.closePictureBoc.TabIndex = 0;
             this.closePictureBoc.TabStop = false;
-            this.closePictureBoc.Click += new System.EventHandler(this.closePictureBoc_Click);
             // 
             // bookSearchTextBox
             // 
@@ -506,9 +504,9 @@
             this.bookSearchTextBox.PlaceholderText = "Search";
             this.bookSearchTextBox.SelectedText = "";
             this.bookSearchTextBox.Size = new System.Drawing.Size(332, 45);
-            this.bookSearchTextBox.TabIndex = 6;
+            this.bookSearchTextBox.TabIndex = 8;
             // 
-            // BookForm
+            // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -517,7 +515,7 @@
             this.Controls.Add(this.bookAddButton);
             this.Controls.Add(this.bookDataGridView);
             this.Controls.Add(this.panel1);
-            this.Name = "BookForm";
+            this.Name = "Order";
             this.Size = new System.Drawing.Size(1000, 679);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -534,9 +532,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DataGridView bookDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CusName;
         private Guna.UI2.WinForms.Guna2TextBox bookSearchTextBox;
         private Guna.UI2.WinForms.Guna2Button bookAddButton;
         private Guna.UI2.WinForms.Guna2ShadowPanel addBookPanel;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TextBox bookTitleTextBox;
         private Guna.UI2.WinForms.Guna2ComboBox memberShipStatusTextBox;
         private Guna.UI2.WinForms.Guna2Button clearButton;
@@ -551,10 +554,5 @@
         private Guna.UI2.WinForms.Guna2TextBox emailTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox closePictureBoc;
-        private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CusName;
     }
 }

@@ -10,41 +10,20 @@ using System.Windows.Forms;
 
 namespace BookHaven.Forms.Customer
 {
-    public partial class CustomerForm: UserControl
+    public partial class PurchaseHistory: UserControl
     {
-        public CustomerForm()
+        public PurchaseHistory()
         {
             InitializeComponent();
-            addCustomerPanel.Visible = false;
-        }
-
-        private void CustomerForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void customerAddButton_Click(object sender, EventArgs e)
-        {
-            addCustomerPanel.Visible = true;
-        }
-
-        private void closePictureBoc_Click_1(object sender, EventArgs e)
-        {
-            addCustomerPanel.Visible = false;
         }
 
         private void CustomerButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PurchaseButton_Click(object sender, EventArgs e)
         {
             DashboardBookHaven dashboardBookHav = this.FindForm() as DashboardBookHaven;
 
             if(dashboardBookHav != null)
             {
-                dashboardBookHav.LoadUserControl(new PurchaseHistory());
+                dashboardBookHav.LoadUserControl(new CustomerForm());
             }
             else
             {

@@ -64,6 +64,12 @@
     <Compile Include="Forms\Customer\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Customer\PurchaseHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\PurchaseHistory.Designer.cs">
+      <DependentUpon>PurchaseHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DashboardBookHaven.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,12 @@
     <Compile Include="Forms\Dashboard\DashbaordForm.Designer.cs">
       <DependentUpon>DashbaordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Orders\Order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Orders\Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Book\BookForm.resx">
@@ -89,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Customer\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\PurchaseHistory.resx">
+      <DependentUpon>PurchaseHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashboardBookHaven.resx">
       <DependentUpon>DashboardBookHaven.cs</DependentUpon>
@@ -98,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard\DashbaordForm.resx">
       <DependentUpon>DashbaordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Orders\Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
