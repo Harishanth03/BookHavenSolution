@@ -114,6 +114,7 @@
             this.dashboardButton.Text = "Dashboard";
             this.dashboardButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.dashboardButton.TextOffset = new System.Drawing.Point(30, 0);
+            this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
             // 
             // customerButton
             // 
@@ -199,7 +200,6 @@
             this.orderButton.Text = "Order";
             this.orderButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.orderButton.TextOffset = new System.Drawing.Point(30, 0);
-            this.orderButton.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // pointOfSaleButton
             // 
