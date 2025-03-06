@@ -15,6 +15,17 @@ namespace BookHaven.Forms.Book
         public BookForm()
         {
             InitializeComponent();
+            addBookPanel.Visible = false;
+        }
+
+        private void bookAddButton_Click(object sender, EventArgs e)
+        {
+            addBookPanel.Visible = true;
+        }
+
+        private void closePictureBoc_Click(object sender, EventArgs e)
+        {
+            addBookPanel.Visible = false;
         }
     }
 }
