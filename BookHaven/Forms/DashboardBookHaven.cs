@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookHaven.Forms.Customer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,10 @@ namespace BookHaven
 
         private void customerButton_Click(object sender, EventArgs e)
         {
-
+            mainPanel.Controls.Clear();
+            CustomerForm cus = new CustomerForm();
+            cus.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(cus);
         }
     }
 }
