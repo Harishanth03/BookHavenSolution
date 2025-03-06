@@ -1,4 +1,5 @@
-﻿using BookHaven.Forms.Customer;
+﻿using BookHaven.Forms.Book;
+using BookHaven.Forms.Customer;
 using BookHaven.Forms.Dashboard;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,14 @@ namespace BookHaven
             DashbaordForm DashbaordFrm = new DashbaordForm();
             DashbaordFrm.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(DashbaordFrm);
+        }
+
+        private void BookButton_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear();
+            BookForm book = new BookForm();
+            book.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(book);
         }
     }
 }
