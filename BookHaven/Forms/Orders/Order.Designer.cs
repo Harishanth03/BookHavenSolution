@@ -132,7 +132,7 @@
             this.bookDataGridView.RowHeadersVisible = false;
             this.bookDataGridView.RowHeadersWidth = 100;
             this.bookDataGridView.RowTemplate.Height = 70;
-            this.bookDataGridView.Size = new System.Drawing.Size(948, 400);
+            this.bookDataGridView.Size = new System.Drawing.Size(948, 488);
             this.bookDataGridView.TabIndex = 4;
             this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;

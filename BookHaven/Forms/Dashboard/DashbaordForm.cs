@@ -15,6 +15,9 @@ namespace BookHaven.Forms.Dashboard
         public DashbaordForm()
         {
             InitializeComponent();
+            GraphView graphView = new GraphView();
+            graphView.Dock = DockStyle.Fill;
+            dashboardPanel.Controls.Add(graphView);
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -25,6 +28,38 @@ namespace BookHaven.Forms.Dashboard
         private void chart2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lowInventoryBtn_Click(object sender, EventArgs e)
+        {
+            dashboardPanel.Controls.Clear();
+            LowInventoryForm lowInventory = new LowInventoryForm();
+            lowInventory.Dock = DockStyle.Fill;
+            dashboardPanel.Controls.Add(lowInventory);
+        }
+
+        private void orderBtn_Click(object sender, EventArgs e)
+        {
+            dashboardPanel.Controls.Clear();
+            GraphView graphView = new GraphView();
+            graphView.Dock = DockStyle.Fill;
+            dashboardPanel.Controls.Add(graphView);
+        }
+
+        private void orderManagmentBtn_Click(object sender, EventArgs e)
+        {
+            dashboardPanel.Controls.Clear();
+            OrderSummaryForm orderSummary = new OrderSummaryForm();
+            orderSummary.Dock = DockStyle.Fill;
+            dashboardPanel.Controls.Add(orderSummary);
+        }
+
+        private void staffManagmentBtn_Click(object sender, EventArgs e)
+        {
+            dashboardPanel.Controls.Clear();
+            StaffControlForm staffControl = new StaffControlForm();
+            staffControl.Dock = DockStyle.Fill;
+            dashboardPanel.Controls.Add(staffControl);
         }
     }
 }

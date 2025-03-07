@@ -68,9 +68,8 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1333, 82);
+            this.panel1.Size = new System.Drawing.Size(1000, 67);
             this.panel1.TabIndex = 3;
             // 
             // label1
@@ -80,10 +79,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 42);
+            this.label1.Size = new System.Drawing.Size(224, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "Supplier Managment";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -120,13 +118,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.supplierDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.supplierDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.supplierDataGridView.Location = new System.Drawing.Point(12, 167);
+            this.supplierDataGridView.Location = new System.Drawing.Point(20, 136);
             this.supplierDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.supplierDataGridView.Name = "supplierDataGridView";
             this.supplierDataGridView.RowHeadersVisible = false;
             this.supplierDataGridView.RowHeadersWidth = 100;
             this.supplierDataGridView.RowTemplate.Height = 40;
-            this.supplierDataGridView.Size = new System.Drawing.Size(1301, 517);
+            this.supplierDataGridView.Size = new System.Drawing.Size(953, 498);
             this.supplierDataGridView.TabIndex = 9;
             this.supplierDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.supplierDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -196,13 +194,13 @@
             this.searchSupplier.IconRight = global::BookHaven.Properties.Resources.search;
             this.searchSupplier.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.searchSupplier.IconRightSize = new System.Drawing.Size(24, 24);
-            this.searchSupplier.Location = new System.Drawing.Point(12, 97);
-            this.searchSupplier.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.searchSupplier.Location = new System.Drawing.Point(20, 79);
+            this.searchSupplier.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchSupplier.Name = "searchSupplier";
             this.searchSupplier.PasswordChar = '\0';
             this.searchSupplier.PlaceholderText = "Search";
             this.searchSupplier.SelectedText = "";
-            this.searchSupplier.Size = new System.Drawing.Size(443, 55);
+            this.searchSupplier.Size = new System.Drawing.Size(332, 45);
             this.searchSupplier.TabIndex = 11;
             // 
             // addSupplier
@@ -217,10 +215,9 @@
             this.addSupplier.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
             this.addSupplier.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addSupplier.ForeColor = System.Drawing.Color.White;
-            this.addSupplier.Location = new System.Drawing.Point(1109, 97);
-            this.addSupplier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addSupplier.Location = new System.Drawing.Point(820, 79);
             this.addSupplier.Name = "addSupplier";
-            this.addSupplier.Size = new System.Drawing.Size(204, 55);
+            this.addSupplier.Size = new System.Drawing.Size(153, 45);
             this.addSupplier.TabIndex = 10;
             this.addSupplier.Text = "Add Supplier";
             this.addSupplier.Click += new System.EventHandler(this.addSupplier_Click);
@@ -244,13 +241,12 @@
             this.supplierSidePanel.Controls.Add(this.closePictureBoc);
             this.supplierSidePanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.supplierSidePanel.FillColor = System.Drawing.Color.White;
-            this.supplierSidePanel.Location = new System.Drawing.Point(685, 82);
-            this.supplierSidePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.supplierSidePanel.Location = new System.Drawing.Point(514, 67);
             this.supplierSidePanel.Name = "supplierSidePanel";
             this.supplierSidePanel.ShadowColor = System.Drawing.Color.Black;
             this.supplierSidePanel.ShadowDepth = 30;
             this.supplierSidePanel.ShadowShift = 2;
-            this.supplierSidePanel.Size = new System.Drawing.Size(648, 754);
+            this.supplierSidePanel.Size = new System.Drawing.Size(486, 612);
             this.supplierSidePanel.TabIndex = 12;
             // 
             // SupplierPhoneNumberTextBox
@@ -266,13 +262,13 @@
             this.SupplierPhoneNumberTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
             this.SupplierPhoneNumberTextBox.ForeColor = System.Drawing.Color.Black;
             this.SupplierPhoneNumberTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.SupplierPhoneNumberTextBox.Location = new System.Drawing.Point(333, 186);
-            this.SupplierPhoneNumberTextBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.SupplierPhoneNumberTextBox.Location = new System.Drawing.Point(250, 151);
+            this.SupplierPhoneNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SupplierPhoneNumberTextBox.Name = "SupplierPhoneNumberTextBox";
             this.SupplierPhoneNumberTextBox.PasswordChar = '\0';
             this.SupplierPhoneNumberTextBox.PlaceholderText = "";
             this.SupplierPhoneNumberTextBox.SelectedText = "";
-            this.SupplierPhoneNumberTextBox.Size = new System.Drawing.Size(285, 47);
+            this.SupplierPhoneNumberTextBox.Size = new System.Drawing.Size(214, 38);
             this.SupplierPhoneNumberTextBox.TabIndex = 2;
             // 
             // SupplierTypeTextBox
@@ -289,10 +285,9 @@
             this.SupplierTypeTextBox.Items.AddRange(new object[] {
             "Publisher",
             "Distributor"});
-            this.SupplierTypeTextBox.Location = new System.Drawing.Point(23, 433);
-            this.SupplierTypeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SupplierTypeTextBox.Location = new System.Drawing.Point(17, 352);
             this.SupplierTypeTextBox.Name = "SupplierTypeTextBox";
-            this.SupplierTypeTextBox.Size = new System.Drawing.Size(597, 36);
+            this.SupplierTypeTextBox.Size = new System.Drawing.Size(449, 36);
             this.SupplierTypeTextBox.TabIndex = 15;
             // 
             // clearButton
@@ -309,10 +304,9 @@
             this.clearButton.FillColor = System.Drawing.Color.Transparent;
             this.clearButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.clearButton.ForeColor = System.Drawing.Color.Gray;
-            this.clearButton.Location = new System.Drawing.Point(23, 582);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearButton.Location = new System.Drawing.Point(17, 473);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(601, 55);
+            this.clearButton.Size = new System.Drawing.Size(451, 45);
             this.clearButton.TabIndex = 14;
             this.clearButton.Text = "Clear";
             // 
@@ -327,10 +321,9 @@
             this.addCustomerButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
             this.addCustomerButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCustomerButton.ForeColor = System.Drawing.Color.White;
-            this.addCustomerButton.Location = new System.Drawing.Point(23, 516);
-            this.addCustomerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addCustomerButton.Location = new System.Drawing.Point(17, 419);
             this.addCustomerButton.Name = "addCustomerButton";
-            this.addCustomerButton.Size = new System.Drawing.Size(601, 55);
+            this.addCustomerButton.Size = new System.Drawing.Size(451, 45);
             this.addCustomerButton.TabIndex = 13;
             this.addCustomerButton.Text = "Add Book";
             // 
@@ -339,10 +332,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(16, 398);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(12, 323);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(144, 34);
+            this.label8.Size = new System.Drawing.Size(113, 26);
             this.label8.TabIndex = 9;
             this.label8.Text = "Supplier Type";
             // 
@@ -351,10 +343,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(327, 271);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(245, 220);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 34);
+            this.label5.Size = new System.Drawing.Size(73, 26);
             this.label5.TabIndex = 8;
             this.label5.Text = "Address";
             // 
@@ -371,13 +362,13 @@
             this.addressTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
             this.addressTextBox.ForeColor = System.Drawing.Color.Black;
             this.addressTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.addressTextBox.Location = new System.Drawing.Point(333, 306);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.addressTextBox.Location = new System.Drawing.Point(250, 249);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.PasswordChar = '\0';
             this.addressTextBox.PlaceholderText = "";
             this.addressTextBox.SelectedText = "";
-            this.addressTextBox.Size = new System.Drawing.Size(285, 47);
+            this.addressTextBox.Size = new System.Drawing.Size(214, 38);
             this.addressTextBox.TabIndex = 4;
             // 
             // supplierNametextBox
@@ -393,13 +384,13 @@
             this.supplierNametextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
             this.supplierNametextBox.ForeColor = System.Drawing.Color.Black;
             this.supplierNametextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.supplierNametextBox.Location = new System.Drawing.Point(23, 186);
-            this.supplierNametextBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.supplierNametextBox.Location = new System.Drawing.Point(17, 151);
+            this.supplierNametextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.supplierNametextBox.Name = "supplierNametextBox";
             this.supplierNametextBox.PasswordChar = '\0';
             this.supplierNametextBox.PlaceholderText = "";
             this.supplierNametextBox.SelectedText = "";
-            this.supplierNametextBox.Size = new System.Drawing.Size(285, 47);
+            this.supplierNametextBox.Size = new System.Drawing.Size(214, 38);
             this.supplierNametextBox.TabIndex = 1;
             // 
             // label6
@@ -407,10 +398,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(16, 271);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(12, 220);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 34);
+            this.label6.Size = new System.Drawing.Size(53, 26);
             this.label6.TabIndex = 5;
             this.label6.Text = "Email";
             // 
@@ -421,10 +411,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 94);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(7, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(277, 42);
+            this.label4.Size = new System.Drawing.Size(224, 34);
             this.label4.TabIndex = 2;
             this.label4.Text = "Supplier Managment";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -434,10 +423,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(327, 150);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(245, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 34);
+            this.label3.Size = new System.Drawing.Size(125, 26);
             this.label3.TabIndex = 4;
             this.label3.Text = "Phone Number";
             // 
@@ -454,13 +442,13 @@
             this.emailTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
             this.emailTextBox.ForeColor = System.Drawing.Color.Black;
             this.emailTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailTextBox.Location = new System.Drawing.Point(23, 306);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.emailTextBox.Location = new System.Drawing.Point(17, 249);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.PasswordChar = '\0';
             this.emailTextBox.PlaceholderText = "";
             this.emailTextBox.SelectedText = "";
-            this.emailTextBox.Size = new System.Drawing.Size(285, 47);
+            this.emailTextBox.Size = new System.Drawing.Size(214, 38);
             this.emailTextBox.TabIndex = 3;
             // 
             // label2
@@ -468,10 +456,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(16, 150);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(12, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 34);
+            this.label2.Size = new System.Drawing.Size(123, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "Supplier Name";
             // 
@@ -479,8 +466,7 @@
             // 
             this.closePictureBoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closePictureBoc.Image = global::BookHaven.Properties.Resources.close;
-            this.closePictureBoc.Location = new System.Drawing.Point(17, 15);
-            this.closePictureBoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closePictureBoc.Location = new System.Drawing.Point(13, 12);
             this.closePictureBoc.Name = "closePictureBoc";
             this.closePictureBoc.Size = new System.Drawing.Size(24, 24);
             this.closePictureBoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -490,16 +476,15 @@
             // 
             // SupplierForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.supplierSidePanel);
             this.Controls.Add(this.searchSupplier);
             this.Controls.Add(this.addSupplier);
             this.Controls.Add(this.supplierDataGridView);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SupplierForm";
-            this.Size = new System.Drawing.Size(1333, 836);
+            this.Size = new System.Drawing.Size(1000, 679);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.supplierDataGridView)).EndInit();
