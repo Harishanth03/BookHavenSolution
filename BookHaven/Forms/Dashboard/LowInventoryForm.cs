@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace BookHaven.Forms.Dashboard
 {
-    public partial class DashbaordForm: UserControl
+    public partial class LowInventoryForm: UserControl
     {
-        public DashbaordForm()
+        public LowInventoryForm()
         {
             InitializeComponent();
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void chart2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
