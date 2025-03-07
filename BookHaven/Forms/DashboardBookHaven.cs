@@ -1,6 +1,7 @@
 ﻿using BookHaven.Forms.Book;
 using BookHaven.Forms.Customer;
 using BookHaven.Forms.Dashboard;
+using BookHaven.Forms.Orders;
 using BookHaven.Forms.POS;
 using System;
 using System.Collections.Generic;
@@ -66,6 +67,14 @@ namespace BookHaven
             POS pos = new POS();
             pos.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(pos);
+        }
+
+        private void orderButton_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear();
+            Order orderFrm = new Order();
+            orderFrm.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(orderFrm);
         }
     }
 }

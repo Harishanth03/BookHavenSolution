@@ -15,6 +15,17 @@ namespace BookHaven.Forms.Orders
         public Order()
         {
             InitializeComponent();
+            addOrderPanel.Visible = false;
+        }
+
+        private void closePictureBoc_Click(object sender, EventArgs e)
+        {
+            addOrderPanel.Visible = false;
+        }
+
+        private void addOrderBtn_Click(object sender, EventArgs e)
+        {
+            addOrderPanel.Visible = true;
         }
     }
 }

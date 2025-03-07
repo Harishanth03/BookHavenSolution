@@ -231,6 +231,7 @@
             this.orderButton.Text = "Order";
             this.orderButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.orderButton.TextOffset = new System.Drawing.Point(30, 0);
+            this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
             // 
             // refundButton
             // 
