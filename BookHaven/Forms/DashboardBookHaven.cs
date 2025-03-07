@@ -3,6 +3,7 @@ using BookHaven.Forms.Customer;
 using BookHaven.Forms.Dashboard;
 using BookHaven.Forms.Orders;
 using BookHaven.Forms.POS;
+using BookHaven.Forms.Suppliers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,6 +76,14 @@ namespace BookHaven
             Order orderFrm = new Order();
             orderFrm.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(orderFrm);
+        }
+
+        private void supplierButton_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear();
+            SupplierForm supplierFrm = new SupplierForm();
+            supplierFrm.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(supplierFrm);
         }
     }
 }
