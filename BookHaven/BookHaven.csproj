@@ -89,6 +89,12 @@
     <Compile Include="Forms\Dashboard\DashbaordForm.Designer.cs">
       <DependentUpon>DashbaordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Dashboard\LowInventoryForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\LowInventoryForm.Designer.cs">
+      <DependentUpon>LowInventoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Orders\Order.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard\DashbaordForm.resx">
       <DependentUpon>DashbaordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\LowInventoryForm.resx">
+      <DependentUpon>LowInventoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Orders\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
@@ -250,6 +259,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\total Book.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
