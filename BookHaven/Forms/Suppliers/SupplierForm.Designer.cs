@@ -118,13 +118,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.supplierDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.supplierDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.supplierDataGridView.Location = new System.Drawing.Point(9, 136);
+            this.supplierDataGridView.Location = new System.Drawing.Point(20, 136);
             this.supplierDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.supplierDataGridView.Name = "supplierDataGridView";
             this.supplierDataGridView.RowHeadersVisible = false;
             this.supplierDataGridView.RowHeadersWidth = 100;
             this.supplierDataGridView.RowTemplate.Height = 40;
-            this.supplierDataGridView.Size = new System.Drawing.Size(976, 420);
+            this.supplierDataGridView.Size = new System.Drawing.Size(953, 498);
             this.supplierDataGridView.TabIndex = 9;
             this.supplierDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.supplierDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -194,7 +194,7 @@
             this.searchSupplier.IconRight = global::BookHaven.Properties.Resources.search;
             this.searchSupplier.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.searchSupplier.IconRightSize = new System.Drawing.Size(24, 24);
-            this.searchSupplier.Location = new System.Drawing.Point(9, 79);
+            this.searchSupplier.Location = new System.Drawing.Point(20, 79);
             this.searchSupplier.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchSupplier.Name = "searchSupplier";
             this.searchSupplier.PasswordChar = '\0';
