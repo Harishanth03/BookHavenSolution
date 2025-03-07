@@ -94,6 +94,12 @@
     <Compile Include="Forms\Orders\Order.Designer.cs">
       <DependentUpon>Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Orders\OrderHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Orders\OrderHistory.Designer.cs">
+      <DependentUpon>OrderHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\POS\POS.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Orders\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Orders\OrderHistory.resx">
+      <DependentUpon>OrderHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\POS\POS.resx">
       <DependentUpon>POS.cs</DependentUpon>

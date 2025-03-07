@@ -30,16 +30,15 @@
         {
             this.mainPanel = new System.Windows.Forms.Panel();
             this.sideBarPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dashboardButton = new Guna.UI2.WinForms.Guna2Button();
             this.customerButton = new Guna.UI2.WinForms.Guna2Button();
             this.BookButton = new Guna.UI2.WinForms.Guna2Button();
             this.pointOfSaleButton = new Guna.UI2.WinForms.Guna2Button();
             this.orderButton = new Guna.UI2.WinForms.Guna2Button();
-            this.refundButton = new Guna.UI2.WinForms.Guna2Button();
             this.supplierButton = new Guna.UI2.WinForms.Guna2Button();
             this.reportButton = new Guna.UI2.WinForms.Guna2Button();
             this.logOutBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sideBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +63,6 @@
             this.sideBarPanel.Controls.Add(this.BookButton);
             this.sideBarPanel.Controls.Add(this.pointOfSaleButton);
             this.sideBarPanel.Controls.Add(this.orderButton);
-            this.sideBarPanel.Controls.Add(this.refundButton);
             this.sideBarPanel.Controls.Add(this.supplierButton);
             this.sideBarPanel.Controls.Add(this.reportButton);
             this.sideBarPanel.Controls.Add(this.logOutBtn);
@@ -75,17 +73,6 @@
             this.sideBarPanel.Name = "sideBarPanel";
             this.sideBarPanel.Size = new System.Drawing.Size(200, 679);
             this.sideBarPanel.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BookHaven.Properties.Resources.BH_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(22, 20, 22, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 44);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // dashboardButton
             // 
@@ -233,34 +220,6 @@
             this.orderButton.TextOffset = new System.Drawing.Point(30, 0);
             this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
             // 
-            // refundButton
-            // 
-            this.refundButton.BorderRadius = 5;
-            this.refundButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.refundButton.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            this.refundButton.CheckedState.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refundButton.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.refundButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.refundButton.CustomImages.CheckedImage = global::BookHaven.Properties.Resources.Return_Checked;
-            this.refundButton.CustomImages.Image = global::BookHaven.Properties.Resources.Return_Money;
-            this.refundButton.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.refundButton.CustomImages.ImageSize = new System.Drawing.Size(23, 23);
-            this.refundButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.refundButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.refundButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.refundButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.refundButton.FillColor = System.Drawing.Color.Transparent;
-            this.refundButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
-            this.refundButton.ForeColor = System.Drawing.Color.Gray;
-            this.refundButton.Location = new System.Drawing.Point(8, 336);
-            this.refundButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
-            this.refundButton.Name = "refundButton";
-            this.refundButton.Size = new System.Drawing.Size(187, 46);
-            this.refundButton.TabIndex = 8;
-            this.refundButton.Text = "Return / Refund";
-            this.refundButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.refundButton.TextOffset = new System.Drawing.Point(30, 0);
-            // 
             // supplierButton
             // 
             this.supplierButton.BorderRadius = 5;
@@ -280,7 +239,7 @@
             this.supplierButton.FillColor = System.Drawing.Color.Transparent;
             this.supplierButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
             this.supplierButton.ForeColor = System.Drawing.Color.Gray;
-            this.supplierButton.Location = new System.Drawing.Point(8, 386);
+            this.supplierButton.Location = new System.Drawing.Point(8, 336);
             this.supplierButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.supplierButton.Name = "supplierButton";
             this.supplierButton.Size = new System.Drawing.Size(187, 46);
@@ -308,7 +267,7 @@
             this.reportButton.FillColor = System.Drawing.Color.Transparent;
             this.reportButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
             this.reportButton.ForeColor = System.Drawing.Color.Gray;
-            this.reportButton.Location = new System.Drawing.Point(8, 436);
+            this.reportButton.Location = new System.Drawing.Point(8, 386);
             this.reportButton.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.reportButton.Name = "reportButton";
             this.reportButton.Size = new System.Drawing.Size(187, 46);
@@ -331,7 +290,7 @@
             this.logOutBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
             this.logOutBtn.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOutBtn.ForeColor = System.Drawing.Color.White;
-            this.logOutBtn.Location = new System.Drawing.Point(8, 488);
+            this.logOutBtn.Location = new System.Drawing.Point(8, 438);
             this.logOutBtn.Margin = new System.Windows.Forms.Padding(8, 4, 8, 2);
             this.logOutBtn.Name = "logOutBtn";
             this.logOutBtn.Size = new System.Drawing.Size(187, 46);
@@ -339,6 +298,17 @@
             this.logOutBtn.Text = "Logout Account";
             this.logOutBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.logOutBtn.TextOffset = new System.Drawing.Point(30, 0);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BookHaven.Properties.Resources.BH_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(22, 20, 22, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(156, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // DashboardBookHaven
             // 
@@ -370,7 +340,6 @@
         private Guna.UI2.WinForms.Guna2Button supplierButton;
         private Guna.UI2.WinForms.Guna2Button reportButton;
         private Guna.UI2.WinForms.Guna2Button pointOfSaleButton;
-        private Guna.UI2.WinForms.Guna2Button refundButton;
         private Guna.UI2.WinForms.Guna2Button logOutBtn;
     }
 }

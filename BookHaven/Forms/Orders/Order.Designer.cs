@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.bookDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.CusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addOrderBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.orderSearchSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.orderHistoryBtn = new Guna.UI2.WinForms.Guna2Button();
             this.orderBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -49,7 +48,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.closePictureBoc = new System.Windows.Forms.PictureBox();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -57,6 +55,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
+            this.closePictureBoc = new System.Windows.Forms.PictureBox();
+            this.orderSearchSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cancle = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -90,38 +95,44 @@
             // 
             // bookDataGridView
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.bookDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.bookDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.bookDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.bookDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.bookDataGridView.ColumnHeadersHeight = 50;
             this.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CusName});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bookDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.CusName,
+            this.Quantity,
+            this.Price,
+            this.SubTotal,
+            this.Cancle});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bookDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.bookDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.bookDataGridView.Location = new System.Drawing.Point(26, 151);
             this.bookDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.bookDataGridView.Name = "bookDataGridView";
             this.bookDataGridView.RowHeadersVisible = false;
             this.bookDataGridView.RowHeadersWidth = 100;
-            this.bookDataGridView.Size = new System.Drawing.Size(948, 510);
+            this.bookDataGridView.RowTemplate.Height = 70;
+            this.bookDataGridView.Size = new System.Drawing.Size(948, 400);
             this.bookDataGridView.TabIndex = 4;
             this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -139,16 +150,11 @@
             this.bookDataGridView.ThemeStyle.ReadOnly = false;
             this.bookDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.bookDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.bookDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.bookDataGridView.ThemeStyle.RowsStyle.Height = 22;
+            this.bookDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bookDataGridView.ThemeStyle.RowsStyle.Height = 70;
             this.bookDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.bookDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // CusName
-            // 
-            this.CusName.HeaderText = "Book Name";
-            this.CusName.Name = "CusName";
             // 
             // addOrderBtn
             // 
@@ -168,30 +174,6 @@
             this.addOrderBtn.TabIndex = 7;
             this.addOrderBtn.Text = "Add Order";
             this.addOrderBtn.Click += new System.EventHandler(this.addOrderBtn_Click);
-            // 
-            // orderSearchSearchBox
-            // 
-            this.orderSearchSearchBox.BorderRadius = 6;
-            this.orderSearchSearchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.orderSearchSearchBox.DefaultText = "";
-            this.orderSearchSearchBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.orderSearchSearchBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.orderSearchSearchBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.orderSearchSearchBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.orderSearchSearchBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.orderSearchSearchBox.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderSearchSearchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.orderSearchSearchBox.IconRight = global::BookHaven.Properties.Resources.search;
-            this.orderSearchSearchBox.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.orderSearchSearchBox.IconRightSize = new System.Drawing.Size(24, 24);
-            this.orderSearchSearchBox.Location = new System.Drawing.Point(482, 87);
-            this.orderSearchSearchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.orderSearchSearchBox.Name = "orderSearchSearchBox";
-            this.orderSearchSearchBox.PasswordChar = '\0';
-            this.orderSearchSearchBox.PlaceholderText = "Search";
-            this.orderSearchSearchBox.SelectedText = "";
-            this.orderSearchSearchBox.Size = new System.Drawing.Size(332, 45);
-            this.orderSearchSearchBox.TabIndex = 8;
             // 
             // guna2Panel1
             // 
@@ -224,6 +206,7 @@
             this.orderHistoryBtn.Size = new System.Drawing.Size(180, 43);
             this.orderHistoryBtn.TabIndex = 1;
             this.orderHistoryBtn.Text = "Orders History";
+            this.orderHistoryBtn.Click += new System.EventHandler(this.orderHistoryBtn_Click);
             // 
             // orderBtn
             // 
@@ -394,18 +377,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Customer Name";
             // 
-            // closePictureBoc
-            // 
-            this.closePictureBoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closePictureBoc.Image = global::BookHaven.Properties.Resources.close;
-            this.closePictureBoc.Location = new System.Drawing.Point(13, 12);
-            this.closePictureBoc.Name = "closePictureBoc";
-            this.closePictureBoc.Size = new System.Drawing.Size(24, 24);
-            this.closePictureBoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.closePictureBoc.TabIndex = 0;
-            this.closePictureBoc.TabStop = false;
-            this.closePictureBoc.Click += new System.EventHandler(this.closePictureBoc_Click);
-            // 
             // guna2ComboBox1
             // 
             this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
@@ -508,6 +479,74 @@
             this.label9.Text = "Total Price: 1400.00";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // closePictureBoc
+            // 
+            this.closePictureBoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closePictureBoc.Image = global::BookHaven.Properties.Resources.close;
+            this.closePictureBoc.Location = new System.Drawing.Point(13, 12);
+            this.closePictureBoc.Name = "closePictureBoc";
+            this.closePictureBoc.Size = new System.Drawing.Size(24, 24);
+            this.closePictureBoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.closePictureBoc.TabIndex = 0;
+            this.closePictureBoc.TabStop = false;
+            this.closePictureBoc.Click += new System.EventHandler(this.closePictureBoc_Click);
+            // 
+            // orderSearchSearchBox
+            // 
+            this.orderSearchSearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.orderSearchSearchBox.BorderRadius = 6;
+            this.orderSearchSearchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.orderSearchSearchBox.DefaultText = "";
+            this.orderSearchSearchBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.orderSearchSearchBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.orderSearchSearchBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.orderSearchSearchBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.orderSearchSearchBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.orderSearchSearchBox.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderSearchSearchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.orderSearchSearchBox.IconRight = global::BookHaven.Properties.Resources.search;
+            this.orderSearchSearchBox.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.orderSearchSearchBox.IconRightSize = new System.Drawing.Size(24, 24);
+            this.orderSearchSearchBox.Location = new System.Drawing.Point(482, 87);
+            this.orderSearchSearchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.orderSearchSearchBox.Name = "orderSearchSearchBox";
+            this.orderSearchSearchBox.PasswordChar = '\0';
+            this.orderSearchSearchBox.PlaceholderText = "Search";
+            this.orderSearchSearchBox.SelectedText = "";
+            this.orderSearchSearchBox.Size = new System.Drawing.Size(332, 45);
+            this.orderSearchSearchBox.TabIndex = 8;
+            // 
+            // CusName
+            // 
+            this.CusName.HeaderText = "Book Name";
+            this.CusName.Name = "CusName";
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantiyu";
+            this.Quantity.Name = "Quantity";
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.HeaderText = "SubTotal";
+            this.SubTotal.Name = "SubTotal";
+            // 
+            // Cancle
+            // 
+            dataGridViewCellStyle7.NullValue = "Pending";
+            this.Cancle.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Cancle.HeaderText = "Order Status";
+            this.Cancle.Items.AddRange(new object[] {
+            "Pending",
+            "Completed",
+            "Canceled"});
+            this.Cancle.Name = "Cancle";
+            // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -536,7 +575,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DataGridView bookDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CusName;
         private Guna.UI2.WinForms.Guna2TextBox orderSearchSearchBox;
         private Guna.UI2.WinForms.Guna2Button addOrderBtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
@@ -559,5 +597,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CusName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Cancle;
     }
 }

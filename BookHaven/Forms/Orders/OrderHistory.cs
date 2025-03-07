@@ -10,30 +10,19 @@ using System.Windows.Forms;
 
 namespace BookHaven.Forms.Orders
 {
-    public partial class Order: UserControl
+    public partial class OrderHistory: UserControl
     {
-        public Order()
+        public OrderHistory()
         {
             InitializeComponent();
-            addOrderPanel.Visible = false;
         }
 
-        private void closePictureBoc_Click(object sender, EventArgs e)
-        {
-            addOrderPanel.Visible = false;
-        }
-
-        private void addOrderBtn_Click(object sender, EventArgs e)
-        {
-            addOrderPanel.Visible = true;
-        }
-
-        private void orderHistoryBtn_Click(object sender, EventArgs e)
+        private void CustomerButton_Click(object sender, EventArgs e)
         {
             DashboardBookHaven dashboardBookHav = this.FindForm() as DashboardBookHaven;
             if (dashboardBookHav != null)
             {
-                dashboardBookHav.LoadUserControl(new OrderHistory());
+                dashboardBookHav.LoadUserControl(new Order());
             }
             else
             {
