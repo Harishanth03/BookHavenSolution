@@ -1,6 +1,6 @@
 ﻿namespace BookHaven.Forms.Dashboard
 {
-    partial class LowInventoryForm
+    partial class OrderSummaryForm
     {
         /// <summary> 
         /// Required designer variable.
@@ -35,6 +35,8 @@
             this.CusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,10 +60,12 @@
             this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CusName,
             this.CustomerName,
-            this.OrderDate});
+            this.OrderDate,
+            this.Status,
+            this.Total});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -73,9 +77,8 @@
             this.bookDataGridView.Name = "bookDataGridView";
             this.bookDataGridView.RowHeadersVisible = false;
             this.bookDataGridView.RowHeadersWidth = 100;
-            this.bookDataGridView.RowTemplate.Height = 35;
             this.bookDataGridView.Size = new System.Drawing.Size(918, 467);
-            this.bookDataGridView.TabIndex = 6;
+            this.bookDataGridView.TabIndex = 5;
             this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -94,33 +97,43 @@
             this.bookDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.bookDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.bookDataGridView.ThemeStyle.RowsStyle.Height = 35;
+            this.bookDataGridView.ThemeStyle.RowsStyle.Height = 22;
             this.bookDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.bookDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // CusName
             // 
-            this.CusName.HeaderText = "Book name";
+            this.CusName.HeaderText = "Order ID";
             this.CusName.MinimumWidth = 6;
             this.CusName.Name = "CusName";
             // 
             // CustomerName
             // 
-            this.CustomerName.HeaderText = "Stock Quantity";
+            this.CustomerName.HeaderText = "Customer Name";
             this.CustomerName.Name = "CustomerName";
             // 
             // OrderDate
             // 
-            this.OrderDate.HeaderText = "Supplier";
+            this.OrderDate.HeaderText = "Order Date";
             this.OrderDate.Name = "OrderDate";
             // 
-            // LowInventoryForm
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            // 
+            // OrderSummaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.bookDataGridView);
-            this.Name = "LowInventoryForm";
+            this.Name = "OrderSummaryForm";
             this.Size = new System.Drawing.Size(945, 512);
             ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -133,5 +146,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
     }
 }
