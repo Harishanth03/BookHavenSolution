@@ -247,6 +247,7 @@
             this.supplierButton.Text = "Supplier";
             this.supplierButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.supplierButton.TextOffset = new System.Drawing.Point(30, 0);
+            this.supplierButton.Click += new System.EventHandler(this.supplierButton_Click);
             // 
             // reportButton
             // 
