@@ -119,6 +119,7 @@
             this.staffManagmentBtn.Size = new System.Drawing.Size(231, 47);
             this.staffManagmentBtn.TabIndex = 14;
             this.staffManagmentBtn.Text = "Staff Managment";
+            this.staffManagmentBtn.Click += new System.EventHandler(this.staffManagmentBtn_Click);
             // 
             // orderBtn
             // 

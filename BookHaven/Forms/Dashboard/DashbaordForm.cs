@@ -53,5 +53,13 @@ namespace BookHaven.Forms.Dashboard
             orderSummary.Dock = DockStyle.Fill;
             dashboardPanel.Controls.Add(orderSummary);
         }
+
+        private void staffManagmentBtn_Click(object sender, EventArgs e)
+        {
+            dashboardPanel.Controls.Clear();
+            StaffControlForm staffControl = new StaffControlForm();
+            staffControl.Dock = DockStyle.Fill;
+            dashboardPanel.Controls.Add(staffControl);
+        }
     }
 }

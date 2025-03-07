@@ -107,6 +107,12 @@
     <Compile Include="Forms\Dashboard\OrderSummary.Designer.cs">
       <DependentUpon>OrderSummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Dashboard\StaffControlForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\StaffControlForm.Designer.cs">
+      <DependentUpon>StaffControlForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Orders\Order.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard\OrderSummary.resx">
       <DependentUpon>OrderSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\StaffControlForm.resx">
+      <DependentUpon>StaffControlForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Orders\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>

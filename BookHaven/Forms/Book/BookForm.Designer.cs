@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.bookDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -43,8 +43,6 @@
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.bookTitleTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.memberShipStatusTextBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.clearButton = new Guna.UI2.WinForms.Guna2Button();
-            this.addCustomerButton = new Guna.UI2.WinForms.Guna2Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.addressTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,6 +54,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.closePictureBoc = new System.Windows.Forms.PictureBox();
             this.bookSearchTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.addCustomerButton = new Guna.UI2.WinForms.Guna2Button();
+            this.clearButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).BeginInit();
             this.addBookPanel.SuspendLayout();
@@ -88,31 +88,31 @@
             // 
             // bookDataGridView
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.bookDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.bookDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.bookDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.bookDataGridView.ColumnHeadersHeight = 50;
             this.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CusName});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bookDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bookDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
             this.bookDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.bookDataGridView.Location = new System.Drawing.Point(26, 136);
             this.bookDataGridView.Margin = new System.Windows.Forms.Padding(0);
@@ -304,43 +304,6 @@
             this.memberShipStatusTextBox.Size = new System.Drawing.Size(449, 36);
             this.memberShipStatusTextBox.TabIndex = 15;
             // 
-            // clearButton
-            // 
-            this.clearButton.BackColor = System.Drawing.Color.White;
-            this.clearButton.BorderColor = System.Drawing.Color.Gray;
-            this.clearButton.BorderRadius = 4;
-            this.clearButton.BorderThickness = 1;
-            this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.clearButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.clearButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.clearButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.clearButton.FillColor = System.Drawing.Color.Transparent;
-            this.clearButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.clearButton.ForeColor = System.Drawing.Color.Gray;
-            this.clearButton.Location = new System.Drawing.Point(13, 544);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(451, 45);
-            this.clearButton.TabIndex = 14;
-            this.clearButton.Text = "Clear";
-            // 
-            // addCustomerButton
-            // 
-            this.addCustomerButton.BorderRadius = 4;
-            this.addCustomerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addCustomerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.addCustomerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.addCustomerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.addCustomerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.addCustomerButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            this.addCustomerButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addCustomerButton.ForeColor = System.Drawing.Color.White;
-            this.addCustomerButton.Location = new System.Drawing.Point(13, 490);
-            this.addCustomerButton.Name = "addCustomerButton";
-            this.addCustomerButton.Size = new System.Drawing.Size(451, 45);
-            this.addCustomerButton.TabIndex = 13;
-            this.addCustomerButton.Text = "Add Book";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -512,6 +475,43 @@
             this.bookSearchTextBox.Size = new System.Drawing.Size(332, 45);
             this.bookSearchTextBox.TabIndex = 6;
             // 
+            // addCustomerButton
+            // 
+            this.addCustomerButton.BorderRadius = 4;
+            this.addCustomerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addCustomerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addCustomerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addCustomerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addCustomerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addCustomerButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            this.addCustomerButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addCustomerButton.ForeColor = System.Drawing.Color.White;
+            this.addCustomerButton.Location = new System.Drawing.Point(13, 490);
+            this.addCustomerButton.Name = "addCustomerButton";
+            this.addCustomerButton.Size = new System.Drawing.Size(451, 45);
+            this.addCustomerButton.TabIndex = 13;
+            this.addCustomerButton.Text = "Add Book";
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.White;
+            this.clearButton.BorderColor = System.Drawing.Color.Gray;
+            this.clearButton.BorderRadius = 4;
+            this.clearButton.BorderThickness = 1;
+            this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.clearButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.clearButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.clearButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.clearButton.FillColor = System.Drawing.Color.Transparent;
+            this.clearButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.clearButton.ForeColor = System.Drawing.Color.Gray;
+            this.clearButton.Location = new System.Drawing.Point(13, 544);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(451, 45);
+            this.clearButton.TabIndex = 14;
+            this.clearButton.Text = "Clear";
+            // 
             // BookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -543,8 +543,6 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel addBookPanel;
         private Guna.UI2.WinForms.Guna2TextBox bookTitleTextBox;
         private Guna.UI2.WinForms.Guna2ComboBox memberShipStatusTextBox;
-        private Guna.UI2.WinForms.Guna2Button clearButton;
-        private Guna.UI2.WinForms.Guna2Button addCustomerButton;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox addressTextBox;
@@ -560,5 +558,7 @@
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn CusName;
+        private Guna.UI2.WinForms.Guna2Button clearButton;
+        private Guna.UI2.WinForms.Guna2Button addCustomerButton;
     }
 }
