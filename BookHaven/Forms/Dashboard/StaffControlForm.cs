@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using BookHaven.Model;
 
 namespace BookHaven.Forms.Dashboard
 {
@@ -37,11 +38,9 @@ namespace BookHaven.Forms.Dashboard
 
         private void addStaffBtn_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=HARISHANTH\\SQLEXPRESS;Initial Catalog=BookHaven;Integrated Security=True;";
-
-            using (SqlConnection connecion = new SqlConnection(connectionString))
+            using(SqlConnection con = DatabaseConnection.GetConnection())
             {
-               
+                
             }
         }
     }
