@@ -38,9 +38,22 @@ namespace BookHaven.Forms.Dashboard
 
         private void addStaffBtn_Click(object sender, EventArgs e)
         {
-            using(SqlConnection con = DatabaseConnection.GetConnection())
+            try
             {
-                
+                string staffName = staffNameTextBox.Text;
+                string userName = userNameTextBox.Text;
+                string password = passwordTextBox.Text;
+                string email = emailTextBox.Text;
+                string userRole = staffRoleTextBox.SelectedItem?.ToString();
+
+                Staff staff = new Staff(staffName, userName, password, email, userRole);
+                staff.AddStaff();
+                MessageBox.Show("Staff member added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
