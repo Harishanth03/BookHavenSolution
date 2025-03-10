@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using BookHaven.Model;
 
 namespace BookHaven.Forms.Dashboard
@@ -46,9 +45,16 @@ namespace BookHaven.Forms.Dashboard
                 string email = emailTextBox.Text;
                 string userRole = staffRoleTextBox.SelectedItem?.ToString();
 
+                if(string.IsNullOrEmpty(staffName) || string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(userRole))
+                {
+                    MessageBox.Show("Please fill all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 Staff staff = new Staff(staffName, userName, password, email, userRole);
                 staff.AddStaff();
                 MessageBox.Show("Staff member added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                addStaffPanel.Visible = false;
 
             }
             catch (Exception ex)

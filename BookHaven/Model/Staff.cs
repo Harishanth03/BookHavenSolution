@@ -32,6 +32,7 @@ namespace BookHaven.Model
         {
             using(SqlConnection con = DatabaseConnection.GetConnection())
             {
+                con.Open();
                 string insertQuery = "INSERT INTO staff (Name , Email , UserName , UserRole , PasswordHash) VALUES(@name , @email , @username , @userrole , ENCRYPTBYPASSPHRASE(@Passphrase, @Password))";
 
                 using(SqlCommand cmd = new SqlCommand(insertQuery , con))
@@ -39,6 +40,7 @@ namespace BookHaven.Model
                     cmd.Parameters.AddWithValue("@name", StaffName);
                     cmd.Parameters.AddWithValue("@email", Email);
                     cmd.Parameters.AddWithValue("@username", UserName);
+                    cmd.Parameters.AddWithValue("@Password", Password);
                     cmd.Parameters.AddWithValue("@userrole", UserRole);
                     cmd.Parameters.AddWithValue("@Passphrase", ENVProcess.GetEncryptionPassphrase());
 
