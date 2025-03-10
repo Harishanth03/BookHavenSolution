@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace BookHaven.Forms.Customer
 {
@@ -50,6 +51,13 @@ namespace BookHaven.Forms.Customer
             {
                 MessageBox.Show("Error: Could not find Dashboard.", "Navigation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void addCustomerButton_Click(object sender, EventArgs e)
+        {
+            
+
+
         }
     }
 }

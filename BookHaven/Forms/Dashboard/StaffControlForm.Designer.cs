@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bookDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.CusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,18 +38,18 @@
             this.bookSearchTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.addStaffButton = new Guna.UI2.WinForms.Guna2Button();
             this.addStaffPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.bookTitleTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.memberShipStatusTextBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.bookNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.clearButton = new Guna.UI2.WinForms.Guna2Button();
+            this.addStaffBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.userNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.staffRoleTextBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.staffNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.emailTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.passwordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.closePictureBoc = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.clearButton = new Guna.UI2.WinForms.Guna2Button();
-            this.addCustomerButton = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).BeginInit();
             this.addStaffPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBoc)).BeginInit();
@@ -57,33 +57,33 @@
             // 
             // bookDataGridView
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.bookDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.bookDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bookDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bookDataGridView.ColumnHeadersHeight = 50;
             this.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CusName,
             this.CustomerName,
             this.OrderDate});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bookDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bookDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.bookDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.bookDataGridView.Location = new System.Drawing.Point(13, 65);
             this.bookDataGridView.Margin = new System.Windows.Forms.Padding(0);
@@ -178,15 +178,15 @@
             // 
             this.addStaffPanel.BackColor = System.Drawing.Color.Transparent;
             this.addStaffPanel.Controls.Add(this.clearButton);
-            this.addStaffPanel.Controls.Add(this.addCustomerButton);
-            this.addStaffPanel.Controls.Add(this.bookTitleTextBox);
-            this.addStaffPanel.Controls.Add(this.memberShipStatusTextBox);
+            this.addStaffPanel.Controls.Add(this.addStaffBtn);
+            this.addStaffPanel.Controls.Add(this.userNameTextBox);
+            this.addStaffPanel.Controls.Add(this.staffRoleTextBox);
             this.addStaffPanel.Controls.Add(this.label5);
-            this.addStaffPanel.Controls.Add(this.bookNameTextBox);
+            this.addStaffPanel.Controls.Add(this.staffNameTextBox);
             this.addStaffPanel.Controls.Add(this.label6);
             this.addStaffPanel.Controls.Add(this.label4);
             this.addStaffPanel.Controls.Add(this.label3);
-            this.addStaffPanel.Controls.Add(this.emailTextBox);
+            this.addStaffPanel.Controls.Add(this.passwordTextBox);
             this.addStaffPanel.Controls.Add(this.label2);
             this.addStaffPanel.Controls.Add(this.closePictureBoc);
             this.addStaffPanel.Dock = System.Windows.Forms.DockStyle.Right;
@@ -199,65 +199,114 @@
             this.addStaffPanel.Size = new System.Drawing.Size(481, 512);
             this.addStaffPanel.TabIndex = 10;
             // 
-            // bookTitleTextBox
+            // clearButton
             // 
-            this.bookTitleTextBox.BorderRadius = 2;
-            this.bookTitleTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bookTitleTextBox.DefaultText = "";
-            this.bookTitleTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.bookTitleTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.bookTitleTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.bookTitleTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.bookTitleTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bookTitleTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.bookTitleTextBox.ForeColor = System.Drawing.Color.Black;
-            this.bookTitleTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bookTitleTextBox.Location = new System.Drawing.Point(250, 151);
-            this.bookTitleTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bookTitleTextBox.Name = "bookTitleTextBox";
-            this.bookTitleTextBox.PasswordChar = '\0';
-            this.bookTitleTextBox.PlaceholderText = "";
-            this.bookTitleTextBox.SelectedText = "";
-            this.bookTitleTextBox.Size = new System.Drawing.Size(214, 38);
-            this.bookTitleTextBox.TabIndex = 2;
+            this.clearButton.BackColor = System.Drawing.Color.White;
+            this.clearButton.BorderColor = System.Drawing.Color.Gray;
+            this.clearButton.BorderRadius = 4;
+            this.clearButton.BorderThickness = 1;
+            this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.clearButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.clearButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.clearButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.clearButton.FillColor = System.Drawing.Color.Transparent;
+            this.clearButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.clearButton.ForeColor = System.Drawing.Color.Gray;
+            this.clearButton.Location = new System.Drawing.Point(13, 365);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(451, 45);
+            this.clearButton.TabIndex = 17;
+            this.clearButton.Text = "Clear";
             // 
-            // memberShipStatusTextBox
+            // addStaffBtn
             // 
-            this.memberShipStatusTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.memberShipStatusTextBox.BorderRadius = 2;
-            this.memberShipStatusTextBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.memberShipStatusTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.memberShipStatusTextBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.memberShipStatusTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.memberShipStatusTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.memberShipStatusTextBox.ForeColor = System.Drawing.Color.Black;
-            this.memberShipStatusTextBox.ItemHeight = 30;
-            this.memberShipStatusTextBox.Location = new System.Drawing.Point(250, 249);
-            this.memberShipStatusTextBox.Name = "memberShipStatusTextBox";
-            this.memberShipStatusTextBox.Size = new System.Drawing.Size(216, 36);
-            this.memberShipStatusTextBox.TabIndex = 15;
+            this.addStaffBtn.BorderRadius = 4;
+            this.addStaffBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addStaffBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addStaffBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addStaffBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addStaffBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addStaffBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            this.addStaffBtn.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addStaffBtn.ForeColor = System.Drawing.Color.White;
+            this.addStaffBtn.Location = new System.Drawing.Point(13, 311);
+            this.addStaffBtn.Name = "addStaffBtn";
+            this.addStaffBtn.Size = new System.Drawing.Size(451, 45);
+            this.addStaffBtn.TabIndex = 16;
+            this.addStaffBtn.Text = "Add Staff";
+            this.addStaffBtn.Click += new System.EventHandler(this.addStaffBtn_Click);
             // 
-            // bookNameTextBox
+            // userNameTextBox
             // 
-            this.bookNameTextBox.BorderRadius = 2;
-            this.bookNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bookNameTextBox.DefaultText = "";
-            this.bookNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.bookNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.bookNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.bookNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.bookNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bookNameTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.bookNameTextBox.ForeColor = System.Drawing.Color.Black;
-            this.bookNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bookNameTextBox.Location = new System.Drawing.Point(17, 151);
-            this.bookNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bookNameTextBox.Name = "bookNameTextBox";
-            this.bookNameTextBox.PasswordChar = '\0';
-            this.bookNameTextBox.PlaceholderText = "";
-            this.bookNameTextBox.SelectedText = "";
-            this.bookNameTextBox.Size = new System.Drawing.Size(214, 38);
-            this.bookNameTextBox.TabIndex = 1;
+            this.userNameTextBox.BorderRadius = 2;
+            this.userNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.userNameTextBox.DefaultText = "";
+            this.userNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.userNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.userNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.userNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.userNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.userNameTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.userNameTextBox.ForeColor = System.Drawing.Color.Black;
+            this.userNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.userNameTextBox.Location = new System.Drawing.Point(250, 151);
+            this.userNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userNameTextBox.Name = "userNameTextBox";
+            this.userNameTextBox.PasswordChar = '\0';
+            this.userNameTextBox.PlaceholderText = "";
+            this.userNameTextBox.SelectedText = "";
+            this.userNameTextBox.Size = new System.Drawing.Size(214, 38);
+            this.userNameTextBox.TabIndex = 2;
+            // 
+            // staffRoleTextBox
+            // 
+            this.staffRoleTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.staffRoleTextBox.BorderRadius = 2;
+            this.staffRoleTextBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.staffRoleTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.staffRoleTextBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.staffRoleTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.staffRoleTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.staffRoleTextBox.ForeColor = System.Drawing.Color.Black;
+            this.staffRoleTextBox.ItemHeight = 30;
+            this.staffRoleTextBox.Location = new System.Drawing.Point(250, 249);
+            this.staffRoleTextBox.Name = "staffRoleTextBox";
+            this.staffRoleTextBox.Size = new System.Drawing.Size(216, 36);
+            this.staffRoleTextBox.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(245, 220);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 26);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Staff Role";
+            // 
+            // staffNameTextBox
+            // 
+            this.staffNameTextBox.BorderRadius = 2;
+            this.staffNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.staffNameTextBox.DefaultText = "";
+            this.staffNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.staffNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.staffNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.staffNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.staffNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.staffNameTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.staffNameTextBox.ForeColor = System.Drawing.Color.Black;
+            this.staffNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.staffNameTextBox.Location = new System.Drawing.Point(17, 151);
+            this.staffNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.staffNameTextBox.Name = "staffNameTextBox";
+            this.staffNameTextBox.PasswordChar = '\0';
+            this.staffNameTextBox.PlaceholderText = "";
+            this.staffNameTextBox.SelectedText = "";
+            this.staffNameTextBox.Size = new System.Drawing.Size(214, 38);
+            this.staffNameTextBox.TabIndex = 1;
             // 
             // label6
             // 
@@ -279,9 +328,9 @@
             this.label4.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(11, 49);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(190, 34);
+            this.label4.Size = new System.Drawing.Size(110, 34);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Book Managment";
+            this.label4.Text = "Add Staff ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label3
@@ -295,27 +344,27 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "User name";
             // 
-            // emailTextBox
+            // passwordTextBox
             // 
-            this.emailTextBox.BorderRadius = 2;
-            this.emailTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.emailTextBox.DefaultText = "";
-            this.emailTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.emailTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.emailTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.emailTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.emailTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.emailTextBox.ForeColor = System.Drawing.Color.Black;
-            this.emailTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailTextBox.Location = new System.Drawing.Point(17, 249);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.PasswordChar = '\0';
-            this.emailTextBox.PlaceholderText = "";
-            this.emailTextBox.SelectedText = "";
-            this.emailTextBox.Size = new System.Drawing.Size(214, 38);
-            this.emailTextBox.TabIndex = 3;
+            this.passwordTextBox.BorderRadius = 2;
+            this.passwordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.passwordTextBox.DefaultText = "";
+            this.passwordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.passwordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.passwordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.passwordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.passwordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.passwordTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.passwordTextBox.ForeColor = System.Drawing.Color.Black;
+            this.passwordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.passwordTextBox.Location = new System.Drawing.Point(17, 249);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '\0';
+            this.passwordTextBox.PlaceholderText = "";
+            this.passwordTextBox.SelectedText = "";
+            this.passwordTextBox.Size = new System.Drawing.Size(214, 38);
+            this.passwordTextBox.TabIndex = 3;
             // 
             // label2
             // 
@@ -339,54 +388,6 @@
             this.closePictureBoc.TabIndex = 0;
             this.closePictureBoc.TabStop = false;
             this.closePictureBoc.Click += new System.EventHandler(this.closePictureBoc_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(245, 220);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 26);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Staff Role";
-            // 
-            // clearButton
-            // 
-            this.clearButton.BackColor = System.Drawing.Color.White;
-            this.clearButton.BorderColor = System.Drawing.Color.Gray;
-            this.clearButton.BorderRadius = 4;
-            this.clearButton.BorderThickness = 1;
-            this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.clearButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.clearButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.clearButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.clearButton.FillColor = System.Drawing.Color.Transparent;
-            this.clearButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.clearButton.ForeColor = System.Drawing.Color.Gray;
-            this.clearButton.Location = new System.Drawing.Point(13, 365);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(451, 45);
-            this.clearButton.TabIndex = 17;
-            this.clearButton.Text = "Clear";
-            // 
-            // addCustomerButton
-            // 
-            this.addCustomerButton.BorderRadius = 4;
-            this.addCustomerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addCustomerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.addCustomerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.addCustomerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.addCustomerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.addCustomerButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            this.addCustomerButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addCustomerButton.ForeColor = System.Drawing.Color.White;
-            this.addCustomerButton.Location = new System.Drawing.Point(13, 311);
-            this.addCustomerButton.Name = "addCustomerButton";
-            this.addCustomerButton.Size = new System.Drawing.Size(451, 45);
-            this.addCustomerButton.TabIndex = 16;
-            this.addCustomerButton.Text = "Add Book";
             // 
             // StaffControlForm
             // 
@@ -417,17 +418,17 @@
         private Guna.UI2.WinForms.Guna2TextBox bookSearchTextBox;
         private Guna.UI2.WinForms.Guna2Button addStaffButton;
         private Guna.UI2.WinForms.Guna2ShadowPanel addStaffPanel;
-        private Guna.UI2.WinForms.Guna2TextBox bookTitleTextBox;
-        private Guna.UI2.WinForms.Guna2ComboBox memberShipStatusTextBox;
-        private Guna.UI2.WinForms.Guna2TextBox bookNameTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox userNameTextBox;
+        private Guna.UI2.WinForms.Guna2ComboBox staffRoleTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox staffNameTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox emailTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox passwordTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox closePictureBoc;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button clearButton;
-        private Guna.UI2.WinForms.Guna2Button addCustomerButton;
+        private Guna.UI2.WinForms.Guna2Button addStaffBtn;
     }
 }
