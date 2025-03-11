@@ -282,6 +282,7 @@
     <Compile Include="Forms\Suppliers\SupplierForm.Designer.cs">
       <DependentUpon>SupplierForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Book.cs" />
     <Compile Include="Model\DatabaseConnection.cs" />
     <Compile Include="Model\ENVProcess.cs" />
     <Compile Include="Model\Staff.cs" />
