@@ -57,23 +57,23 @@ namespace BookHaven
 
         private void signinButton_Click(object sender, EventArgs e)
         {
-            string userName = usernameTextBox.Text;
-            string password = PasswordTextBox.Text;
-            string userRole;
+            //string userName = usernameTextBox.Text;
+            //string password = PasswordTextBox.Text;
+            //string userRole;
 
-            Staff staff = new Staff("", userName , password , "" , "");
-            if(staff.login(userName , password , out userRole))
-            {
-                MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //Staff staff = new Staff("", userName , password , "" , "");
+            //if(staff.login(userName , password , out userRole))
+            //{
+            //    MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                DashboardBookHaven dashboardBookHaven = new DashboardBookHaven(userRole);
-                dashboardBookHaven.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Invalid username or password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //    DashboardBookHaven dashboardBookHaven = new DashboardBookHaven(userRole);
+            //    dashboardBookHaven.Show();
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Invalid username or password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
     }
 }
