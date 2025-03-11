@@ -13,6 +13,7 @@ namespace BookHaven.Model
 
         public string StaffName { get; set; }
         public string UserName { get; set; }
+
         public string Password;
         public string Email { get; set; }
         public string UserRole { get; set; }
@@ -48,5 +49,36 @@ namespace BookHaven.Model
                 }
             }
         }
+
+        //=============================================== Login Staff Details ===========================================================
+
+        public bool login(string userName , string password , out string userRole)
+        {
+            userRole = null;
+
+            string queryLogin = @"SELECT UserRole FROM staff WHERE UserName = @username AND CONVERT(NVARCHAR(MAX), DECRYPTBYPASSPHRASE(@Passphrase, PasswordHash)) = @password";
+
+            using (SqlConnection con = DatabaseConnection.GetConnection())
+            {
+                con.Open();
+                using(SqlCommand cmd = new SqlCommand(queryLogin , con))
+                {
+                    cmd.Parameters.AddWithValue("@username", userName);
+                    cmd.Parameters.AddWithValue("@password", password);
+                    cmd.Parameters.AddWithValue("@Passphrase" , ENVProcess.GetEncryptionPassphrase());
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null) 
+                    { 
+                        userRole = result.ToString();
+                        return true;
+                    }
+                }
+
+            }
+
+             return false;
+        }
+
     }
 }
