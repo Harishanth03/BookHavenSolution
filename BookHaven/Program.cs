@@ -16,7 +16,7 @@ namespace BookHaven
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashboardBookHaven());
+            Application.Run(new loginFrm());
         }
     }
 }

@@ -18,12 +18,17 @@ namespace BookHaven
 {
     public partial class DashboardBookHaven: Form
     {
-        public DashboardBookHaven()
+
+        private string userRole;
+
+        public DashboardBookHaven(string role)
         {
             InitializeComponent();
             DashbaordForm DashbaordFrm = new DashbaordForm();
             DashbaordFrm.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(DashbaordFrm);
+
+            userRole = role;
         }
 
         private void customerButton_Click(object sender, EventArgs e)
@@ -84,6 +89,34 @@ namespace BookHaven
             SupplierForm supplierFrm = new SupplierForm();
             supplierFrm.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(supplierFrm);
+        }
+
+        //=============================================== Access Control ===========================================================
+
+        private void AccessControl()
+        {
+            if (userRole == "SalesClerk")
+            {
+                reportButton.Visible = false;
+                supplierButton.Visible = false;
+                reportButton.Visible = false;
+
+            }
+            else if (userRole == "Admin")
+            {
+                pointOfSaleButton.Visible = false;
+                orderButton.Visible = false;
+            }
+        }
+
+        private void sideBarPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void DashboardBookHaven_Load(object sender, EventArgs e)
+        {
+            AccessControl();
         }
     }
 }
