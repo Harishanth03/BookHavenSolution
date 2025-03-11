@@ -36,13 +36,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.addCustomerButton = new Guna.UI2.WinForms.Guna2Button();
-            this.bookNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.addToSummaryBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.QuantityTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.bookNameComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.newCustomerButton = new Guna.UI2.WinForms.Guna2Button();
-            this.bookDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.SammaryTable = new Guna.UI2.WinForms.Guna2DataGridView();
             this.CusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,8 +50,8 @@
             this.RemoveBtn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.memberShipStatusTextBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.PriceLable = new System.Windows.Forms.Label();
+            this.customerNameComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -59,14 +59,14 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.netRevenueLable = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.totalAmountLable = new System.Windows.Forms.Label();
+            this.paymentMethodComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.discountTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SammaryTable)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -80,7 +80,7 @@
             this.panel1.Controls.Add(this.tableLayoutPanel4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1333, 82);
             this.panel1.TabIndex = 2;
@@ -94,7 +94,7 @@
             this.tableLayoutPanel4.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(1040, 0);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -114,7 +114,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Sales by:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -144,48 +143,47 @@
             this.label1.Text = "Point Of Sales Of Book Haven";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // addCustomerButton
+            // addToSummaryBtn
             // 
-            this.addCustomerButton.BorderRadius = 4;
-            this.addCustomerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addCustomerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.addCustomerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.addCustomerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.addCustomerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.addCustomerButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addCustomerButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
-            this.addCustomerButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addCustomerButton.ForeColor = System.Drawing.Color.White;
-            this.addCustomerButton.Location = new System.Drawing.Point(952, 111);
-            this.addCustomerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.addCustomerButton.Name = "addCustomerButton";
-            this.addCustomerButton.Size = new System.Drawing.Size(308, 51);
-            this.addCustomerButton.TabIndex = 23;
-            this.addCustomerButton.Text = "Add To Summary";
+            this.addToSummaryBtn.BorderRadius = 4;
+            this.addToSummaryBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addToSummaryBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addToSummaryBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addToSummaryBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addToSummaryBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addToSummaryBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addToSummaryBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
+            this.addToSummaryBtn.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addToSummaryBtn.ForeColor = System.Drawing.Color.White;
+            this.addToSummaryBtn.Location = new System.Drawing.Point(952, 111);
+            this.addToSummaryBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.addToSummaryBtn.Name = "addToSummaryBtn";
+            this.addToSummaryBtn.Size = new System.Drawing.Size(308, 51);
+            this.addToSummaryBtn.TabIndex = 23;
+            this.addToSummaryBtn.Text = "Add To Summary";
             // 
-            // bookNameTextBox
+            // QuantityTextBox
             // 
-            this.bookNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.bookNameTextBox.BorderRadius = 2;
-            this.bookNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bookNameTextBox.DefaultText = "";
-            this.bookNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.bookNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.bookNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.bookNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.bookNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bookNameTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.bookNameTextBox.ForeColor = System.Drawing.Color.Black;
-            this.bookNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bookNameTextBox.Location = new System.Drawing.Point(953, 56);
-            this.bookNameTextBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.bookNameTextBox.Name = "bookNameTextBox";
-            this.bookNameTextBox.PasswordChar = '\0';
-            this.bookNameTextBox.PlaceholderText = "";
-            this.bookNameTextBox.SelectedText = "";
-            this.bookNameTextBox.Size = new System.Drawing.Size(306, 44);
-            this.bookNameTextBox.TabIndex = 21;
-            this.bookNameTextBox.TextChanged += new System.EventHandler(this.bookNameTextBox_TextChanged);
+            this.QuantityTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.QuantityTextBox.BorderRadius = 2;
+            this.QuantityTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.QuantityTextBox.DefaultText = "";
+            this.QuantityTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.QuantityTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.QuantityTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.QuantityTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.QuantityTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.QuantityTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.QuantityTextBox.ForeColor = System.Drawing.Color.Black;
+            this.QuantityTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.QuantityTextBox.Location = new System.Drawing.Point(953, 56);
+            this.QuantityTextBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.QuantityTextBox.Name = "QuantityTextBox";
+            this.QuantityTextBox.PasswordChar = '\0';
+            this.QuantityTextBox.PlaceholderText = "";
+            this.QuantityTextBox.SelectedText = "";
+            this.QuantityTextBox.Size = new System.Drawing.Size(306, 44);
+            this.QuantityTextBox.TabIndex = 21;
             // 
             // label6
             // 
@@ -199,25 +197,24 @@
             this.label6.Size = new System.Drawing.Size(97, 34);
             this.label6.TabIndex = 22;
             this.label6.Text = "Quantity";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // guna2ComboBox1
+            // bookNameComboBox
             // 
-            this.guna2ComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 2;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(636, 60);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(308, 36);
-            this.guna2ComboBox1.TabIndex = 20;
+            this.bookNameComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bookNameComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.bookNameComboBox.BorderRadius = 2;
+            this.bookNameComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.bookNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bookNameComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.bookNameComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.bookNameComboBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.bookNameComboBox.ForeColor = System.Drawing.Color.Black;
+            this.bookNameComboBox.ItemHeight = 30;
+            this.bookNameComboBox.Location = new System.Drawing.Point(636, 60);
+            this.bookNameComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.bookNameComboBox.Name = "bookNameComboBox";
+            this.bookNameComboBox.Size = new System.Drawing.Size(308, 36);
+            this.bookNameComboBox.TabIndex = 20;
             // 
             // label5
             // 
@@ -245,17 +242,17 @@
             this.newCustomerButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newCustomerButton.ForeColor = System.Drawing.Color.White;
             this.newCustomerButton.Location = new System.Drawing.Point(320, 56);
-            this.newCustomerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.newCustomerButton.Margin = new System.Windows.Forms.Padding(4);
             this.newCustomerButton.Name = "newCustomerButton";
             this.newCustomerButton.Size = new System.Drawing.Size(308, 44);
             this.newCustomerButton.TabIndex = 18;
             this.newCustomerButton.Text = "New Customer ?";
             // 
-            // bookDataGridView
+            // SammaryTable
             // 
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.bookDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.bookDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.SammaryTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.SammaryTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
@@ -264,10 +261,10 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.bookDataGridView.ColumnHeadersHeight = 50;
-            this.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SammaryTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.SammaryTable.ColumnHeadersHeight = 50;
+            this.SammaryTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.SammaryTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CusName,
             this.BookQty,
             this.BookPrice,
@@ -280,36 +277,36 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bookDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
-            this.bookDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.bookDataGridView.Location = new System.Drawing.Point(37, 348);
-            this.bookDataGridView.Margin = new System.Windows.Forms.Padding(0);
-            this.bookDataGridView.Name = "bookDataGridView";
-            this.bookDataGridView.RowHeadersVisible = false;
-            this.bookDataGridView.RowHeadersWidth = 100;
-            this.bookDataGridView.Size = new System.Drawing.Size(1264, 228);
-            this.bookDataGridView.TabIndex = 4;
-            this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.bookDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.bookDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.bookDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.bookDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bookDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.bookDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.bookDataGridView.ThemeStyle.HeaderStyle.Height = 50;
-            this.bookDataGridView.ThemeStyle.ReadOnly = false;
-            this.bookDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.bookDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.bookDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.bookDataGridView.ThemeStyle.RowsStyle.Height = 22;
-            this.bookDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.bookDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.SammaryTable.DefaultCellStyle = dataGridViewCellStyle6;
+            this.SammaryTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.SammaryTable.Location = new System.Drawing.Point(37, 348);
+            this.SammaryTable.Margin = new System.Windows.Forms.Padding(0);
+            this.SammaryTable.Name = "SammaryTable";
+            this.SammaryTable.RowHeadersVisible = false;
+            this.SammaryTable.RowHeadersWidth = 100;
+            this.SammaryTable.Size = new System.Drawing.Size(1264, 228);
+            this.SammaryTable.TabIndex = 4;
+            this.SammaryTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.SammaryTable.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.SammaryTable.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.SammaryTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.SammaryTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.SammaryTable.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.SammaryTable.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.SammaryTable.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.SammaryTable.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.SammaryTable.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SammaryTable.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.SammaryTable.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.SammaryTable.ThemeStyle.HeaderStyle.Height = 50;
+            this.SammaryTable.ThemeStyle.ReadOnly = false;
+            this.SammaryTable.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.SammaryTable.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.SammaryTable.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SammaryTable.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.SammaryTable.ThemeStyle.RowsStyle.Height = 22;
+            this.SammaryTable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.SammaryTable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // CusName
             // 
@@ -369,17 +366,17 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.memberShipStatusTextBox, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PriceLable, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.customerNameComboBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.newCustomerButton, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label5, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.guna2ComboBox1, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.bookNameComboBox, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.label6, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bookNameTextBox, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.addCustomerButton, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.QuantityTextBox, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.addToSummaryBtn, 3, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(37, 126);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -388,38 +385,38 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1264, 166);
             this.tableLayoutPanel1.TabIndex = 26;
             // 
-            // label7
+            // PriceLable
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PriceLable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(4, 107);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(188, 59);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Price: 1400.00";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PriceLable.AutoSize = true;
+            this.PriceLable.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceLable.ForeColor = System.Drawing.Color.DimGray;
+            this.PriceLable.Location = new System.Drawing.Point(4, 107);
+            this.PriceLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PriceLable.Name = "PriceLable";
+            this.PriceLable.Size = new System.Drawing.Size(188, 59);
+            this.PriceLable.TabIndex = 24;
+            this.PriceLable.Text = "Price: 1400.00";
+            this.PriceLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // memberShipStatusTextBox
+            // customerNameComboBox
             // 
-            this.memberShipStatusTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.memberShipStatusTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.memberShipStatusTextBox.BorderRadius = 2;
-            this.memberShipStatusTextBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.memberShipStatusTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.memberShipStatusTextBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.memberShipStatusTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.memberShipStatusTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.memberShipStatusTextBox.ForeColor = System.Drawing.Color.Black;
-            this.memberShipStatusTextBox.ItemHeight = 30;
-            this.memberShipStatusTextBox.Location = new System.Drawing.Point(4, 60);
-            this.memberShipStatusTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.memberShipStatusTextBox.Name = "memberShipStatusTextBox";
-            this.memberShipStatusTextBox.Size = new System.Drawing.Size(308, 36);
-            this.memberShipStatusTextBox.TabIndex = 17;
+            this.customerNameComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.customerNameComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.customerNameComboBox.BorderRadius = 2;
+            this.customerNameComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.customerNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.customerNameComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.customerNameComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.customerNameComboBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.customerNameComboBox.ForeColor = System.Drawing.Color.Black;
+            this.customerNameComboBox.ItemHeight = 30;
+            this.customerNameComboBox.Location = new System.Drawing.Point(4, 60);
+            this.customerNameComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.customerNameComboBox.Name = "customerNameComboBox";
+            this.customerNameComboBox.Size = new System.Drawing.Size(308, 36);
+            this.customerNameComboBox.TabIndex = 17;
             // 
             // label8
             // 
@@ -449,7 +446,7 @@
             this.guna2Button1.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(846, 4);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(414, 55);
             this.guna2Button1.TabIndex = 26;
@@ -469,7 +466,7 @@
             this.guna2Button2.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.Location = new System.Drawing.Point(425, 4);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(413, 55);
             this.guna2Button2.TabIndex = 33;
@@ -489,7 +486,7 @@
             this.guna2Button3.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.Location = new System.Drawing.Point(4, 4);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(413, 55);
             this.guna2Button3.TabIndex = 34;
@@ -508,7 +505,7 @@
             this.tableLayoutPanel3.Controls.Add(this.guna2Button2, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.guna2Button3, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(37, 736);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -526,13 +523,13 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Controls.Add(this.label12, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label11, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.netRevenueLable, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label10, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.guna2ComboBox2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.guna2ComboBox3, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.totalAmountLable, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.paymentMethodComboBox, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.discountTextBox, 1, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(37, 596);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -553,19 +550,19 @@
             this.label12.TabIndex = 29;
             this.label12.Text = "Payment Method";
             // 
-            // label11
+            // netRevenueLable
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DimGray;
-            this.label11.Location = new System.Drawing.Point(636, 19);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(287, 42);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Net Revenue : 1400.00";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.netRevenueLable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.netRevenueLable.AutoSize = true;
+            this.netRevenueLable.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.netRevenueLable.ForeColor = System.Drawing.Color.DimGray;
+            this.netRevenueLable.Location = new System.Drawing.Point(636, 19);
+            this.netRevenueLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.netRevenueLable.Name = "netRevenueLable";
+            this.netRevenueLable.Size = new System.Drawing.Size(287, 42);
+            this.netRevenueLable.TabIndex = 28;
+            this.netRevenueLable.Text = "Net Revenue : 1400.00";
+            this.netRevenueLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
@@ -581,55 +578,60 @@
             this.label10.Text = "Discount: ";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // totalAmountLable
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(4, 19);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(293, 42);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Total Amount: 1400.00";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.totalAmountLable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.totalAmountLable.AutoSize = true;
+            this.totalAmountLable.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalAmountLable.ForeColor = System.Drawing.Color.DimGray;
+            this.totalAmountLable.Location = new System.Drawing.Point(4, 19);
+            this.totalAmountLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.totalAmountLable.Name = "totalAmountLable";
+            this.totalAmountLable.Size = new System.Drawing.Size(293, 42);
+            this.totalAmountLable.TabIndex = 25;
+            this.totalAmountLable.Text = "Total Amount: 1400.00";
+            this.totalAmountLable.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // guna2ComboBox2
+            // paymentMethodComboBox
             // 
-            this.guna2ComboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 2;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(320, 74);
-            this.guna2ComboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(308, 36);
-            this.guna2ComboBox2.TabIndex = 27;
+            this.paymentMethodComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.paymentMethodComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.paymentMethodComboBox.BorderRadius = 2;
+            this.paymentMethodComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.paymentMethodComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.paymentMethodComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.paymentMethodComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.paymentMethodComboBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.paymentMethodComboBox.ForeColor = System.Drawing.Color.Black;
+            this.paymentMethodComboBox.ItemHeight = 30;
+            this.paymentMethodComboBox.Location = new System.Drawing.Point(952, 74);
+            this.paymentMethodComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.paymentMethodComboBox.Name = "paymentMethodComboBox";
+            this.paymentMethodComboBox.Size = new System.Drawing.Size(308, 36);
+            this.paymentMethodComboBox.TabIndex = 30;
             // 
-            // guna2ComboBox3
+            // discountTextBox
             // 
-            this.guna2ComboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.BorderRadius = 2;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox3.ItemHeight = 30;
-            this.guna2ComboBox3.Location = new System.Drawing.Point(952, 74);
-            this.guna2ComboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.Size = new System.Drawing.Size(308, 36);
-            this.guna2ComboBox3.TabIndex = 30;
+            this.discountTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.discountTextBox.BorderRadius = 2;
+            this.discountTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.discountTextBox.DefaultText = "";
+            this.discountTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.discountTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.discountTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.discountTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.discountTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.discountTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.discountTextBox.ForeColor = System.Drawing.Color.Black;
+            this.discountTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.discountTextBox.Location = new System.Drawing.Point(321, 70);
+            this.discountTextBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.discountTextBox.Name = "discountTextBox";
+            this.discountTextBox.PasswordChar = '\0';
+            this.discountTextBox.PlaceholderText = "";
+            this.discountTextBox.SelectedText = "";
+            this.discountTextBox.Size = new System.Drawing.Size(306, 44);
+            this.discountTextBox.TabIndex = 31;
             // 
             // POS
             // 
@@ -640,15 +642,16 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.bookDataGridView);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.SammaryTable);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "POS";
             this.Size = new System.Drawing.Size(1333, 836);
+            this.Load += new System.EventHandler(this.POS_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SammaryTable)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -663,23 +666,23 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2DataGridView bookDataGridView;
+        private Guna.UI2.WinForms.Guna2DataGridView SammaryTable;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox bookNameComboBox;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button newCustomerButton;
-        private Guna.UI2.WinForms.Guna2TextBox bookNameTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox QuantityTextBox;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2Button addCustomerButton;
+        private Guna.UI2.WinForms.Guna2Button addToSummaryBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn CusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubtotalBook;
         private System.Windows.Forms.DataGridViewTextBoxColumn RemoveBtn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2ComboBox memberShipStatusTextBox;
+        private Guna.UI2.WinForms.Guna2ComboBox customerNameComboBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label PriceLable;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
@@ -689,10 +692,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private System.Windows.Forms.Label totalAmountLable;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
+        private System.Windows.Forms.Label netRevenueLable;
+        private Guna.UI2.WinForms.Guna2ComboBox paymentMethodComboBox;
+        private Guna.UI2.WinForms.Guna2TextBox discountTextBox;
     }
 }
