@@ -28,17 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.staffDataGridview = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.StaffID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.bookSearchTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.addStaffButton = new Guna.UI2.WinForms.Guna2Button();
             this.addStaffPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.addStaffBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.updateButton = new Guna.UI2.WinForms.Guna2Button();
+            this.clearButton = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.emailTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.clearButton = new Guna.UI2.WinForms.Guna2Button();
-            this.addStaffBtn = new Guna.UI2.WinForms.Guna2Button();
             this.userNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.staffRoleTextBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,39 +59,29 @@
             this.passwordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.closePictureBoc = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.updateButton = new Guna.UI2.WinForms.Guna2Button();
-            this.StaffID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.staffDataGridview)).BeginInit();
             this.addStaffPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closePictureBoc)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closePictureBoc)).BeginInit();
             this.SuspendLayout();
             // 
             // staffDataGridview
             // 
             this.staffDataGridview.AllowUserToAddRows = false;
             this.staffDataGridview.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.staffDataGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.staffDataGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.staffDataGridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.staffDataGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.staffDataGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.staffDataGridview.ColumnHeadersHeight = 50;
             this.staffDataGridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.staffDataGridview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -94,14 +94,14 @@
             this.edit,
             this.delete});
             this.staffDataGridview.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.staffDataGridview.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.staffDataGridview.DefaultCellStyle = dataGridViewCellStyle3;
             this.staffDataGridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.staffDataGridview.Location = new System.Drawing.Point(17, 80);
             this.staffDataGridview.Margin = new System.Windows.Forms.Padding(0);
@@ -109,7 +109,7 @@
             this.staffDataGridview.RowHeadersVisible = false;
             this.staffDataGridview.RowHeadersWidth = 100;
             this.staffDataGridview.RowTemplate.Height = 35;
-            this.staffDataGridview.Size = new System.Drawing.Size(1224, 523);
+            this.staffDataGridview.Size = new System.Drawing.Size(1297, 690);
             this.staffDataGridview.TabIndex = 7;
             this.staffDataGridview.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.staffDataGridview.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -133,6 +133,63 @@
             this.staffDataGridview.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.staffDataGridview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.staffDataGridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffDataGridview_CellContentClick);
+            // 
+            // StaffID
+            // 
+            this.StaffID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.StaffID.HeaderText = "StaffID";
+            this.StaffID.MinimumWidth = 6;
+            this.StaffID.Name = "StaffID";
+            this.StaffID.Width = 109;
+            // 
+            // staffName
+            // 
+            this.staffName.HeaderText = "Name";
+            this.staffName.MinimumWidth = 6;
+            this.staffName.Name = "staffName";
+            // 
+            // Email
+            // 
+            this.Email.FillWeight = 150F;
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            // 
+            // UserName
+            // 
+            this.UserName.HeaderText = "UserName";
+            this.UserName.MinimumWidth = 6;
+            this.UserName.Name = "UserName";
+            // 
+            // UserRole
+            // 
+            this.UserRole.HeaderText = "UserRole";
+            this.UserRole.MinimumWidth = 6;
+            this.UserRole.Name = "UserRole";
+            // 
+            // CreatedAt
+            // 
+            this.CreatedAt.HeaderText = "CreatedAt";
+            this.CreatedAt.MinimumWidth = 6;
+            this.CreatedAt.Name = "CreatedAt";
+            // 
+            // edit
+            // 
+            this.edit.FillWeight = 50F;
+            this.edit.HeaderText = "Edit";
+            this.edit.Image = global::BookHaven.Properties.Resources.Edit;
+            this.edit.MinimumWidth = 6;
+            this.edit.Name = "edit";
+            this.edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // delete
+            // 
+            this.delete.FillWeight = 50F;
+            this.delete.HeaderText = "Delete";
+            this.delete.Image = global::BookHaven.Properties.Resources.delete;
+            this.delete.MinimumWidth = 6;
+            this.delete.Name = "delete";
+            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // bookSearchTextBox
             // 
@@ -170,7 +227,7 @@
             this.addStaffButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
             this.addStaffButton.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addStaffButton.ForeColor = System.Drawing.Color.White;
-            this.addStaffButton.Location = new System.Drawing.Point(1037, 12);
+            this.addStaffButton.Location = new System.Drawing.Point(1110, 12);
             this.addStaffButton.Margin = new System.Windows.Forms.Padding(4);
             this.addStaffButton.Name = "addStaffButton";
             this.addStaffButton.Size = new System.Drawing.Size(204, 55);
@@ -196,13 +253,83 @@
             this.addStaffPanel.Controls.Add(this.closePictureBoc);
             this.addStaffPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.addStaffPanel.FillColor = System.Drawing.Color.White;
-            this.addStaffPanel.Location = new System.Drawing.Point(619, 0);
+            this.addStaffPanel.Location = new System.Drawing.Point(692, 0);
             this.addStaffPanel.Margin = new System.Windows.Forms.Padding(4);
             this.addStaffPanel.Name = "addStaffPanel";
             this.addStaffPanel.ShadowColor = System.Drawing.Color.Black;
             this.addStaffPanel.ShadowDepth = 50;
-            this.addStaffPanel.Size = new System.Drawing.Size(641, 630);
+            this.addStaffPanel.Size = new System.Drawing.Size(641, 836);
             this.addStaffPanel.TabIndex = 10;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.addStaffBtn);
+            this.flowLayoutPanel1.Controls.Add(this.updateButton);
+            this.flowLayoutPanel1.Controls.Add(this.clearButton);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 424);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(635, 203);
+            this.flowLayoutPanel1.TabIndex = 20;
+            // 
+            // addStaffBtn
+            // 
+            this.addStaffBtn.BorderRadius = 4;
+            this.addStaffBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addStaffBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addStaffBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addStaffBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addStaffBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addStaffBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            this.addStaffBtn.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addStaffBtn.ForeColor = System.Drawing.Color.White;
+            this.addStaffBtn.Location = new System.Drawing.Point(16, 4);
+            this.addStaffBtn.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
+            this.addStaffBtn.Name = "addStaffBtn";
+            this.addStaffBtn.Size = new System.Drawing.Size(601, 55);
+            this.addStaffBtn.TabIndex = 16;
+            this.addStaffBtn.Text = "Add Staff";
+            this.addStaffBtn.Click += new System.EventHandler(this.addStaffBtn_Click);
+            // 
+            // updateButton
+            // 
+            this.updateButton.BorderRadius = 4;
+            this.updateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.updateButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.updateButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.updateButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.updateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.updateButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateButton.ForeColor = System.Drawing.Color.White;
+            this.updateButton.Location = new System.Drawing.Point(16, 67);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(601, 55);
+            this.updateButton.TabIndex = 17;
+            this.updateButton.Text = "Update Staff";
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.White;
+            this.clearButton.BorderColor = System.Drawing.Color.Gray;
+            this.clearButton.BorderRadius = 4;
+            this.clearButton.BorderThickness = 1;
+            this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.clearButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.clearButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.clearButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.clearButton.FillColor = System.Drawing.Color.Transparent;
+            this.clearButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.clearButton.ForeColor = System.Drawing.Color.Gray;
+            this.clearButton.Location = new System.Drawing.Point(16, 130);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(601, 55);
+            this.clearButton.TabIndex = 17;
+            this.clearButton.Text = "Clear";
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // label1
             // 
@@ -237,47 +364,6 @@
             this.emailTextBox.SelectedText = "";
             this.emailTextBox.Size = new System.Drawing.Size(285, 47);
             this.emailTextBox.TabIndex = 18;
-            // 
-            // clearButton
-            // 
-            this.clearButton.BackColor = System.Drawing.Color.White;
-            this.clearButton.BorderColor = System.Drawing.Color.Gray;
-            this.clearButton.BorderRadius = 4;
-            this.clearButton.BorderThickness = 1;
-            this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.clearButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.clearButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.clearButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.clearButton.FillColor = System.Drawing.Color.Transparent;
-            this.clearButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.clearButton.ForeColor = System.Drawing.Color.Gray;
-            this.clearButton.Location = new System.Drawing.Point(16, 130);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(601, 55);
-            this.clearButton.TabIndex = 17;
-            this.clearButton.Text = "Clear";
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
-            // 
-            // addStaffBtn
-            // 
-            this.addStaffBtn.BorderRadius = 4;
-            this.addStaffBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addStaffBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.addStaffBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.addStaffBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.addStaffBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.addStaffBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            this.addStaffBtn.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addStaffBtn.ForeColor = System.Drawing.Color.White;
-            this.addStaffBtn.Location = new System.Drawing.Point(16, 4);
-            this.addStaffBtn.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
-            this.addStaffBtn.Name = "addStaffBtn";
-            this.addStaffBtn.Size = new System.Drawing.Size(601, 55);
-            this.addStaffBtn.TabIndex = 16;
-            this.addStaffBtn.Text = "Add Staff";
-            this.addStaffBtn.Click += new System.EventHandler(this.addStaffBtn_Click);
             // 
             // userNameTextBox
             // 
@@ -441,92 +527,6 @@
             this.closePictureBoc.TabStop = false;
             this.closePictureBoc.Click += new System.EventHandler(this.closePictureBoc_Click);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.addStaffBtn);
-            this.flowLayoutPanel1.Controls.Add(this.updateButton);
-            this.flowLayoutPanel1.Controls.Add(this.clearButton);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 424);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(635, 203);
-            this.flowLayoutPanel1.TabIndex = 20;
-            // 
-            // updateButton
-            // 
-            this.updateButton.BorderRadius = 4;
-            this.updateButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.updateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.updateButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.updateButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.updateButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.updateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.updateButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateButton.ForeColor = System.Drawing.Color.White;
-            this.updateButton.Location = new System.Drawing.Point(16, 67);
-            this.updateButton.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(601, 55);
-            this.updateButton.TabIndex = 17;
-            this.updateButton.Text = "Update Staff";
-            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
-            // 
-            // StaffID
-            // 
-            this.StaffID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.StaffID.HeaderText = "StaffID";
-            this.StaffID.MinimumWidth = 6;
-            this.StaffID.Name = "StaffID";
-            this.StaffID.Width = 109;
-            // 
-            // staffName
-            // 
-            this.staffName.HeaderText = "Name";
-            this.staffName.MinimumWidth = 6;
-            this.staffName.Name = "staffName";
-            // 
-            // Email
-            // 
-            this.Email.FillWeight = 150F;
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 6;
-            this.Email.Name = "Email";
-            // 
-            // UserName
-            // 
-            this.UserName.HeaderText = "UserName";
-            this.UserName.MinimumWidth = 6;
-            this.UserName.Name = "UserName";
-            // 
-            // UserRole
-            // 
-            this.UserRole.HeaderText = "UserRole";
-            this.UserRole.MinimumWidth = 6;
-            this.UserRole.Name = "UserRole";
-            // 
-            // CreatedAt
-            // 
-            this.CreatedAt.HeaderText = "CreatedAt";
-            this.CreatedAt.MinimumWidth = 6;
-            this.CreatedAt.Name = "CreatedAt";
-            // 
-            // edit
-            // 
-            this.edit.FillWeight = 50F;
-            this.edit.HeaderText = "Edit";
-            this.edit.Image = global::BookHaven.Properties.Resources.Edit;
-            this.edit.MinimumWidth = 6;
-            this.edit.Name = "edit";
-            this.edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // delete
-            // 
-            this.delete.FillWeight = 50F;
-            this.delete.HeaderText = "Delete";
-            this.delete.Image = global::BookHaven.Properties.Resources.delete;
-            this.delete.MinimumWidth = 6;
-            this.delete.Name = "delete";
-            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // StaffControlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -538,13 +538,13 @@
             this.Controls.Add(this.staffDataGridview);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StaffControlForm";
-            this.Size = new System.Drawing.Size(1260, 630);
+            this.Size = new System.Drawing.Size(1333, 836);
             this.Load += new System.EventHandler(this.StaffControlForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.staffDataGridview)).EndInit();
             this.addStaffPanel.ResumeLayout(false);
             this.addStaffPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closePictureBoc)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.closePictureBoc)).EndInit();
             this.ResumeLayout(false);
 
         }
