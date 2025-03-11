@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using DotNetEnv;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace BookHaven.Model
 {
     public class Staff
     {
-
+        public int Id { get; set; }
         public string StaffName { get; set; }
         public string UserName { get; set; }
 
@@ -19,15 +21,17 @@ namespace BookHaven.Model
         public string UserRole { get; set; }
 
 
-        public Staff(string staffName, string userName, string password, string email, string userRole)
+        public Staff(int staffID ,  string staffName, string userName, string password, string email, string userRole)
         {
             StaffName = staffName;
             UserName = userName;
             Password = password;
             Email = email;
             UserRole = userRole;
+            Id = staffID;
         }
 
+        //======================================================== Add Staff Details ==========================================================
 
         public void AddStaff()
         {
@@ -78,6 +82,50 @@ namespace BookHaven.Model
             }
 
              return false;
+        }
+
+        //==================================================== Update Staff Details =======================================================
+
+        public void UpdateStaff()
+        {
+            using (SqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                connection.Open();
+
+                string updateQuery = "UPDATE staff SET Name = @name, Email = @email, UserRole = @userrole WHERE StaffID = @staffID";
+
+                using (SqlCommand cmd = new SqlCommand(updateQuery , connection))
+                {
+                    cmd.Parameters.AddWithValue("@name", StaffName);
+                    cmd.Parameters.AddWithValue("@email", Email);
+                    cmd.Parameters.AddWithValue("@userrole", UserRole);
+                    cmd.Parameters.AddWithValue("@staffID", Id);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        //====================================================== Delete Staff ============================================================
+
+        public static void DeleteStaff(int staffID)
+        {
+            using (SqlConnection connection =DatabaseConnection.GetConnection())
+            {
+                connection.Open();
+
+                string deleteQuery = "DELETE FROM staff WHERE StaffID = @staffID";
+
+                using (SqlCommand cmd = new SqlCommand(deleteQuery, connection))
+                {
+                    cmd.Parameters.AddWithValue("@staffID", staffID);
+                    cmd.ExecuteNonQuery();
+                }
+
+                connection.Close();
+            }
+
+            MessageBox.Show("Staff member deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
     }

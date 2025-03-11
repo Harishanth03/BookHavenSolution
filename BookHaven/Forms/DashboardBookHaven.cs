@@ -21,14 +21,14 @@ namespace BookHaven
 
         private string userRole;
 
-        public DashboardBookHaven(string role)
+        public DashboardBookHaven()
         {
             InitializeComponent();
             DashbaordForm DashbaordFrm = new DashbaordForm();
             DashbaordFrm.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(DashbaordFrm);
 
-            userRole = role;
+            //userRole = role;
         }
 
         private void customerButton_Click(object sender, EventArgs e)
@@ -116,7 +116,7 @@ namespace BookHaven
 
         private void DashboardBookHaven_Load(object sender, EventArgs e)
         {
-            AccessControl();
+            //AccessControl();
         }
     }
 }

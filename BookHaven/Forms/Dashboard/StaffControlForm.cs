@@ -31,7 +31,9 @@ namespace BookHaven.Forms.Dashboard
 
         private void addStaffButton_Click(object sender, EventArgs e)
         {
+            updateButton.Visible = false;
             addStaffPanel.Visible = true;
+
         }
 
         private void StaffControlForm_Load(object sender, EventArgs e)
@@ -48,8 +50,10 @@ namespace BookHaven.Forms.Dashboard
 
         private void addStaffBtn_Click(object sender, EventArgs e)
         {
+            
             try
             {
+                int staffID = 0;
                 string staffName = staffNameTextBox.Text;
                 string userName = userNameTextBox.Text;
                 string password = passwordTextBox.Text;
@@ -62,7 +66,7 @@ namespace BookHaven.Forms.Dashboard
                     return;
                 }
 
-                Staff staff = new Staff(staffName, userName, password, email, userRole);
+                Staff staff = new Staff(staffID , staffName, userName, password, email, userRole);
                 staff.AddStaff();
                 MessageBox.Show("Staff member added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LodaStaffDetails();
@@ -112,8 +116,83 @@ namespace BookHaven.Forms.Dashboard
                 con.Close();
             }
         }
+
+        private int SelectedStaffID;
+
+        private void staffDataGridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            if (staffDataGridview.Columns[e.ColumnIndex].Name == "edit")
+            {
+                addStaffBtn.Visible = false;
+
+                addStaffPanel.Visible = true;
+
+                updateButton.Visible = true;
+
+                passwordTextBox.Enabled = false;
+
+                userNameTextBox.Enabled = false;
+
+                SelectedStaffID = Convert.ToInt32(staffDataGridview.Rows[e.RowIndex].Cells["StaffID"].Value);
+                staffNameTextBox.Text = staffDataGridview.Rows[e.RowIndex].Cells["staffName"].Value.ToString();
+                emailTextBox.Text = staffDataGridview.Rows[e.RowIndex].Cells["Email"].Value.ToString();
+                staffRoleTextBox.Text = staffDataGridview.Rows[e.RowIndex].Cells["UserRole"].Value.ToString();
+
+                MessageBox.Show($"Selected Staff ID: {SelectedStaffID}", "Staff Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+            if(staffDataGridview.Columns[e.ColumnIndex].Name == "delete")
+            {
+                int staffID = Convert.ToInt32(staffDataGridview.Rows[e.RowIndex].Cells["StaffID"].Value);
+                string staffName = staffDataGridview.Rows[e.RowIndex].Cells["staffName"].Value.ToString();
+
+                DialogResult result = MessageBox.Show(
+                   $"Are you sure you want to delete {staffName}?",
+                   "Confirm Delete",
+                   MessageBoxButtons.OKCancel,
+                   MessageBoxIcon.Warning
+                );
+
+                if (result == DialogResult.OK)
+                {
+                    Staff.DeleteStaff(staffID);
+                    LodaStaffDetails(); // Refresh DataGridView
+                }
+            }
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string staffName = staffNameTextBox.Text;
+                string email = emailTextBox.Text;
+                string userRole = staffRoleTextBox.SelectedItem?.ToString();
+
+                if(string.IsNullOrEmpty(staffName) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(userRole))
+                {
+                    MessageBox.Show("Please fill all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Staff staff = new Staff(SelectedStaffID, staffName, "", "", email, userRole);
+                staff.UpdateStaff();
+
+                MessageBox.Show("Staff details updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LodaStaffDetails(); 
+                clear();
+                addStaffPanel.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         //======================================================= Datagrid view Edit and Delete colum ===========================================
 
-        
+
     }
 }
