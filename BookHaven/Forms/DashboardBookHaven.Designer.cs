@@ -311,6 +311,7 @@
             this.logOutBtn.Text = "Logout Account";
             this.logOutBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.logOutBtn.TextOffset = new System.Drawing.Point(30, 0);
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
             // DashboardBookHaven
             // 

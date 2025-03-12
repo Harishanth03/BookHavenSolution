@@ -116,7 +116,22 @@ namespace BookHaven
 
         private void DashboardBookHaven_Load(object sender, EventArgs e)
         {
-            //AccessControl();
+            AccessControl();
+        }
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                // Redirect to Login Form
+                loginFrm loginForm = new loginFrm();
+                loginForm.Show();
+
+                // Close the current Dashboard
+                this.Close();
+            }
         }
     }
 }

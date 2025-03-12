@@ -10,82 +10,74 @@ using System.Windows.Forms;
 
 namespace BookHaven.Model
 {
-    public class Staff
+    public abstract class Staff
     {
         public int Id { get; set; }
         public string StaffName { get; set; }
         public string UserName { get; set; }
-
-        public string Password;
+        public string Password { get; set; } // Changed to property
         public string Email { get; set; }
         public string UserRole { get; set; }
 
-
-        public Staff(int staffID ,  string staffName, string userName, string password, string email, string userRole)
+        protected Staff(int staffID, string staffName, string email, string userName, string password, string userRole)
         {
+            Id = staffID;
             StaffName = staffName;
             UserName = userName;
             Password = password;
             Email = email;
             UserRole = userRole;
-            Id = staffID;
         }
 
-        //======================================================== Add Staff Details ==========================================================
+        // 🔹 Abstract method for inserting role-specific data
+        public abstract void InsertRoleSpecificData(int staffID);
 
-        public void AddStaff()
+        // 🔹 Method to check if a user already exists
+        public static bool UserExists(string userName, string email)
         {
-            using(SqlConnection con = DatabaseConnection.GetConnection())
+            using (SqlConnection con = DatabaseConnection.GetConnection())
             {
                 con.Open();
-                string insertQuery = "INSERT INTO staff (Name , Email , UserName , UserRole , PasswordHash) VALUES(@name , @email , @username , @userrole , ENCRYPTBYPASSPHRASE(@Passphrase, @Password))";
-
-                using(SqlCommand cmd = new SqlCommand(insertQuery , con))
+                string checkQuery = "SELECT COUNT(*) FROM staff WHERE UserName = @username OR Email = @email";
+                using (SqlCommand cmd = new SqlCommand(checkQuery, con))
                 {
-                    cmd.Parameters.AddWithValue("@name", StaffName);
-                    cmd.Parameters.AddWithValue("@email", Email);
-                    cmd.Parameters.AddWithValue("@username", UserName);
-                    cmd.Parameters.AddWithValue("@Password", Password);
-                    cmd.Parameters.AddWithValue("@userrole", UserRole);
-                    cmd.Parameters.AddWithValue("@Passphrase", ENVProcess.GetEncryptionPassphrase());
-
-                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@username", userName);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    return Convert.ToInt32(cmd.ExecuteScalar()) > 0;
                 }
             }
         }
 
-        //=============================================== Login Staff Details ===========================================================
-
-        public bool login(string userName , string password , out string userRole)
+        //=============================================== 🔹 Static Login Method ===========================================================
+        public static bool Login(string userName, string password, out string userRole)
         {
             userRole = null;
-
-            string queryLogin = @"SELECT UserRole FROM staff WHERE UserName = @username AND CONVERT(NVARCHAR(MAX), DECRYPTBYPASSPHRASE(@Passphrase, PasswordHash)) = @password";
+            string queryLogin = @"SELECT UserRole FROM staff 
+                          WHERE UserName = @username 
+                          AND CONVERT(NVARCHAR(MAX), DECRYPTBYPASSPHRASE(@Passphrase, PasswordHash)) = @password";
 
             using (SqlConnection con = DatabaseConnection.GetConnection())
             {
                 con.Open();
-                using(SqlCommand cmd = new SqlCommand(queryLogin , con))
+                using (SqlCommand cmd = new SqlCommand(queryLogin, con))
                 {
                     cmd.Parameters.AddWithValue("@username", userName);
                     cmd.Parameters.AddWithValue("@password", password);
-                    cmd.Parameters.AddWithValue("@Passphrase" , ENVProcess.GetEncryptionPassphrase());
+                    cmd.Parameters.AddWithValue("@Passphrase", ENVProcess.GetEncryptionPassphrase());
 
                     object result = cmd.ExecuteScalar();
-                    if (result != null) 
-                    { 
+                    if (result != null)
+                    {
                         userRole = result.ToString();
                         return true;
                     }
                 }
-
             }
-
-             return false;
+            return false;
         }
 
-        //==================================================== Update Staff Details =======================================================
 
+        //==================================================== 🔹 Update Staff Details =======================================================
         public void UpdateStaff()
         {
             using (SqlConnection connection = DatabaseConnection.GetConnection())
@@ -94,7 +86,7 @@ namespace BookHaven.Model
 
                 string updateQuery = "UPDATE staff SET Name = @name, Email = @email, UserRole = @userrole WHERE StaffID = @staffID";
 
-                using (SqlCommand cmd = new SqlCommand(updateQuery , connection))
+                using (SqlCommand cmd = new SqlCommand(updateQuery, connection))
                 {
                     cmd.Parameters.AddWithValue("@name", StaffName);
                     cmd.Parameters.AddWithValue("@email", Email);
@@ -106,11 +98,10 @@ namespace BookHaven.Model
             }
         }
 
-        //====================================================== Delete Staff ============================================================
-
+        //====================================================== 🔹 Delete Staff ============================================================
         public static void DeleteStaff(int staffID)
         {
-            using (SqlConnection connection =DatabaseConnection.GetConnection())
+            using (SqlConnection connection = DatabaseConnection.GetConnection())
             {
                 connection.Open();
 

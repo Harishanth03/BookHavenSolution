@@ -291,6 +291,9 @@
     <Compile Include="Model\Customers.cs" />
     <Compile Include="Model\DatabaseConnection.cs" />
     <Compile Include="Model\ENVProcess.cs" />
+    <Compile Include="Model\PointOfSales.cs" />
+    <Compile Include="Model\SalesTransactionDetails.cs" />
+    <Compile Include="Model\SalesTransactionRepository.cs" />
     <Compile Include="Model\Staff.cs" />
     <Compile Include="Model\TransactionBase.cs" />
     <Compile Include="Program.cs" />

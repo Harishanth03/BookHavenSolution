@@ -14,6 +14,10 @@ namespace BookHaven.Forms.Dashboard
 {
     public partial class StaffControlForm: UserControl
     {
+
+       /* private int SelectedStaffID;*/ // Store the selected staff ID for update
+
+
         public StaffControlForm()
         {
             InitializeComponent();
@@ -50,34 +54,56 @@ namespace BookHaven.Forms.Dashboard
 
         private void addStaffBtn_Click(object sender, EventArgs e)
         {
-            
-            try
-            {
-                int staffID = 0;
-                string staffName = staffNameTextBox.Text;
-                string userName = userNameTextBox.Text;
-                string password = passwordTextBox.Text;
-                string email = emailTextBox.Text;
-                string userRole = staffRoleTextBox.SelectedItem?.ToString();
 
-                if(string.IsNullOrEmpty(staffName) || string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(userRole))
-                {
-                    MessageBox.Show("Please fill all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+            //try
+            //{
+            //    string staffName = staffNameTextBox.Text;
+            //    string userName = userNameTextBox.Text;
+            //    string password = passwordTextBox.Text;
+            //    string email = emailTextBox.Text;
+            //    string userRole = staffRoleTextBox.SelectedItem?.ToString();
 
-                Staff staff = new Staff(staffID , staffName, userName, password, email, userRole);
-                staff.AddStaff();
-                MessageBox.Show("Staff member added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LodaStaffDetails();
-                clear();
-                addStaffPanel.Visible = false;
+            //    if (string.IsNullOrEmpty(staffName) || string.IsNullOrEmpty(userName) ||
+            //        string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(userRole))
+            //    {
+            //        MessageBox.Show("Please fill all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return;
+            //    }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //    Staff newStaff;
+
+            //    if (userRole == "Admin")
+            //    {
+            //        newStaff = new Admin(0, staffName, email, userName, password);
+            //    }
+            //    else if (userRole == "SalesClerk")
+            //    {
+            //        newStaff = new SalesClerk(0, staffName, email, userName, password);
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Invalid role selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return;
+            //    }
+
+            //    if (newStaff is Admin admin)
+            //    {
+            //        admin.AddStaff();
+            //    }
+            //    else if (newStaff is SalesClerk clerk)
+            //    {
+            //        clerk.AddStaff();
+            //    }
+
+            //    MessageBox.Show("Staff member added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    LodaStaffDetails();
+            //    clear();
+            //    addStaffPanel.Visible = false;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -117,79 +143,95 @@ namespace BookHaven.Forms.Dashboard
             }
         }
 
-        private int SelectedStaffID;
+        //private int SelectedStaffID;
 
         private void staffDataGridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;
+            //if (e.RowIndex < 0) return;
 
-            if (staffDataGridview.Columns[e.ColumnIndex].Name == "edit")
-            {
-                addStaffBtn.Visible = false;
+            //if (staffDataGridview.Columns[e.ColumnIndex].Name == "edit")
+            //{
+            //    addStaffBtn.Visible = false;
 
-                addStaffPanel.Visible = true;
+            //    addStaffPanel.Visible = true;
 
-                updateButton.Visible = true;
+            //    updateButton.Visible = true;
 
-                passwordTextBox.Enabled = false;
+            //    passwordTextBox.Enabled = false;
 
-                userNameTextBox.Enabled = false;
+            //    userNameTextBox.Enabled = false;
 
-                SelectedStaffID = Convert.ToInt32(staffDataGridview.Rows[e.RowIndex].Cells["StaffID"].Value);
-                staffNameTextBox.Text = staffDataGridview.Rows[e.RowIndex].Cells["staffName"].Value.ToString();
-                emailTextBox.Text = staffDataGridview.Rows[e.RowIndex].Cells["Email"].Value.ToString();
-                staffRoleTextBox.Text = staffDataGridview.Rows[e.RowIndex].Cells["UserRole"].Value.ToString();
+            //    SelectedStaffID = Convert.ToInt32(staffDataGridview.Rows[e.RowIndex].Cells["StaffID"].Value);
+            //    staffNameTextBox.Text = staffDataGridview.Rows[e.RowIndex].Cells["staffName"].Value.ToString();
+            //    emailTextBox.Text = staffDataGridview.Rows[e.RowIndex].Cells["Email"].Value.ToString();
+            //    staffRoleTextBox.Text = staffDataGridview.Rows[e.RowIndex].Cells["UserRole"].Value.ToString();
 
-                MessageBox.Show($"Selected Staff ID: {SelectedStaffID}", "Staff Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    MessageBox.Show($"Selected Staff ID: {SelectedStaffID}", "Staff Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
+            //}
 
-            if(staffDataGridview.Columns[e.ColumnIndex].Name == "delete")
-            {
-                int staffID = Convert.ToInt32(staffDataGridview.Rows[e.RowIndex].Cells["StaffID"].Value);
-                string staffName = staffDataGridview.Rows[e.RowIndex].Cells["staffName"].Value.ToString();
+            //if(staffDataGridview.Columns[e.ColumnIndex].Name == "delete")
+            //{
+            //    int staffID = Convert.ToInt32(staffDataGridview.Rows[e.RowIndex].Cells["StaffID"].Value);
+            //    string staffName = staffDataGridview.Rows[e.RowIndex].Cells["staffName"].Value.ToString();
 
-                DialogResult result = MessageBox.Show(
-                   $"Are you sure you want to delete {staffName}?",
-                   "Confirm Delete",
-                   MessageBoxButtons.OKCancel,
-                   MessageBoxIcon.Warning
-                );
+            //    DialogResult result = MessageBox.Show(
+            //       $"Are you sure you want to delete {staffName}?",
+            //       "Confirm Delete",
+            //       MessageBoxButtons.OKCancel,
+            //       MessageBoxIcon.Warning
+            //    );
 
-                if (result == DialogResult.OK)
-                {
-                    Staff.DeleteStaff(staffID);
-                    LodaStaffDetails(); // Refresh DataGridView
-                }
-            }
+            //    if (result == DialogResult.OK)
+            //    {
+            //        Staff.DeleteStaff(staffID);
+            //        LodaStaffDetails(); // Refresh DataGridView
+            //    }
+            //}
         }
 
         private void updateButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string staffName = staffNameTextBox.Text;
-                string email = emailTextBox.Text;
-                string userRole = staffRoleTextBox.SelectedItem?.ToString();
+            //try
+            //{
+            //    string staffName = staffNameTextBox.Text;
+            //    string email = emailTextBox.Text;
+            //    string userRole = staffRoleTextBox.SelectedItem?.ToString();
 
-                if(string.IsNullOrEmpty(staffName) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(userRole))
-                {
-                    MessageBox.Show("Please fill all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+            //    if (string.IsNullOrEmpty(staffName) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(userRole))
+            //    {
+            //        MessageBox.Show("Please fill all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return;
+            //    }
 
-                Staff staff = new Staff(SelectedStaffID, staffName, "", "", email, userRole);
-                staff.UpdateStaff();
 
-                MessageBox.Show("Staff details updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LodaStaffDetails(); 
-                clear();
-                addStaffPanel.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //    Staff staff;
+
+
+            //    if (userRole == "Admin")
+            //    {
+            //        staff = new Admin(SelectedStaffID, staffName, email, "", "");
+            //    }
+            //    else if (userRole == "SalesClerk")
+            //    {
+            //        staff = new SalesClerk(SelectedStaffID, staffName, email, "", "");
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Invalid role selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return;
+            //    }
+
+
+            //    staff.UpdateStaff();
+
+            //    MessageBox.Show("Staff details updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+            //    addStaffPanel.Visible = false;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
         //======================================================= Datagrid view Edit and Delete colum ===========================================
 

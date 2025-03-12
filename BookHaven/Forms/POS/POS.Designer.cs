@@ -46,7 +46,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.PriceLable = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.customerComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.processSalesButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -57,7 +58,6 @@
             this.totalAmountLable = new System.Windows.Forms.Label();
             this.paymentMethodComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.discountTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.customerComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.summaryDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.bookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -325,25 +325,45 @@
             this.label8.Text = "Customer Name";
             this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // guna2Button1
+            // customerComboBox
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.customerComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.customerComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.customerComboBox.BorderRadius = 2;
+            this.customerComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.customerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.customerComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.customerComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.customerComboBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.customerComboBox.ForeColor = System.Drawing.Color.Black;
+            this.customerComboBox.ItemHeight = 30;
+            this.customerComboBox.Location = new System.Drawing.Point(4, 60);
+            this.customerComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.customerComboBox.Name = "customerComboBox";
+            this.customerComboBox.Size = new System.Drawing.Size(308, 36);
+            this.customerComboBox.TabIndex = 25;
+            this.customerComboBox.SelectedIndexChanged += new System.EventHandler(this.customerComboBox_SelectedIndexChanged);
+            // 
+            // processSalesButton
+            // 
+            this.processSalesButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button1.BorderRadius = 4;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(846, 4);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(414, 55);
-            this.guna2Button1.TabIndex = 26;
-            this.guna2Button1.Text = "Process Sales";
+            this.processSalesButton.BorderRadius = 4;
+            this.processSalesButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.processSalesButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.processSalesButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.processSalesButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.processSalesButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.processSalesButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
+            this.processSalesButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.processSalesButton.ForeColor = System.Drawing.Color.White;
+            this.processSalesButton.Location = new System.Drawing.Point(846, 4);
+            this.processSalesButton.Margin = new System.Windows.Forms.Padding(4);
+            this.processSalesButton.Name = "processSalesButton";
+            this.processSalesButton.Size = new System.Drawing.Size(414, 55);
+            this.processSalesButton.TabIndex = 26;
+            this.processSalesButton.Text = "Process Sales";
+            this.processSalesButton.Click += new System.EventHandler(this.processSalesButton_Click);
             // 
             // guna2Button2
             // 
@@ -394,7 +414,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel3.Controls.Add(this.guna2Button1, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.processSalesButton, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.guna2Button2, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.guna2Button3, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(37, 736);
@@ -530,25 +550,6 @@
             this.discountTextBox.Size = new System.Drawing.Size(306, 44);
             this.discountTextBox.TabIndex = 31;
             this.discountTextBox.TextChanged += new System.EventHandler(this.discountTextBox_TextChanged);
-            // 
-            // customerComboBox
-            // 
-            this.customerComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.customerComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.customerComboBox.BorderRadius = 2;
-            this.customerComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.customerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.customerComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.customerComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.customerComboBox.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.customerComboBox.ForeColor = System.Drawing.Color.Black;
-            this.customerComboBox.ItemHeight = 30;
-            this.customerComboBox.Location = new System.Drawing.Point(4, 60);
-            this.customerComboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.customerComboBox.Name = "customerComboBox";
-            this.customerComboBox.Size = new System.Drawing.Size(308, 36);
-            this.customerComboBox.TabIndex = 25;
-            this.customerComboBox.SelectedIndexChanged += new System.EventHandler(this.customerComboBox_SelectedIndexChanged);
             // 
             // summaryDataGridView
             // 
@@ -704,7 +705,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label PriceLable;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button processSalesButton;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;

@@ -61,8 +61,7 @@ namespace BookHaven
             //string password = PasswordTextBox.Text;
             //string userRole;
 
-            //Staff staff = new Staff("", userName , password , "" , "");
-            //if(staff.login(userName , password , out userRole))
+            //if (Staff.login(userName, password, out userRole))
             //{
             //    MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

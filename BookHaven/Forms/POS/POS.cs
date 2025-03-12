@@ -272,5 +272,88 @@ namespace BookHaven.Forms.POS
                 netRevenueLable.Text = "Net Revenue: රු. " + netRevenue.ToString("N2", CultureInfo.CreateSpecificCulture("si-LK")) + "/-";
             }
         }
+
+        private void processSalesButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(summaryDataGridView.Rows.Count  == 0)
+                {
+                    MessageBox.Show("No items to process!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if(SelectedBookID == 0)
+                {
+                    MessageBox.Show("Please select a customer!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if(string.IsNullOrEmpty(paymentMethodComboBox.Text))
+                {
+                    MessageBox.Show("Please select a payment method!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                decimal totalAmount = Convert.ToDecimal(totalAmountLable.Text.Replace("Total Price: රු.", "").Replace("/-", "").Trim(), CultureInfo.CreateSpecificCulture("si-LK"));
+
+                decimal discount = 0;
+
+                if(!string.IsNullOrEmpty(discountTextBox.Text))
+                {
+
+                    decimal.TryParse(discountTextBox.Text, out discount);
+
+                }
+
+                string paymentMethod = paymentMethodComboBox.Text;
+
+                int salesClerkID = 1;
+
+                PointOfSales salesTransaction = new PointOfSales(salesClerkID , SelectedCustomerID , totalAmount , paymentMethod , discount);
+
+                List<SalesTransactionDetails> salesTransactionDetails = new List<SalesTransactionDetails>();
+
+                foreach(DataGridViewRow row in summaryDataGridView.Rows)
+                {
+                    if (row.Cells["bookID"].Value != null && row.Cells["bookQuantity"].Value != null && row.Cells["bookPrice"].Value != null)
+                    {
+                        int bookID = Convert.ToInt32(row.Cells["bookID"].Value);
+                        int quantity = Convert.ToInt32(row.Cells["bookQuantity"].Value);
+                        decimal price = Convert.ToDecimal(row.Cells["bookPrice"].Value.ToString().Replace("රු.", "").Replace("/-", "").Trim(),CultureInfo.CreateSpecificCulture("si-LK"));
+                        salesTransactionDetails.Add(new SalesTransactionDetails(0, bookID, quantity, price));
+                    }
+                }
+
+                SalesTransactionRepository transactionRepo = new SalesTransactionRepository();
+
+                int transactionID = transactionRepo.SaveTransaction(salesTransaction, salesTransactionDetails);
+
+                if (transactionID > 0)
+                {
+                    MessageBox.Show("Transaction successful! Transaction ID: " + transactionID, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearPOS();
+                }
+                else
+                {
+                    MessageBox.Show("Transaction failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error processing sale: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ClearPOS()
+        {
+            summaryDataGridView.Rows.Clear();
+            totalAmountLable.Text = "Total Price: රු. 0.00/-";
+            discountTextBox.Clear();
+            netRevenueLable.Text = "Net Revenue: රු. 0.00/-";
+            customerComboBox.SelectedIndex = -1;
+            paymentMethodComboBox.SelectedIndex = -1;
+        }
     }
 }
