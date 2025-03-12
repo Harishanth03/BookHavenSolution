@@ -198,6 +198,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookHavenDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookHavenDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Book\BookForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -287,6 +292,7 @@
     <Compile Include="Model\DatabaseConnection.cs" />
     <Compile Include="Model\ENVProcess.cs" />
     <Compile Include="Model\Staff.cs" />
+    <Compile Include="Model\TransactionBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Book\BookForm.resx">
@@ -339,6 +345,17 @@
     </EmbeddedResource>
     <None Include=".env">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BookHavenDataSet.xsc">
+      <DependentUpon>BookHavenDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BookHavenDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookHavenDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookHavenDataSet.xss">
+      <DependentUpon>BookHavenDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,16 +42,9 @@
             this.bookNameComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.newCustomerButton = new Guna.UI2.WinForms.Guna2Button();
-            this.SammaryTable = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.CusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubtotalBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RemoveBtn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.PriceLable = new System.Windows.Forms.Label();
-            this.customerNameComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -64,12 +57,21 @@
             this.totalAmountLable = new System.Windows.Forms.Label();
             this.paymentMethodComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.discountTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.customerComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.summaryDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.bookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SammaryTable)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summaryDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -161,6 +163,7 @@
             this.addToSummaryBtn.Size = new System.Drawing.Size(308, 51);
             this.addToSummaryBtn.TabIndex = 23;
             this.addToSummaryBtn.Text = "Add To Summary";
+            this.addToSummaryBtn.Click += new System.EventHandler(this.addToSummaryBtn_Click);
             // 
             // QuantityTextBox
             // 
@@ -215,6 +218,7 @@
             this.bookNameComboBox.Name = "bookNameComboBox";
             this.bookNameComboBox.Size = new System.Drawing.Size(308, 36);
             this.bookNameComboBox.TabIndex = 20;
+            this.bookNameComboBox.SelectedIndexChanged += new System.EventHandler(this.bookNameComboBox_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -248,99 +252,6 @@
             this.newCustomerButton.TabIndex = 18;
             this.newCustomerButton.Text = "New Customer ?";
             // 
-            // SammaryTable
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.SammaryTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.SammaryTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SammaryTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.SammaryTable.ColumnHeadersHeight = 50;
-            this.SammaryTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.SammaryTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CusName,
-            this.BookQty,
-            this.BookPrice,
-            this.SubtotalBook,
-            this.RemoveBtn});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SammaryTable.DefaultCellStyle = dataGridViewCellStyle6;
-            this.SammaryTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.SammaryTable.Location = new System.Drawing.Point(37, 348);
-            this.SammaryTable.Margin = new System.Windows.Forms.Padding(0);
-            this.SammaryTable.Name = "SammaryTable";
-            this.SammaryTable.RowHeadersVisible = false;
-            this.SammaryTable.RowHeadersWidth = 100;
-            this.SammaryTable.Size = new System.Drawing.Size(1264, 228);
-            this.SammaryTable.TabIndex = 4;
-            this.SammaryTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.SammaryTable.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.SammaryTable.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.SammaryTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.SammaryTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.SammaryTable.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.SammaryTable.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.SammaryTable.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.SammaryTable.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.SammaryTable.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SammaryTable.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.SammaryTable.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.SammaryTable.ThemeStyle.HeaderStyle.Height = 50;
-            this.SammaryTable.ThemeStyle.ReadOnly = false;
-            this.SammaryTable.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.SammaryTable.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.SammaryTable.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SammaryTable.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.SammaryTable.ThemeStyle.RowsStyle.Height = 22;
-            this.SammaryTable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.SammaryTable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // CusName
-            // 
-            this.CusName.HeaderText = "Book Name";
-            this.CusName.MinimumWidth = 6;
-            this.CusName.Name = "CusName";
-            // 
-            // BookQty
-            // 
-            this.BookQty.HeaderText = "Quantity";
-            this.BookQty.MinimumWidth = 6;
-            this.BookQty.Name = "BookQty";
-            this.BookQty.ReadOnly = true;
-            // 
-            // BookPrice
-            // 
-            this.BookPrice.HeaderText = "Price";
-            this.BookPrice.MinimumWidth = 6;
-            this.BookPrice.Name = "BookPrice";
-            this.BookPrice.ReadOnly = true;
-            // 
-            // SubtotalBook
-            // 
-            this.SubtotalBook.HeaderText = "Sub Total";
-            this.SubtotalBook.MinimumWidth = 6;
-            this.SubtotalBook.Name = "SubtotalBook";
-            this.SubtotalBook.ReadOnly = true;
-            // 
-            // RemoveBtn
-            // 
-            this.RemoveBtn.HeaderText = "Remove";
-            this.RemoveBtn.MinimumWidth = 6;
-            this.RemoveBtn.Name = "RemoveBtn";
-            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -367,7 +278,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Controls.Add(this.PriceLable, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.customerNameComboBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.newCustomerButton, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label5, 2, 0);
@@ -375,6 +285,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.QuantityTextBox, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.addToSummaryBtn, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.customerComboBox, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(37, 126);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -395,28 +306,10 @@
             this.PriceLable.Location = new System.Drawing.Point(4, 107);
             this.PriceLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PriceLable.Name = "PriceLable";
-            this.PriceLable.Size = new System.Drawing.Size(188, 59);
+            this.PriceLable.Size = new System.Drawing.Size(119, 59);
             this.PriceLable.TabIndex = 24;
-            this.PriceLable.Text = "Price: 1400.00";
+            this.PriceLable.Text = "රු.00.00";
             this.PriceLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // customerNameComboBox
-            // 
-            this.customerNameComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.customerNameComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.customerNameComboBox.BorderRadius = 2;
-            this.customerNameComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.customerNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.customerNameComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.customerNameComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.customerNameComboBox.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.customerNameComboBox.ForeColor = System.Drawing.Color.Black;
-            this.customerNameComboBox.ItemHeight = 30;
-            this.customerNameComboBox.Location = new System.Drawing.Point(4, 60);
-            this.customerNameComboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.customerNameComboBox.Name = "customerNameComboBox";
-            this.customerNameComboBox.Size = new System.Drawing.Size(308, 36);
-            this.customerNameComboBox.TabIndex = 17;
             // 
             // label8
             // 
@@ -604,6 +497,10 @@
             this.paymentMethodComboBox.Font = new System.Drawing.Font("Poppins", 11.25F);
             this.paymentMethodComboBox.ForeColor = System.Drawing.Color.Black;
             this.paymentMethodComboBox.ItemHeight = 30;
+            this.paymentMethodComboBox.Items.AddRange(new object[] {
+            "Cash",
+            "Credit Card",
+            "Online"});
             this.paymentMethodComboBox.Location = new System.Drawing.Point(952, 74);
             this.paymentMethodComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.paymentMethodComboBox.Name = "paymentMethodComboBox";
@@ -632,17 +529,148 @@
             this.discountTextBox.SelectedText = "";
             this.discountTextBox.Size = new System.Drawing.Size(306, 44);
             this.discountTextBox.TabIndex = 31;
+            this.discountTextBox.TextChanged += new System.EventHandler(this.discountTextBox_TextChanged);
+            // 
+            // customerComboBox
+            // 
+            this.customerComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.customerComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.customerComboBox.BorderRadius = 2;
+            this.customerComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.customerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.customerComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.customerComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.customerComboBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.customerComboBox.ForeColor = System.Drawing.Color.Black;
+            this.customerComboBox.ItemHeight = 30;
+            this.customerComboBox.Location = new System.Drawing.Point(4, 60);
+            this.customerComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.customerComboBox.Name = "customerComboBox";
+            this.customerComboBox.Size = new System.Drawing.Size(308, 36);
+            this.customerComboBox.TabIndex = 25;
+            this.customerComboBox.SelectedIndexChanged += new System.EventHandler(this.customerComboBox_SelectedIndexChanged);
+            // 
+            // summaryDataGridView
+            // 
+            this.summaryDataGridView.AllowUserToAddRows = false;
+            this.summaryDataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.summaryDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.summaryDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.summaryDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.summaryDataGridView.ColumnHeadersHeight = 50;
+            this.summaryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.summaryDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bookID,
+            this.customerName,
+            this.bookName,
+            this.bookPrice,
+            this.bookQuantity,
+            this.Price,
+            this.delete});
+            this.summaryDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.summaryDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.summaryDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.summaryDataGridView.Location = new System.Drawing.Point(37, 348);
+            this.summaryDataGridView.Margin = new System.Windows.Forms.Padding(0);
+            this.summaryDataGridView.Name = "summaryDataGridView";
+            this.summaryDataGridView.RowHeadersVisible = false;
+            this.summaryDataGridView.RowHeadersWidth = 100;
+            this.summaryDataGridView.RowTemplate.Height = 35;
+            this.summaryDataGridView.Size = new System.Drawing.Size(1264, 228);
+            this.summaryDataGridView.TabIndex = 30;
+            this.summaryDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.summaryDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.summaryDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.summaryDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.summaryDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.summaryDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.summaryDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.summaryDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.summaryDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.summaryDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.summaryDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.summaryDataGridView.ThemeStyle.HeaderStyle.Height = 50;
+            this.summaryDataGridView.ThemeStyle.ReadOnly = false;
+            this.summaryDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.summaryDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.summaryDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.summaryDataGridView.ThemeStyle.RowsStyle.Height = 35;
+            this.summaryDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.summaryDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // bookID
+            // 
+            this.bookID.HeaderText = "Book ID";
+            this.bookID.MinimumWidth = 6;
+            this.bookID.Name = "bookID";
+            // 
+            // customerName
+            // 
+            this.customerName.HeaderText = "CustomerName";
+            this.customerName.MinimumWidth = 6;
+            this.customerName.Name = "customerName";
+            // 
+            // bookName
+            // 
+            this.bookName.HeaderText = "Book Name";
+            this.bookName.MinimumWidth = 6;
+            this.bookName.Name = "bookName";
+            // 
+            // bookPrice
+            // 
+            this.bookPrice.HeaderText = "BookPrice";
+            this.bookPrice.MinimumWidth = 6;
+            this.bookPrice.Name = "bookPrice";
+            // 
+            // bookQuantity
+            // 
+            this.bookQuantity.HeaderText = "Quantity";
+            this.bookQuantity.MinimumWidth = 6;
+            this.bookQuantity.Name = "bookQuantity";
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Sub Total";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            // 
+            // delete
+            // 
+            this.delete.FillWeight = 50F;
+            this.delete.HeaderText = "Delete";
+            this.delete.Image = global::BookHaven.Properties.Resources.delete;
+            this.delete.MinimumWidth = 6;
+            this.delete.Name = "delete";
+            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.summaryDataGridView);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.SammaryTable);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "POS";
             this.Size = new System.Drawing.Size(1333, 836);
@@ -651,12 +679,12 @@
             this.panel1.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SammaryTable)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summaryDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -666,7 +694,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2DataGridView SammaryTable;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox bookNameComboBox;
         private System.Windows.Forms.Label label5;
@@ -674,13 +701,7 @@
         private Guna.UI2.WinForms.Guna2TextBox QuantityTextBox;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button addToSummaryBtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CusName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookQty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubtotalBook;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RemoveBtn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2ComboBox customerNameComboBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label PriceLable;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
@@ -697,5 +718,14 @@
         private System.Windows.Forms.Label netRevenueLable;
         private Guna.UI2.WinForms.Guna2ComboBox paymentMethodComboBox;
         private Guna.UI2.WinForms.Guna2TextBox discountTextBox;
+        private Guna.UI2.WinForms.Guna2ComboBox customerComboBox;
+        private Guna.UI2.WinForms.Guna2DataGridView summaryDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewImageColumn delete;
     }
 }
