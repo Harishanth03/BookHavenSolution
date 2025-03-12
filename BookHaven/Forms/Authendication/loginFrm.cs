@@ -66,6 +66,23 @@ namespace BookHaven
             //{
             //    MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            //    // Determine which class to instantiate based on role
+            //    Staff staff;
+            //    if (userRole == "Admin")
+            //    {
+            //        staff = new Admin(0, "", "", userName, password); // Placeholder values
+            //    }
+            //    else if (userRole == "SalesClerk")
+            //    {
+            //        staff = new SalesClerk(0, "", "", userName, password);
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Invalid user role!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return;
+            //    }
+
+            //    // Open the dashboard and pass the role
             //    DashboardBookHaven dashboardBookHaven = new DashboardBookHaven(userRole);
             //    dashboardBookHaven.Show();
             //    this.Hide();
