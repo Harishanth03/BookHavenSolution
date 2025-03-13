@@ -48,7 +48,7 @@ namespace BookHaven.Model
             }
         }
 
-        //=============================================== 🔹 Static Login Method ===========================================================
+        //===============================================  Static Login Method ===========================================================
         public static bool Login(string userName, string password, out string userRole)
         {
             userRole = null;

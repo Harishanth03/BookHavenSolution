@@ -125,11 +125,8 @@ namespace BookHaven
 
             if (dialogResult == DialogResult.Yes)
             {
-                // Redirect to Login Form
                 loginFrm loginForm = new loginFrm();
                 loginForm.Show();
-
-                // Close the current Dashboard
                 this.Close();
             }
         }
