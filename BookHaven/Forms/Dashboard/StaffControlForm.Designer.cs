@@ -38,9 +38,6 @@
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.bookSearchTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.addStaffButton = new Guna.UI2.WinForms.Guna2Button();
             this.addStaffPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -58,7 +55,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.passwordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.closePictureBoc = new System.Windows.Forms.PictureBox();
+            this.staffSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.staffDataGridview)).BeginInit();
             this.addStaffPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -173,48 +175,6 @@
             this.CreatedAt.MinimumWidth = 6;
             this.CreatedAt.Name = "CreatedAt";
             // 
-            // edit
-            // 
-            this.edit.FillWeight = 50F;
-            this.edit.HeaderText = "Edit";
-            this.edit.Image = global::BookHaven.Properties.Resources.Edit;
-            this.edit.MinimumWidth = 6;
-            this.edit.Name = "edit";
-            this.edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // delete
-            // 
-            this.delete.FillWeight = 50F;
-            this.delete.HeaderText = "Delete";
-            this.delete.Image = global::BookHaven.Properties.Resources.delete;
-            this.delete.MinimumWidth = 6;
-            this.delete.Name = "delete";
-            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // bookSearchTextBox
-            // 
-            this.bookSearchTextBox.BorderRadius = 6;
-            this.bookSearchTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bookSearchTextBox.DefaultText = "";
-            this.bookSearchTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.bookSearchTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.bookSearchTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.bookSearchTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.bookSearchTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bookSearchTextBox.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookSearchTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bookSearchTextBox.IconRight = global::BookHaven.Properties.Resources.search;
-            this.bookSearchTextBox.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bookSearchTextBox.IconRightSize = new System.Drawing.Size(24, 24);
-            this.bookSearchTextBox.Location = new System.Drawing.Point(21, 12);
-            this.bookSearchTextBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.bookSearchTextBox.Name = "bookSearchTextBox";
-            this.bookSearchTextBox.PasswordChar = '\0';
-            this.bookSearchTextBox.PlaceholderText = "Search";
-            this.bookSearchTextBox.SelectedText = "";
-            this.bookSearchTextBox.Size = new System.Drawing.Size(443, 55);
-            this.bookSearchTextBox.TabIndex = 8;
-            // 
             // addStaffButton
             // 
             this.addStaffButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -232,7 +192,7 @@
             this.addStaffButton.Name = "addStaffButton";
             this.addStaffButton.Size = new System.Drawing.Size(204, 55);
             this.addStaffButton.TabIndex = 9;
-            this.addStaffButton.Text = "Add Book";
+            this.addStaffButton.Text = "Add Staff";
             this.addStaffButton.Click += new System.EventHandler(this.addStaffButton_Click);
             // 
             // addStaffPanel
@@ -253,12 +213,12 @@
             this.addStaffPanel.Controls.Add(this.closePictureBoc);
             this.addStaffPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.addStaffPanel.FillColor = System.Drawing.Color.White;
-            this.addStaffPanel.Location = new System.Drawing.Point(692, 0);
+            this.addStaffPanel.Location = new System.Drawing.Point(694, 0);
             this.addStaffPanel.Margin = new System.Windows.Forms.Padding(4);
             this.addStaffPanel.Name = "addStaffPanel";
             this.addStaffPanel.ShadowColor = System.Drawing.Color.Black;
             this.addStaffPanel.ShadowDepth = 50;
-            this.addStaffPanel.Size = new System.Drawing.Size(641, 836);
+            this.addStaffPanel.Size = new System.Drawing.Size(639, 836);
             this.addStaffPanel.TabIndex = 10;
             // 
             // flowLayoutPanel1
@@ -514,6 +474,26 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Staff Name";
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.FillWeight = 50F;
+            this.dataGridViewImageColumn1.HeaderText = "Edit";
+            this.dataGridViewImageColumn1.Image = global::BookHaven.Properties.Resources.Edit;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.Width = 91;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.FillWeight = 50F;
+            this.dataGridViewImageColumn2.HeaderText = "Delete";
+            this.dataGridViewImageColumn2.Image = global::BookHaven.Properties.Resources.delete;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn2.Width = 92;
+            // 
             // closePictureBoc
             // 
             this.closePictureBoc.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -527,6 +507,49 @@
             this.closePictureBoc.TabStop = false;
             this.closePictureBoc.Click += new System.EventHandler(this.closePictureBoc_Click);
             // 
+            // staffSearchBox
+            // 
+            this.staffSearchBox.BorderRadius = 6;
+            this.staffSearchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.staffSearchBox.DefaultText = "";
+            this.staffSearchBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.staffSearchBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.staffSearchBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.staffSearchBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.staffSearchBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.staffSearchBox.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staffSearchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.staffSearchBox.IconRight = global::BookHaven.Properties.Resources.search;
+            this.staffSearchBox.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.staffSearchBox.IconRightSize = new System.Drawing.Size(24, 24);
+            this.staffSearchBox.Location = new System.Drawing.Point(21, 12);
+            this.staffSearchBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.staffSearchBox.Name = "staffSearchBox";
+            this.staffSearchBox.PasswordChar = '\0';
+            this.staffSearchBox.PlaceholderText = "Search";
+            this.staffSearchBox.SelectedText = "";
+            this.staffSearchBox.Size = new System.Drawing.Size(443, 55);
+            this.staffSearchBox.TabIndex = 8;
+            this.staffSearchBox.TextChanged += new System.EventHandler(this.staffSearchBox_TextChanged);
+            // 
+            // edit
+            // 
+            this.edit.FillWeight = 50F;
+            this.edit.HeaderText = "Edit";
+            this.edit.Image = global::BookHaven.Properties.Resources.Edit;
+            this.edit.MinimumWidth = 6;
+            this.edit.Name = "edit";
+            this.edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // delete
+            // 
+            this.delete.FillWeight = 50F;
+            this.delete.HeaderText = "Delete";
+            this.delete.Image = global::BookHaven.Properties.Resources.delete;
+            this.delete.MinimumWidth = 6;
+            this.delete.Name = "delete";
+            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // StaffControlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -534,7 +557,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.addStaffPanel);
             this.Controls.Add(this.addStaffButton);
-            this.Controls.Add(this.bookSearchTextBox);
+            this.Controls.Add(this.staffSearchBox);
             this.Controls.Add(this.staffDataGridview);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StaffControlForm";
@@ -552,7 +575,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView staffDataGridview;
-        private Guna.UI2.WinForms.Guna2TextBox bookSearchTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox staffSearchBox;
         private Guna.UI2.WinForms.Guna2Button addStaffButton;
         private Guna.UI2.WinForms.Guna2ShadowPanel addStaffPanel;
         private Guna.UI2.WinForms.Guna2TextBox userNameTextBox;
@@ -579,5 +602,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CreatedAt;
         private System.Windows.Forms.DataGridViewImageColumn edit;
         private System.Windows.Forms.DataGridViewImageColumn delete;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }

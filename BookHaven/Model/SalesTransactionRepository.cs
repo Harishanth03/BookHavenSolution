@@ -22,7 +22,9 @@ namespace BookHaven.Model
 
                 try
                 {
-                    string insertTransactionQuery = @"INSERT INTO SalesTransaction (SalesClerkID, CustomerID, TotalAmount, PaymentMethod, Discount) VALUES (@SalesClerkID, @CustomerID, @TotalAmount, @PaymentMethod, @Discount); SELECT SCOPE_IDENTITY();";
+                    string insertTransactionQuery = @"INSERT INTO SalesTransaction (SalesClerkID, CustomerID, TotalAmount, PaymentMethod, Discount) 
+                                                    VALUES (@SalesClerkID, @CustomerID, @TotalAmount, @PaymentMethod, @Discount); 
+                                                    SELECT SCOPE_IDENTITY();";
 
                     using(SqlCommand cmd = new SqlCommand(insertTransactionQuery , con , sqlTransaction))
                     {
@@ -37,7 +39,8 @@ namespace BookHaven.Model
 
                     foreach(var detail in details)
                     {
-                        string insertDetailQuery = @"INSERT INTO SalesTransactionDetails (SalesTransactionID, BookID, Quantity, Price) VALUES (@SalesTransactionID, @BookID, @Quantity, @Price);";
+                        string insertDetailQuery = @"INSERT INTO SalesTransactionDetails (SalesTransactionID, BookID, Quantity, Price) 
+                                                    VALUES (@SalesTransactionID, @BookID, @Quantity, @Price);";
 
                         using(SqlCommand cmd = new SqlCommand(insertDetailQuery , con , sqlTransaction))
                         {

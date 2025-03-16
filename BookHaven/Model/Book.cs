@@ -39,7 +39,8 @@ namespace BookHaven.Model
             {
                 connection.Open();
 
-                string bookInsertQuery = "INSERT INTO Book (Title, Author, ISBN, Genre, Price, StockQuantity) VALUES (@title, @author, @isbn, @genre, @price, @stockQuantity)";
+                string bookInsertQuery = "INSERT INTO Book (Title, Author, ISBN, Genre, Price, StockQuantity) " +
+                                         "VALUES (@title, @author, @isbn, @genre, @price, @stockQuantity)";
 
                 using (SqlCommand command = new SqlCommand(bookInsertQuery, connection))
                 {

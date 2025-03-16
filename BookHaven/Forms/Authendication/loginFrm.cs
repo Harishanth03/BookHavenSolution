@@ -13,6 +13,11 @@ namespace BookHaven
 {
     public partial class loginFrm: Form
     {
+
+        public static string userRole;
+        public static string staffName;
+        public static int staffID;
+
         public loginFrm()
         {
             InitializeComponent();
@@ -57,39 +62,38 @@ namespace BookHaven
 
         private void signinButton_Click(object sender, EventArgs e)
         {
-            //string userName = usernameTextBox.Text;
-            //string password = PasswordTextBox.Text;
-            //string userRole;
+            if(string.IsNullOrEmpty(usernameTextBox.Text))
+            {
+                MessageBox.Show("Username Name is required!", "Missing Field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            //if (Staff.login(userName, password, out userRole))
-            //{
-            //    MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if(string.IsNullOrEmpty(PasswordTextBox.Text))
+            {
+                MessageBox.Show("Password is required!", "Missing Field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            //    // Determine which class to instantiate based on role
-            //    Staff staff;
-            //    if (userRole == "Admin")
-            //    {
-            //        staff = new Admin(0, "", "", userName, password); // Placeholder values
-            //    }
-            //    else if (userRole == "SalesClerk")
-            //    {
-            //        staff = new SalesClerk(0, "", "", userName, password);
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Invalid user role!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        return;
-            //    }
+            string userName = usernameTextBox.Text;
+            string password = PasswordTextBox.Text;
 
-            //    // Open the dashboard and pass the role
-            //    DashboardBookHaven dashboardBookHaven = new DashboardBookHaven(userRole);
-            //    dashboardBookHaven.Show();
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Invalid username or password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+
+            if(StaffRepository.LoginStaff(userName , password , out userRole , out staffName , out staffID))
+            {
+                MessageBox.Show($"Hello {staffID} your Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                DashboardBookHaven dashboard = new DashboardBookHaven();
+
+                this.Hide();
+
+                dashboard.Show();
+            }
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

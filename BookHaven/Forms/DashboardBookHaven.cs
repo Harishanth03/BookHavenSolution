@@ -3,6 +3,7 @@ using BookHaven.Forms.Customer;
 using BookHaven.Forms.Dashboard;
 using BookHaven.Forms.Orders;
 using BookHaven.Forms.POS;
+using BookHaven.Forms.Report;
 using BookHaven.Forms.Suppliers;
 using System;
 using System.Collections.Generic;
@@ -129,6 +130,14 @@ namespace BookHaven
                 loginForm.Show();
                 this.Close();
             }
+        }
+
+        private void reportButton_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear();
+            ReportForm frm = new ReportForm();
+            frm.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(frm);
         }
     }
 }

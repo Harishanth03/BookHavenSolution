@@ -48,8 +48,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 67);
+            this.panel1.Size = new System.Drawing.Size(1333, 82);
             this.panel1.TabIndex = 3;
             // 
             // label1
@@ -59,9 +60,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 16);
+            this.label1.Location = new System.Drawing.Point(4, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 34);
+            this.label1.Size = new System.Drawing.Size(153, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "Dashboard";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -74,9 +76,10 @@
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Controls.Add(this.tableLayoutPanel2);
-            this.guna2Panel1.Location = new System.Drawing.Point(28, 78);
+            this.guna2Panel1.Location = new System.Drawing.Point(37, 96);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(945, 62);
+            this.guna2Panel1.Size = new System.Drawing.Size(1260, 76);
             this.guna2Panel1.TabIndex = 10;
             // 
             // tableLayoutPanel2
@@ -92,11 +95,12 @@
             this.tableLayoutPanel2.Controls.Add(this.orderBtn, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.orderManagmentBtn, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.lowInventoryBtn, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 5);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 6);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(939, 53);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1252, 65);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // staffManagmentBtn
@@ -114,9 +118,10 @@
             this.staffManagmentBtn.FillColor = System.Drawing.Color.White;
             this.staffManagmentBtn.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.staffManagmentBtn.ForeColor = System.Drawing.Color.Gray;
-            this.staffManagmentBtn.Location = new System.Drawing.Point(705, 3);
+            this.staffManagmentBtn.Location = new System.Drawing.Point(943, 4);
+            this.staffManagmentBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.staffManagmentBtn.Name = "staffManagmentBtn";
-            this.staffManagmentBtn.Size = new System.Drawing.Size(231, 47);
+            this.staffManagmentBtn.Size = new System.Drawing.Size(305, 57);
             this.staffManagmentBtn.TabIndex = 14;
             this.staffManagmentBtn.Text = "Staff Managment";
             this.staffManagmentBtn.Click += new System.EventHandler(this.staffManagmentBtn_Click);
@@ -137,9 +142,10 @@
             this.orderBtn.FillColor = System.Drawing.Color.Transparent;
             this.orderBtn.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.orderBtn.ForeColor = System.Drawing.Color.Gray;
-            this.orderBtn.Location = new System.Drawing.Point(3, 3);
+            this.orderBtn.Location = new System.Drawing.Point(4, 4);
+            this.orderBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.orderBtn.Name = "orderBtn";
-            this.orderBtn.Size = new System.Drawing.Size(228, 47);
+            this.orderBtn.Size = new System.Drawing.Size(305, 57);
             this.orderBtn.TabIndex = 11;
             this.orderBtn.Text = "Graph report";
             this.orderBtn.Click += new System.EventHandler(this.orderBtn_Click);
@@ -159,9 +165,10 @@
             this.orderManagmentBtn.FillColor = System.Drawing.Color.White;
             this.orderManagmentBtn.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderManagmentBtn.ForeColor = System.Drawing.Color.Gray;
-            this.orderManagmentBtn.Location = new System.Drawing.Point(471, 3);
+            this.orderManagmentBtn.Location = new System.Drawing.Point(630, 4);
+            this.orderManagmentBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.orderManagmentBtn.Name = "orderManagmentBtn";
-            this.orderManagmentBtn.Size = new System.Drawing.Size(228, 47);
+            this.orderManagmentBtn.Size = new System.Drawing.Size(305, 57);
             this.orderManagmentBtn.TabIndex = 13;
             this.orderManagmentBtn.Text = "Order managment";
             this.orderManagmentBtn.Click += new System.EventHandler(this.orderManagmentBtn_Click);
@@ -181,9 +188,10 @@
             this.lowInventoryBtn.FillColor = System.Drawing.Color.White;
             this.lowInventoryBtn.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lowInventoryBtn.ForeColor = System.Drawing.Color.Gray;
-            this.lowInventoryBtn.Location = new System.Drawing.Point(237, 3);
+            this.lowInventoryBtn.Location = new System.Drawing.Point(317, 4);
+            this.lowInventoryBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lowInventoryBtn.Name = "lowInventoryBtn";
-            this.lowInventoryBtn.Size = new System.Drawing.Size(228, 47);
+            this.lowInventoryBtn.Size = new System.Drawing.Size(305, 57);
             this.lowInventoryBtn.TabIndex = 12;
             this.lowInventoryBtn.Text = "Low Inventory";
             this.lowInventoryBtn.Click += new System.EventHandler(this.lowInventoryBtn_Click);
@@ -194,20 +202,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dashboardPanel.BackColor = System.Drawing.Color.White;
-            this.dashboardPanel.Location = new System.Drawing.Point(28, 146);
+            this.dashboardPanel.Location = new System.Drawing.Point(37, 180);
+            this.dashboardPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dashboardPanel.Name = "dashboardPanel";
-            this.dashboardPanel.Size = new System.Drawing.Size(945, 512);
+            this.dashboardPanel.Size = new System.Drawing.Size(1260, 630);
             this.dashboardPanel.TabIndex = 11;
             // 
             // DashbaordForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dashboardPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DashbaordForm";
-            this.Size = new System.Drawing.Size(1000, 679);
+            this.Size = new System.Drawing.Size(1333, 836);
+            this.Load += new System.EventHandler(this.DashbaordForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);

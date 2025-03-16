@@ -281,20 +281,29 @@
     <Compile Include="Forms\POS\POS.Designer.cs">
       <DependentUpon>POS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Report\Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Report\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Suppliers\SupplierForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\Suppliers\SupplierForm.Designer.cs">
       <DependentUpon>SupplierForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Book.cs" />
     <Compile Include="Model\Customers.cs" />
     <Compile Include="Model\DatabaseConnection.cs" />
     <Compile Include="Model\ENVProcess.cs" />
     <Compile Include="Model\PointOfSales.cs" />
+    <Compile Include="Model\SalesClerk.cs" />
     <Compile Include="Model\SalesTransactionDetails.cs" />
     <Compile Include="Model\SalesTransactionRepository.cs" />
     <Compile Include="Model\Staff.cs" />
+    <Compile Include="Model\StaffRepository.cs" />
     <Compile Include="Model\TransactionBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -336,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\POS\POS.resx">
       <DependentUpon>POS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Suppliers\SupplierForm.resx">
       <DependentUpon>SupplierForm.cs</DependentUpon>
@@ -477,6 +489,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

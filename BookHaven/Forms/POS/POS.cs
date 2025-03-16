@@ -26,6 +26,7 @@ namespace BookHaven.Forms.POS
             InitializeComponent();
             bookNameComboBox.SelectedIndexChanged += bookNameComboBox_SelectedIndexChanged;
             QuantityTextBox.TextChanged += QuantityTextBox_TextChanged;
+            StaffNameLable.Text = loginFrm.staffName;
         }
 
         private void QuantityTextBox_TextChanged(object sender, EventArgs e)
@@ -308,7 +309,7 @@ namespace BookHaven.Forms.POS
 
                 string paymentMethod = paymentMethodComboBox.Text;
 
-                int salesClerkID = 1;
+                int salesClerkID = loginFrm.staffID;
 
                 PointOfSales salesTransaction = new PointOfSales(salesClerkID , SelectedCustomerID , totalAmount , paymentMethod , discount);
 

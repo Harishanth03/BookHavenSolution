@@ -30,7 +30,6 @@
         {
             this.mainPanel = new System.Windows.Forms.Panel();
             this.sideBarPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dashboardButton = new Guna.UI2.WinForms.Guna2Button();
             this.customerButton = new Guna.UI2.WinForms.Guna2Button();
             this.BookButton = new Guna.UI2.WinForms.Guna2Button();
@@ -39,6 +38,8 @@
             this.supplierButton = new Guna.UI2.WinForms.Guna2Button();
             this.reportButton = new Guna.UI2.WinForms.Guna2Button();
             this.logOutBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.stockBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sideBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +65,7 @@
             this.sideBarPanel.Controls.Add(this.pointOfSaleButton);
             this.sideBarPanel.Controls.Add(this.orderButton);
             this.sideBarPanel.Controls.Add(this.supplierButton);
+            this.sideBarPanel.Controls.Add(this.stockBtn);
             this.sideBarPanel.Controls.Add(this.reportButton);
             this.sideBarPanel.Controls.Add(this.logOutBtn);
             this.sideBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -74,17 +76,6 @@
             this.sideBarPanel.Size = new System.Drawing.Size(267, 836);
             this.sideBarPanel.TabIndex = 0;
             this.sideBarPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sideBarPanel_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BookHaven.Properties.Resources.BH_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(29, 25, 29, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // dashboardButton
             // 
@@ -280,7 +271,7 @@
             this.reportButton.FillColor = System.Drawing.Color.Transparent;
             this.reportButton.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
             this.reportButton.ForeColor = System.Drawing.Color.Gray;
-            this.reportButton.Location = new System.Drawing.Point(11, 472);
+            this.reportButton.Location = new System.Drawing.Point(11, 533);
             this.reportButton.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.reportButton.Name = "reportButton";
             this.reportButton.Size = new System.Drawing.Size(249, 57);
@@ -288,6 +279,7 @@
             this.reportButton.Text = "Report";
             this.reportButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.reportButton.TextOffset = new System.Drawing.Point(30, 0);
+            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
             // 
             // logOutBtn
             // 
@@ -303,7 +295,7 @@
             this.logOutBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
             this.logOutBtn.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOutBtn.ForeColor = System.Drawing.Color.White;
-            this.logOutBtn.Location = new System.Drawing.Point(11, 536);
+            this.logOutBtn.Location = new System.Drawing.Point(11, 597);
             this.logOutBtn.Margin = new System.Windows.Forms.Padding(11, 5, 11, 2);
             this.logOutBtn.Name = "logOutBtn";
             this.logOutBtn.Size = new System.Drawing.Size(249, 57);
@@ -312,6 +304,45 @@
             this.logOutBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.logOutBtn.TextOffset = new System.Drawing.Point(30, 0);
             this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
+            // 
+            // stockBtn
+            // 
+            this.stockBtn.BorderRadius = 5;
+            this.stockBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.stockBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            this.stockBtn.CheckedState.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stockBtn.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.stockBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.stockBtn.CustomImages.CheckedImage = global::BookHaven.Properties.Resources.inventor;
+            this.stockBtn.CustomImages.Image = global::BookHaven.Properties.Resources.inven;
+            this.stockBtn.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.stockBtn.CustomImages.ImageSize = new System.Drawing.Size(23, 23);
+            this.stockBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.stockBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.stockBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.stockBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.stockBtn.FillColor = System.Drawing.Color.Transparent;
+            this.stockBtn.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold);
+            this.stockBtn.ForeColor = System.Drawing.Color.Gray;
+            this.stockBtn.Location = new System.Drawing.Point(11, 472);
+            this.stockBtn.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
+            this.stockBtn.Name = "stockBtn";
+            this.stockBtn.Size = new System.Drawing.Size(249, 57);
+            this.stockBtn.TabIndex = 11;
+            this.stockBtn.Text = "Book Stock";
+            this.stockBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.stockBtn.TextOffset = new System.Drawing.Point(30, 0);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BookHaven.Properties.Resources.BH_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(29, 25, 29, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(208, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // DashboardBookHaven
             // 
@@ -345,5 +376,6 @@
         private Guna.UI2.WinForms.Guna2Button reportButton;
         private Guna.UI2.WinForms.Guna2Button pointOfSaleButton;
         private Guna.UI2.WinForms.Guna2Button logOutBtn;
+        private Guna.UI2.WinForms.Guna2Button stockBtn;
     }
 }

@@ -61,5 +61,13 @@ namespace BookHaven.Forms.Dashboard
             staffControl.Dock = DockStyle.Fill;
             dashboardPanel.Controls.Add(staffControl);
         }
+
+        private void DashbaordForm_Load(object sender, EventArgs e)
+        {
+            if(loginFrm.userRole == "SalesClerk")
+            {
+                staffManagmentBtn.Enabled = false;
+            }
+        }
     }
 }
