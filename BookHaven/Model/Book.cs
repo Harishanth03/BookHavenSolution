@@ -99,5 +99,41 @@ namespace BookHaven.Model
                 throw;
             }
         }
+
+        public static bool deleteBook(int bookID)
+        {
+            try
+            {
+                using (SqlConnection connection = DatabaseConnection.GetConnection())
+                {
+                    connection.Open();
+
+                    string deleteStaffQuery = "DELETE FROM staff WHERE StaffID = @staffID";
+
+                    using (SqlCommand cmd = new SqlCommand(deleteStaffQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@staffID", bookID);
+
+                        int rowDeleted = cmd.ExecuteNonQuery();
+
+                        if (rowDeleted > 0)
+                        {
+                            MessageBox.Show("Book deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No matching  book found. Deletion failed.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error inserting staff: " + ex.Message);
+                throw;
+            }
+        }
     }
 }
