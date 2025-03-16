@@ -100,19 +100,19 @@ namespace BookHaven.Model
             }
         }
 
-        public static bool deleteBook(int bookID)
+        public static bool deleteBook(int bookID) //get the BookID as parameter from Object Creation in Butt0n clck event
         {
             try
             {
-                using (SqlConnection connection = DatabaseConnection.GetConnection())
+                using (SqlConnection connection = DatabaseConnection.GetConnection()) 
                 {
                     connection.Open();
 
-                    string deleteStaffQuery = "DELETE FROM staff WHERE StaffID = @staffID";
+                    string deleteStaffQuery = "DELETE FROM staff WHERE BookID = @bookID";
 
                     using (SqlCommand cmd = new SqlCommand(deleteStaffQuery, connection))
                     {
-                        cmd.Parameters.AddWithValue("@staffID", bookID);
+                        cmd.Parameters.AddWithValue("@bookID", bookID);
 
                         int rowDeleted = cmd.ExecuteNonQuery();
 
