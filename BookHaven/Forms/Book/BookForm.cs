@@ -155,6 +155,20 @@ namespace BookHaven.Forms.Book
                 MessageBox.Show($"Selected Staff ID: {selectedBookID}", "Staff Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
+
+            if (bookDataGridView.Columns[e.ColumnIndex].Name == "delete")
+            {
+                selectedBookID = Convert.ToInt32(bookDataGridView.Rows[e.RowIndex].Cells["bookID"].Value);
+                string BookName = bookDataGridView.Rows[e.RowIndex].Cells["bookName"].Value.ToString();
+
+                DialogResult result = MessageBox.Show($"Are you sure you want to delete {bookNameTextBox.Text}?", "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.OK)
+                {
+                    BookRespo.deleteBook(selectedBookID);
+                    bookDataGridViewShow(); // Refresh DataGridView
+                }
+            }
         }
 
         private void updateButton_Click(object sender, EventArgs e)

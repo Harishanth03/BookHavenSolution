@@ -108,7 +108,7 @@ namespace BookHaven.Model
                 {
                     connection.Open();
 
-                    string deleteStaffQuery = "DELETE FROM staff WHERE BookID = @bookID";
+                    string deleteStaffQuery = "DELETE FROM Book WHERE BookID = @bookID";
 
                     using (SqlCommand cmd = new SqlCommand(deleteStaffQuery, connection))
                     {
