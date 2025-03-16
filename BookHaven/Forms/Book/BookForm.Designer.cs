@@ -57,9 +57,9 @@
             this.bookDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.bookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.author = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isbn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edit = new System.Windows.Forms.DataGridViewImageColumn();
@@ -193,6 +193,7 @@
             this.updateButton.Size = new System.Drawing.Size(601, 55);
             this.updateButton.TabIndex = 18;
             this.updateButton.Text = "Update Staff";
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // clearButton
             // 
@@ -495,9 +496,9 @@
             this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bookID,
             this.bookName,
-            this.bookGenre,
             this.author,
             this.isbn,
+            this.bookGenre,
             this.price,
             this.bookQuantity,
             this.edit,
@@ -555,12 +556,6 @@
             this.bookName.MinimumWidth = 6;
             this.bookName.Name = "bookName";
             // 
-            // bookGenre
-            // 
-            this.bookGenre.HeaderText = "Book Genre";
-            this.bookGenre.MinimumWidth = 6;
-            this.bookGenre.Name = "bookGenre";
-            // 
             // author
             // 
             this.author.HeaderText = "Author";
@@ -572,6 +567,12 @@
             this.isbn.HeaderText = "ISBN";
             this.isbn.MinimumWidth = 6;
             this.isbn.Name = "isbn";
+            // 
+            // bookGenre
+            // 
+            this.bookGenre.HeaderText = "Book Genre";
+            this.bookGenre.MinimumWidth = 6;
+            this.bookGenre.Name = "bookGenre";
             // 
             // price
             // 
@@ -655,9 +656,9 @@
         private Guna.UI2.WinForms.Guna2DataGridView bookDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookID;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookGenre;
         private System.Windows.Forms.DataGridViewTextBoxColumn author;
         private System.Windows.Forms.DataGridViewTextBoxColumn isbn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookGenre;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookQuantity;
         private System.Windows.Forms.DataGridViewImageColumn edit;

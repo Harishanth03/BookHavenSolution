@@ -150,9 +150,66 @@ namespace BookHaven.Forms.Book
                 bookQuantityTextBox.Text = Convert.ToInt32(bookDataGridView.Rows[e.RowIndex].Cells["bookQuantity"].Value).ToString();
 
                 addBookPanel.Visible = true;
+                bookQuantityTextBox.Enabled = false;
 
                 MessageBox.Show($"Selected Staff ID: {selectedBookID}", "Staff Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            }
+
+            if (bookDataGridView.Columns[e.ColumnIndex].Name == "delete")
+            {
+                selectedBookID = Convert.ToInt32(bookDataGridView.Rows[e.RowIndex].Cells["bookID"].Value);
+                string BookName = bookDataGridView.Rows[e.RowIndex].Cells["bookName"].Value.ToString();
+
+                DialogResult result = MessageBox.Show($"Are you sure you want to delete {bookNameTextBox.Text}?", "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.OK)
+                {
+                    BookRespo.deleteBook(selectedBookID);
+                    bookDataGridViewShow(); // Refresh DataGridView
+                }
+            }
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string title = bookNameTextBox.Text;
+
+                string author = authorTextBox.Text;
+
+                string isbn = isbnTextBox.Text;
+
+                string genre = genreComboBox.SelectedItem?.ToString();
+
+                decimal price = Convert.ToDecimal(bookPriceTextBox.Text);
+
+                int stockQuantity = Convert.ToInt32(bookQuantityTextBox.Text);
+
+                if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(author) || string.IsNullOrEmpty(isbn) || string.IsNullOrEmpty(genre))
+                {
+                    MessageBox.Show("Please fill all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Books bookUpdate = new Books(title, author, isbn, genre, price, stockQuantity);
+                bool isUpdated  = BookRespo.updateBook( selectedBookID ,bookUpdate);
+
+                if(isUpdated)
+                {
+                    ClearFields();
+
+                    addBookPanel.Visible=false;
+
+                    bookDataGridViewShow();
+                }
+
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Error inserting staff: " + ex.Message);
+                throw;
             }
         }
     }
