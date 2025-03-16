@@ -193,6 +193,7 @@
             this.updateButton.Size = new System.Drawing.Size(601, 55);
             this.updateButton.TabIndex = 18;
             this.updateButton.Text = "Update Staff";
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // clearButton
             // 
