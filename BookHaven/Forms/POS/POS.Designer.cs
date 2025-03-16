@@ -48,7 +48,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.customerComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.processSalesButton = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.receiptPrintButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -365,25 +365,26 @@
             this.processSalesButton.Text = "Process Sales";
             this.processSalesButton.Click += new System.EventHandler(this.processSalesButton_Click);
             // 
-            // guna2Button2
+            // receiptPrintButton
             // 
-            this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.receiptPrintButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button2.BorderRadius = 4;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(425, 4);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(413, 55);
-            this.guna2Button2.TabIndex = 33;
-            this.guna2Button2.Text = "Receipt ";
+            this.receiptPrintButton.BorderRadius = 4;
+            this.receiptPrintButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.receiptPrintButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.receiptPrintButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.receiptPrintButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.receiptPrintButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.receiptPrintButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            this.receiptPrintButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receiptPrintButton.ForeColor = System.Drawing.Color.White;
+            this.receiptPrintButton.Location = new System.Drawing.Point(425, 4);
+            this.receiptPrintButton.Margin = new System.Windows.Forms.Padding(4);
+            this.receiptPrintButton.Name = "receiptPrintButton";
+            this.receiptPrintButton.Size = new System.Drawing.Size(413, 55);
+            this.receiptPrintButton.TabIndex = 33;
+            this.receiptPrintButton.Text = "Receipt ";
+            this.receiptPrintButton.Click += new System.EventHandler(this.receiptPrintButton_Click);
             // 
             // guna2Button3
             // 
@@ -415,7 +416,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel3.Controls.Add(this.processSalesButton, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.guna2Button2, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.receiptPrintButton, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.guna2Button3, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(37, 736);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
@@ -706,7 +707,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label PriceLable;
         private Guna.UI2.WinForms.Guna2Button processSalesButton;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button receiptPrintButton;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;

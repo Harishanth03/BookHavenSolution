@@ -53,6 +53,8 @@ namespace BookHaven.Model
                         }
                     }
 
+                    UpdateTotalSpent(con, sqlTransaction, salesTransaction.CustomerID, salesTransaction.CalculateNetRevenue());
+
                     sqlTransaction.Commit();
                 }
                 catch (Exception ex)
@@ -63,6 +65,61 @@ namespace BookHaven.Model
             }
 
             return salesTransactionID;
+        }
+
+        //============================================== Update the total spent =================================================
+
+        public static void UpdateTotalSpent( SqlConnection con , SqlTransaction sqlTransaction , int customerID , decimal newPurchaseAmount)
+        {
+            decimal previousTotalSpent = 0; // get the previoud amount  from database and save it on a variable
+
+            string getTotalSpentQuery = "SELECT TotalSpent FROM Customer WHERE CustomerID = @CustomerID";
+
+            using(SqlCommand cmd = new SqlCommand(getTotalSpentQuery , con , sqlTransaction))
+            {
+                cmd.Parameters.AddWithValue("@CustomerID", customerID);
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                {
+                    previousTotalSpent = Convert.ToDecimal(result);
+                }
+            }
+
+            decimal UpdatedTotalSpent = previousTotalSpent + newPurchaseAmount;
+
+            string updateTotalSpentQuery = "UPDATE Customer SET TotalSpent = @UpdatedTotalSpent WHERE CustomerID = @CustomerID";
+
+            using (SqlCommand cmd = new SqlCommand(updateTotalSpentQuery, con, sqlTransaction))
+            {
+                cmd.Parameters.AddWithValue("@UpdatedTotalSpent", UpdatedTotalSpent);
+                cmd.Parameters.AddWithValue("@CustomerID", customerID);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        //=========================================== Get Total Sales =======================================================
+
+        public static int getTotalSales()
+        {
+            int totalSales = 0;
+
+            using (SqlConnection con = DatabaseConnection.GetConnection())
+            {
+                con.Open();
+
+                string query = "SELECT COUNT(*) FROM SalesTransaction"; // Counting total transactions
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    object result = cmd.ExecuteScalar();
+                    if (result != DBNull.Value && result != null)
+                    {
+                        totalSales = Convert.ToInt32(result);
+                    }
+                }
+            }
+
+            return totalSales;
         }
     }
 }

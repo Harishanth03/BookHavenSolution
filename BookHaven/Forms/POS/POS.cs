@@ -333,6 +333,7 @@ namespace BookHaven.Forms.POS
                 if (transactionID > 0)
                 {
                     MessageBox.Show("Transaction successful! Transaction ID: " + transactionID, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     ClearPOS();
                 }
                 else
@@ -355,6 +356,38 @@ namespace BookHaven.Forms.POS
             netRevenueLable.Text = "Net Revenue: රු. 0.00/-";
             customerComboBox.SelectedIndex = -1;
             paymentMethodComboBox.SelectedIndex = -1;
+        }
+
+        private void receiptPrintButton_Click(object sender, EventArgs e)
+        {
+            if (summaryDataGridView.Rows.Count == 0)
+            {
+                MessageBox.Show("No items to print!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string transactionID = "TID" + DateTime.Now.ToString("yyyyMMddHHmmss");
+            string customerName = "Walk-in Customer"; // Default
+
+            if (customerComboBox.SelectedItem is DataRowView selectedRow)
+            {
+               customerName = customerComboBox.Text;            
+            }
+
+            string totalAmount = totalAmountLable.Text;
+            string discount = discountTextBox.Text;
+            string netRevenue = netRevenueLable.Text;
+
+            ReceiptPrint receiptPrinter = new ReceiptPrint(
+                transactionID,
+                customerName,
+                totalAmount,
+                discount,
+                netRevenue,
+                summaryDataGridView
+            );
+
+            receiptPrinter.PrintReceipt();
         }
     }
 }

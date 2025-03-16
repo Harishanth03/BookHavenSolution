@@ -21,7 +21,18 @@ namespace BookHaven.Forms.Book
             InitializeComponent();
             addBookPanel.Visible = false;
             this.ActiveControl = addBookPanel;
+            RestrictedSalesClerkAction();
 
+        }
+
+
+        private void RestrictedSalesClerkAction()
+        {
+            if(loginFrm.userRole == "SalesClerk")
+            {
+                 bookDataGridView.Columns["edit"].Visible = false; 
+            bookDataGridView.Columns["delete"].Visible = false; 
+            }
         }
 
         private void bookAddButton_Click(object sender, EventArgs e)

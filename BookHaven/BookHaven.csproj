@@ -299,6 +299,7 @@
     <Compile Include="Model\DatabaseConnection.cs" />
     <Compile Include="Model\ENVProcess.cs" />
     <Compile Include="Model\PointOfSales.cs" />
+    <Compile Include="Model\ReceiptPrint.cs" />
     <Compile Include="Model\SalesClerk.cs" />
     <Compile Include="Model\SalesTransactionDetails.cs" />
     <Compile Include="Model\SalesTransactionRepository.cs" />

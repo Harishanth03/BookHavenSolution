@@ -22,14 +22,14 @@ namespace BookHaven
 
         private string userRole;
 
-        public DashboardBookHaven()
+        public DashboardBookHaven(string role)
         {
             InitializeComponent();
             DashbaordForm DashbaordFrm = new DashbaordForm();
             DashbaordFrm.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(DashbaordFrm);
 
-            //userRole = role;
+            userRole = role;
         }
 
         private void customerButton_Click(object sender, EventArgs e)
@@ -100,7 +100,6 @@ namespace BookHaven
             {
                 reportButton.Visible = false;
                 supplierButton.Visible = false;
-                reportButton.Visible = false;
 
             }
             else if (userRole == "Admin")
@@ -128,7 +127,7 @@ namespace BookHaven
             {
                 loginFrm loginForm = new loginFrm();
                 loginForm.Show();
-                this.Close();
+                this.Close(); 
             }
         }
 

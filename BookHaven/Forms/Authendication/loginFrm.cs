@@ -82,7 +82,7 @@ namespace BookHaven
             {
                 MessageBox.Show($"Hello {staffID} your Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                DashboardBookHaven dashboard = new DashboardBookHaven();
+                DashboardBookHaven dashboard = new DashboardBookHaven(userRole);
 
                 this.Hide();
 

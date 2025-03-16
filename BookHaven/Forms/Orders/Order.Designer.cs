@@ -75,7 +75,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1333, 82);
             this.panel1.TabIndex = 2;
@@ -97,6 +97,7 @@
             // 
             // bookDataGridView
             // 
+            this.bookDataGridView.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.bookDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bookDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -207,7 +208,7 @@
             this.addOrderBtn.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addOrderBtn.ForeColor = System.Drawing.Color.White;
             this.addOrderBtn.Location = new System.Drawing.Point(1095, 107);
-            this.addOrderBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addOrderBtn.Margin = new System.Windows.Forms.Padding(4);
             this.addOrderBtn.Name = "addOrderBtn";
             this.addOrderBtn.Size = new System.Drawing.Size(204, 55);
             this.addOrderBtn.TabIndex = 7;
@@ -222,7 +223,7 @@
             this.guna2Panel1.Controls.Add(this.orderHistoryBtn);
             this.guna2Panel1.Controls.Add(this.orderBtn);
             this.guna2Panel1.Location = new System.Drawing.Point(35, 96);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(505, 76);
             this.guna2Panel1.TabIndex = 9;
@@ -242,7 +243,7 @@
             this.orderHistoryBtn.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderHistoryBtn.ForeColor = System.Drawing.Color.Gray;
             this.orderHistoryBtn.Location = new System.Drawing.Point(256, 12);
-            this.orderHistoryBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderHistoryBtn.Margin = new System.Windows.Forms.Padding(4);
             this.orderHistoryBtn.Name = "orderHistoryBtn";
             this.orderHistoryBtn.Size = new System.Drawing.Size(240, 53);
             this.orderHistoryBtn.TabIndex = 1;
@@ -265,7 +266,7 @@
             this.orderBtn.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.orderBtn.ForeColor = System.Drawing.Color.Gray;
             this.orderBtn.Location = new System.Drawing.Point(8, 12);
-            this.orderBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderBtn.Margin = new System.Windows.Forms.Padding(4);
             this.orderBtn.Name = "orderBtn";
             this.orderBtn.Size = new System.Drawing.Size(240, 53);
             this.orderBtn.TabIndex = 0;
@@ -293,7 +294,7 @@
             this.addOrderPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.addOrderPanel.FillColor = System.Drawing.Color.White;
             this.addOrderPanel.Location = new System.Drawing.Point(694, 82);
-            this.addOrderPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addOrderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.addOrderPanel.Name = "addOrderPanel";
             this.addOrderPanel.ShadowColor = System.Drawing.Color.Black;
             this.addOrderPanel.ShadowDepth = 30;
@@ -324,7 +325,7 @@
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Poppins", 11.25F);
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.guna2DateTimePicker1.Location = new System.Drawing.Point(23, 549);
-            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
@@ -371,7 +372,7 @@
             this.guna2ComboBox3.ForeColor = System.Drawing.Color.Black;
             this.guna2ComboBox3.ItemHeight = 30;
             this.guna2ComboBox3.Location = new System.Drawing.Point(23, 306);
-            this.guna2ComboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ComboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ComboBox3.Name = "guna2ComboBox3";
             this.guna2ComboBox3.Size = new System.Drawing.Size(284, 36);
             this.guna2ComboBox3.TabIndex = 20;
@@ -388,7 +389,7 @@
             this.guna2ComboBox2.ForeColor = System.Drawing.Color.Black;
             this.guna2ComboBox2.ItemHeight = 30;
             this.guna2ComboBox2.Location = new System.Drawing.Point(333, 186);
-            this.guna2ComboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ComboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ComboBox2.Name = "guna2ComboBox2";
             this.guna2ComboBox2.Size = new System.Drawing.Size(284, 36);
             this.guna2ComboBox2.TabIndex = 19;
@@ -405,7 +406,7 @@
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2ComboBox1.ItemHeight = 30;
             this.guna2ComboBox1.Location = new System.Drawing.Point(23, 186);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(284, 36);
             this.guna2ComboBox1.TabIndex = 18;
@@ -425,7 +426,7 @@
             this.clearButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.clearButton.ForeColor = System.Drawing.Color.Gray;
             this.clearButton.Location = new System.Drawing.Point(17, 681);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(4);
             this.clearButton.Name = "clearButton";
             this.clearButton.PressedColor = System.Drawing.Color.DarkGray;
             this.clearButton.Size = new System.Drawing.Size(601, 55);
@@ -444,7 +445,7 @@
             this.addCustomerButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCustomerButton.ForeColor = System.Drawing.Color.White;
             this.addCustomerButton.Location = new System.Drawing.Point(17, 613);
-            this.addCustomerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addCustomerButton.Margin = new System.Windows.Forms.Padding(4);
             this.addCustomerButton.Name = "addCustomerButton";
             this.addCustomerButton.PressedColor = System.Drawing.Color.DarkGray;
             this.addCustomerButton.Size = new System.Drawing.Size(601, 55);
@@ -541,7 +542,7 @@
             this.closePictureBoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closePictureBoc.Image = global::BookHaven.Properties.Resources.close;
             this.closePictureBoc.Location = new System.Drawing.Point(17, 15);
-            this.closePictureBoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closePictureBoc.Margin = new System.Windows.Forms.Padding(4);
             this.closePictureBoc.Name = "closePictureBoc";
             this.closePictureBoc.Size = new System.Drawing.Size(24, 24);
             this.closePictureBoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -584,7 +585,7 @@
             this.Controls.Add(this.addOrderBtn);
             this.Controls.Add(this.bookDataGridView);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Order";
             this.Size = new System.Drawing.Size(1333, 836);
             this.panel1.ResumeLayout(false);

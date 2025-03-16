@@ -49,6 +49,33 @@ namespace BookHaven.Model
                 }
             }
         }
+
+        public static int GetTotalCustomer()
+        {
+            int totalCustomers = 0;
+
+            try
+            {
+                using(SqlConnection con = DatabaseConnection.GetConnection())
+                {
+                    con.Open();
+
+                    string query = "SELECT COUNT(*) FROM Customer"; //Select the all Count from the Customer table
+
+                    using(SqlCommand cmd = new SqlCommand(query , con))
+                    {
+                        totalCustomers = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error retrieving total customers: " + ex.Message);
+                throw;
+            }
+
+            return totalCustomers;
+        }
     }
 
 
