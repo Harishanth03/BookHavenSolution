@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.customerAddButton = new Guna.UI2.WinForms.Guna2Button();
             this.addCustomerPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.addCustomerButton = new Guna.UI2.WinForms.Guna2Button();
+            this.updateButton = new Guna.UI2.WinForms.Guna2Button();
+            this.clearButton = new Guna.UI2.WinForms.Guna2Button();
             this.phoneNumberTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.memberShipStatusTextBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,10 +55,6 @@
             this.PurchaseButton = new Guna.UI2.WinForms.Guna2Button();
             this.CustomerButton = new Guna.UI2.WinForms.Guna2Button();
             this.customerSearchTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.addCustomerButton = new Guna.UI2.WinForms.Guna2Button();
-            this.updateButton = new Guna.UI2.WinForms.Guna2Button();
-            this.clearButton = new Guna.UI2.WinForms.Guna2Button();
             this.customerDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.customerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,9 +67,9 @@
             this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.addCustomerPanel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBoc)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,6 +145,75 @@
             this.addCustomerPanel.ShadowShift = 2;
             this.addCustomerPanel.Size = new System.Drawing.Size(641, 754);
             this.addCustomerPanel.TabIndex = 5;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.addCustomerButton);
+            this.flowLayoutPanel1.Controls.Add(this.updateButton);
+            this.flowLayoutPanel1.Controls.Add(this.clearButton);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 503);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(635, 203);
+            this.flowLayoutPanel1.TabIndex = 21;
+            // 
+            // addCustomerButton
+            // 
+            this.addCustomerButton.BorderRadius = 4;
+            this.addCustomerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addCustomerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addCustomerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addCustomerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addCustomerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addCustomerButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            this.addCustomerButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addCustomerButton.ForeColor = System.Drawing.Color.White;
+            this.addCustomerButton.Location = new System.Drawing.Point(16, 4);
+            this.addCustomerButton.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
+            this.addCustomerButton.Name = "addCustomerButton";
+            this.addCustomerButton.Size = new System.Drawing.Size(601, 55);
+            this.addCustomerButton.TabIndex = 16;
+            this.addCustomerButton.Text = "Add Customer";
+            this.addCustomerButton.Click += new System.EventHandler(this.addCustomerButton_Click_1);
+            // 
+            // updateButton
+            // 
+            this.updateButton.BorderRadius = 4;
+            this.updateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.updateButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.updateButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.updateButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.updateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.updateButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateButton.ForeColor = System.Drawing.Color.White;
+            this.updateButton.Location = new System.Drawing.Point(16, 67);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(601, 55);
+            this.updateButton.TabIndex = 17;
+            this.updateButton.Text = "Update Customer";
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.White;
+            this.clearButton.BorderColor = System.Drawing.Color.Gray;
+            this.clearButton.BorderRadius = 4;
+            this.clearButton.BorderThickness = 1;
+            this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.clearButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.clearButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.clearButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.clearButton.FillColor = System.Drawing.Color.Transparent;
+            this.clearButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.clearButton.ForeColor = System.Drawing.Color.Gray;
+            this.clearButton.Location = new System.Drawing.Point(16, 130);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(601, 55);
+            this.clearButton.TabIndex = 17;
+            this.clearButton.Text = "Clear";
             // 
             // phoneNumberTextBox
             // 
@@ -426,91 +495,23 @@
             this.customerSearchTextBox.Size = new System.Drawing.Size(443, 55);
             this.customerSearchTextBox.TabIndex = 4;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.addCustomerButton);
-            this.flowLayoutPanel1.Controls.Add(this.updateButton);
-            this.flowLayoutPanel1.Controls.Add(this.clearButton);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 503);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(635, 203);
-            this.flowLayoutPanel1.TabIndex = 21;
-            // 
-            // addCustomerButton
-            // 
-            this.addCustomerButton.BorderRadius = 4;
-            this.addCustomerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addCustomerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.addCustomerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.addCustomerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.addCustomerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.addCustomerButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            this.addCustomerButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addCustomerButton.ForeColor = System.Drawing.Color.White;
-            this.addCustomerButton.Location = new System.Drawing.Point(16, 4);
-            this.addCustomerButton.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
-            this.addCustomerButton.Name = "addCustomerButton";
-            this.addCustomerButton.Size = new System.Drawing.Size(601, 55);
-            this.addCustomerButton.TabIndex = 16;
-            this.addCustomerButton.Text = "Add Customer";
-            this.addCustomerButton.Click += new System.EventHandler(this.addCustomerButton_Click_1);
-            // 
-            // updateButton
-            // 
-            this.updateButton.BorderRadius = 4;
-            this.updateButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.updateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.updateButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.updateButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.updateButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.updateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.updateButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateButton.ForeColor = System.Drawing.Color.White;
-            this.updateButton.Location = new System.Drawing.Point(16, 67);
-            this.updateButton.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(601, 55);
-            this.updateButton.TabIndex = 17;
-            this.updateButton.Text = "Update Customer";
-            // 
-            // clearButton
-            // 
-            this.clearButton.BackColor = System.Drawing.Color.White;
-            this.clearButton.BorderColor = System.Drawing.Color.Gray;
-            this.clearButton.BorderRadius = 4;
-            this.clearButton.BorderThickness = 1;
-            this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.clearButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.clearButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.clearButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.clearButton.FillColor = System.Drawing.Color.Transparent;
-            this.clearButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.clearButton.ForeColor = System.Drawing.Color.Gray;
-            this.clearButton.Location = new System.Drawing.Point(16, 130);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(601, 55);
-            this.clearButton.TabIndex = 17;
-            this.clearButton.Text = "Clear";
-            // 
             // customerDataGridView
             // 
             this.customerDataGridView.AllowUserToAddRows = false;
             this.customerDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.customerDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.customerDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.customerDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.customerDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.customerDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.customerDataGridView.ColumnHeadersHeight = 50;
             this.customerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.customerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -524,14 +525,14 @@
             this.edit,
             this.delete});
             this.customerDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.customerDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.customerDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
             this.customerDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.customerDataGridView.Location = new System.Drawing.Point(33, 192);
             this.customerDataGridView.Margin = new System.Windows.Forms.Padding(0);
@@ -562,6 +563,7 @@
             this.customerDataGridView.ThemeStyle.RowsStyle.Height = 35;
             this.customerDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.customerDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.customerDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerDataGridView_CellContentClick);
             // 
             // customerID
             // 
@@ -642,9 +644,9 @@
             this.panel1.PerformLayout();
             this.addCustomerPanel.ResumeLayout(false);
             this.addCustomerPanel.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBoc)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
             this.ResumeLayout(false);
 

@@ -128,5 +128,127 @@ namespace BookHaven.Forms.Customer
                 }
             }
         }
+
+        private int selectedCustomerID;
+
+        private void customerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            if (customerDataGridView.Columns[e.ColumnIndex].Name == "edit")
+            {
+                addCustomerButton.Visible = false;
+
+                addCustomerPanel.Visible = true;
+
+                updateButton.Visible = true;
+
+                selectedCustomerID = Convert.ToInt32(customerDataGridView.Rows[e.RowIndex].Cells["customerID"].Value);
+
+                customerNameTextBox.Text = customerDataGridView.Rows[e.RowIndex].Cells["customerName"].Value.ToString();
+
+                phoneNumberTextBox.Text = customerDataGridView.Rows[e.RowIndex].Cells["phoneNumber"].Value.ToString();
+
+                emailTextBox.Text = customerDataGridView.Rows[e.RowIndex].Cells["email"].Value.ToString();
+
+                addressTextBox.Text = customerDataGridView.Rows[e.RowIndex].Cells["address"].Value.ToString();
+
+                memberShipStatusTextBox.Text = customerDataGridView.Rows[e.RowIndex].Cells["membership"].Value.ToString();
+
+                MessageBox.Show($"Selected Customer: {customerNameTextBox.Text}", "Customer Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            if (customerDataGridView.Columns[e.ColumnIndex].Name == "delete")
+            {
+                if (customerDataGridView.Rows[e.RowIndex].Cells["customerID"].Value == null)
+                {
+                    MessageBox.Show("Error: Selected row does not contain a valid Customer ID!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                int customerID = Convert.ToInt32(customerDataGridView.Rows[e.RowIndex].Cells["customerID"].Value);
+                string customerName = customerDataGridView.Rows[e.RowIndex].Cells["customerName"].Value.ToString();
+
+                MessageBox.Show($"Attempting to delete Customer ID: {customerID}", "Debug Info", MessageBoxButtons.OK, MessageBoxIcon.Information); // Debugging Step
+
+                DialogResult result = MessageBox.Show($"Are you sure you want to delete {customerName}?", "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.OK)
+                {
+                    bool isDeleted = customerRespo.DeleteCustomer(customerID);
+
+                    if (isDeleted)
+                    {
+                        MessageBox.Show("Customer deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadCustomerData(); // Refresh DataGridView
+                    }
+                    else
+                    {
+                        MessageBox.Show("Customer deletion failed! The customer may not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if(selectedCustomerID <= 0)
+                {
+                    MessageBox.Show("No customer selected for update!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    return;
+                }
+
+                string customerName = customerNameTextBox.Text;
+
+                string phoneNumber = phoneNumberTextBox.Text;
+
+                string email = emailTextBox.Text;
+
+                string address = addressTextBox.Text;
+
+                string membershipStatus = memberShipStatusTextBox.SelectedItem?.ToString() ?? "Regular";
+
+                if (string.IsNullOrEmpty(customerName) || string.IsNullOrEmpty(phoneNumber) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(address))
+                {
+                    MessageBox.Show("Please fill all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    return;
+
+                }
+
+                Customers customerUpdate = new Customers(customerName , phoneNumber ,address , membershipStatus , email);
+
+                bool isUpdated = customerRespo.UpdateCustomerDetails(selectedCustomerID, customerUpdate); //return the Bool data when update is succeed or not
+
+                if(isUpdated)
+                {
+                    MessageBox.Show("Customer details updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    LoadCustomerData(); // Refresh DataGridView
+
+                    addCustomerPanel.Visible = false;    
+
+                    ClearFields();
+                }
+                else
+                {
+
+                    MessageBox.Show("Update failed! No changes made or customer not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+
+            }
+            catch(Exception ex)
+            {
+
+                MessageBox.Show("Error updating customer: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
     }
 }
