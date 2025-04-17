@@ -16,10 +16,12 @@ namespace BookHaven.Model
         public string Author { get; set; }
         public string ISBN { get; set; }
         public string Genre { get; set; }
-        public decimal Price { get; set; }
+        public decimal Price { get; set; } //retail price
         public int StockQuantity { get; set; }
+        public int SupplierID { get; set; }
 
-        public Books(string title , string author , string isbn , string genre , decimal price , int stockQuantity)
+
+        public Books(string title , string author , string isbn , string genre , decimal price , int stockQuantity , int supplierId)
         {
             Title = title;
             Author = author;
@@ -27,6 +29,7 @@ namespace BookHaven.Model
             Genre = genre;
             Price = price;
             StockQuantity = stockQuantity;
+            SupplierID = supplierId;
         }
     }
 
@@ -39,23 +42,70 @@ namespace BookHaven.Model
             using (SqlConnection connection = DatabaseConnection.GetConnection())
             {
                 connection.Open();
+                SqlTransaction transaction = connection.BeginTransaction();
 
-                string bookInsertQuery = "INSERT INTO Book (Title, Author, ISBN, Genre, Price, StockQuantity) " +
-                                         "VALUES (@title, @author, @isbn, @genre, @price, @stockQuantity)";
-
-                using (SqlCommand command = new SqlCommand(bookInsertQuery, connection))
+                try
                 {
-                    command.Parameters.AddWithValue("@title", book.Title);
-                    command.Parameters.AddWithValue("@author", book.Author);
-                    command.Parameters.AddWithValue("@isbn", book.ISBN);
-                    command.Parameters.AddWithValue("@genre", book.Genre);
-                    command.Parameters.AddWithValue("@price", book.Price);
-                    command.Parameters.AddWithValue("@stockQuantity", book.StockQuantity);
+                    int bookID;
 
-                    command.ExecuteNonQuery();
+                    // Check if the book already exists
+                    string checkQuery = "SELECT BookID FROM Book WHERE ISBN = @isbn";
+
+                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection, transaction))
+                    {
+                        checkCmd.Parameters.AddWithValue("@isbn", book.ISBN);
+                        object result = checkCmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            // Book already exists
+                            bookID = Convert.ToInt32(result);
+                        }
+                        else
+                        {
+                            // Insert new book
+                            string insertBook = @"INSERT INTO Book (Title, Author, ISBN, Genre, Price, StockQuantity)
+                                          VALUES (@title, @author, @isbn, @genre, @price, @stock);
+                                          SELECT CAST(SCOPE_IDENTITY() AS INT)";
+
+                            using (SqlCommand insertCmd = new SqlCommand(insertBook, connection, transaction))
+                            {
+                                insertCmd.Parameters.AddWithValue("@title", book.Title);
+                                insertCmd.Parameters.AddWithValue("@author", book.Author);
+                                insertCmd.Parameters.AddWithValue("@isbn", book.ISBN);
+                                insertCmd.Parameters.AddWithValue("@genre", book.Genre);
+                                insertCmd.Parameters.AddWithValue("@price", book.Price);
+                                insertCmd.Parameters.AddWithValue("@stock", book.StockQuantity);
+
+                                bookID = (int)insertCmd.ExecuteScalar();
+                            }
+                        }
+                    }
+
+                    // Always insert into Purchase table
+                    string insertPurchase = @"INSERT INTO Purchase (SupplierID, BookID, Quantity, PurchasePrice)
+                                      VALUES (@supplierID, @bookID, @quantity, @purchasePrice)";
+
+                    using (SqlCommand purchaseCmd = new SqlCommand(insertPurchase, connection, transaction))
+                    {
+                        purchaseCmd.Parameters.AddWithValue("@supplierID", book.SupplierID);
+                        purchaseCmd.Parameters.AddWithValue("@bookID", bookID);
+                        purchaseCmd.Parameters.AddWithValue("@quantity", book.StockQuantity);
+                        purchaseCmd.Parameters.AddWithValue("@purchasePrice", book.Price);
+
+                        purchaseCmd.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw new Exception("Failed to add book and purchase: " + ex.Message);
                 }
             }
         }
+
 
         public static bool updateBook(int bookID ,  Books book)
         {

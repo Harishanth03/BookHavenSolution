@@ -14,6 +14,9 @@ namespace BookHaven.Forms.Book
 {
     public partial class BookForm: UserControl
     {
+
+        private DataTable bookTable = new DataTable();
+
         private BookRespo bookRespotery = new BookRespo();
 
         public BookForm()
@@ -53,16 +56,12 @@ namespace BookHaven.Forms.Book
             try
             {
                 string title = bookNameTextBox.Text;
-
                 string author = authorTextBox.Text;
-
                 string isbn = isbnTextBox.Text;
-
                 string genre = genreComboBox.SelectedItem?.ToString();
-
-                decimal price = Convert.ToDecimal(bookPriceTextBox.Text);
-
-                int stockQuantity = Convert.ToInt32(bookQuantityTextBox.Text);
+                decimal price = Convert.ToDecimal(bookPriceTextBox.Text); // Purchase price
+                int quantity = Convert.ToInt32(bookQuantityTextBox.Text);
+                int supplierId = Convert.ToInt32(supplierComboBox.SelectedValue);
 
                 if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(author) || string.IsNullOrEmpty(isbn) || string.IsNullOrEmpty(genre))
                 {
@@ -70,20 +69,17 @@ namespace BookHaven.Forms.Book
                     return;
                 }
 
-                Books book = new Books(title, author, isbn, genre, price, stockQuantity);
-
+                Books book = new Books(title, author, isbn, genre, price, quantity, supplierId);
                 bookRespotery.addBook(book);
 
-                MessageBox.Show("Book added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Book and purchase added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 bookDataGridViewShow();
-
                 ClearFields();
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -104,7 +100,7 @@ namespace BookHaven.Forms.Book
 
         private void BookForm_Load(object sender, EventArgs e)
         {
-            
+            this.supplierTableAdapter.Fill(this.supplierDataSet.Supplier);
             bookDataGridViewShow();
             updateButton.Visible = false;
         }
@@ -116,29 +112,33 @@ namespace BookHaven.Forms.Book
             using (SqlConnection con = DatabaseConnection.GetConnection())
             {
                 con.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(selectQuery, con);
 
-                using (SqlCommand cmd = new SqlCommand(selectQuery, con))
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    bookDataGridView.Rows.Clear();
-
-                    while (reader.Read())
-                    {
-                        bookDataGridView.Rows.Add(
-                            reader["BookID"],
-                            reader["Title"],
-                            reader["Author"],
-                            reader["ISBN"],
-                            reader["Genre"],
-                            reader["Price"],
-                            reader["StockQuantity"]
-                        );
-                    }
-                }
-
+                bookTable.Clear(); // Clear previous data
+                adapter.Fill(bookTable);
                 con.Close();
             }
+
+            // Clear the DataGridView rows
+            bookDataGridView.Rows.Clear();
+
+            // Loop through filtered rows
+            foreach (DataRowView rowView in bookTable.DefaultView)
+            {
+                DataRow row = rowView.Row;
+
+                bookDataGridView.Rows.Add(
+                    row["BookID"],
+                    row["Title"],
+                    row["Author"],
+                    row["ISBN"],
+                    row["Genre"],
+                    row["Price"],
+                    row["StockQuantity"]
+                );
+            }
         }
+
 
         private int selectedBookID;
 
@@ -187,16 +187,12 @@ namespace BookHaven.Forms.Book
             try
             {
                 string title = bookNameTextBox.Text;
-
                 string author = authorTextBox.Text;
-
                 string isbn = isbnTextBox.Text;
-
                 string genre = genreComboBox.SelectedItem?.ToString();
-
-                decimal price = Convert.ToDecimal(bookPriceTextBox.Text);
-
-                int stockQuantity = Convert.ToInt32(bookQuantityTextBox.Text);
+                decimal price = Convert.ToDecimal(bookPriceTextBox.Text); // Purchase price
+                int quantity = Convert.ToInt32(bookQuantityTextBox.Text);
+                int supplierId = Convert.ToInt32(supplierComboBox.SelectedValue);
 
                 if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(author) || string.IsNullOrEmpty(isbn) || string.IsNullOrEmpty(genre))
                 {
@@ -204,24 +200,35 @@ namespace BookHaven.Forms.Book
                     return;
                 }
 
-                Books bookUpdate = new Books(title, author, isbn, genre, price, stockQuantity);
-                bool isUpdated  = BookRespo.updateBook( selectedBookID ,bookUpdate);
+                Books book = new Books(title, author, isbn, genre, price, quantity, supplierId);
+                bookRespotery.addBook(book);
 
-                if(isUpdated)
-                {
-                    ClearFields();
+                MessageBox.Show("Book and purchase added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    addBookPanel.Visible=false;
-
-                    bookDataGridViewShow();
-                }
-
+                bookDataGridViewShow();
+                ClearFields();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error inserting staff: " + ex.Message);
-                throw;
+                MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void bookSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = bookSearchTextBox.Text.Trim().Replace("'", "''");
+
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                bookTable.DefaultView.RowFilter = string.Empty;
+            }
+            else
+            {
+                bookTable.DefaultView.RowFilter =
+                    $"Title LIKE '%{keyword}%' OR Author LIKE '%{keyword}%' OR ISBN LIKE '%{keyword}%' OR Genre LIKE '%{keyword}%'";
+            }
+
+            bookDataGridViewShow();
         }
     }
 }
