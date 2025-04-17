@@ -250,5 +250,10 @@ namespace BookHaven.Forms.Customer
 
             }
         }
+
+        private void addCustomerPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
