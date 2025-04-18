@@ -198,6 +198,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Book\BookForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -293,6 +303,7 @@
     <Compile Include="Model\Customers.cs" />
     <Compile Include="Model\DatabaseConnection.cs" />
     <Compile Include="Model\ENVProcess.cs" />
+    <Compile Include="Model\Order.cs" />
     <Compile Include="Model\PointOfSales.cs" />
     <Compile Include="Model\ReceiptPrint.cs" />
     <Compile Include="Model\SalesClerk.cs" />
@@ -362,6 +373,28 @@
     </EmbeddedResource>
     <None Include=".env">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="BookDataSet.xsc">
+      <DependentUpon>BookDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BookDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookDataSet.xss">
+      <DependentUpon>BookDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerDataSet.xsc">
+      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CustomerDataSet.xss">
+      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
