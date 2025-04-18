@@ -14,20 +14,29 @@ namespace BookHaven.Model
         public string Name { get; set; }
         public string ContactPerson { get; set; }
         public string Phone { get; set; }
+        public string Email { get; set; }        
+        public string Address { get; set; }    
+        public string SupplierType { get; set; }
 
-        public Supplier(string name, string contactPerson, string phone)
+        public Supplier(string name, string contactPerson, string phone , string email , string address , string supplierType) //for add
         {
             Name = name;
             ContactPerson = contactPerson;
             Phone = phone;
+            Email = email;
+            Address = address;
+            SupplierType = supplierType;
         }
 
-        public Supplier(int id, string name, string contactPerson, string phone)
+        public Supplier(int id, string name, string contactPerson, string phone , string email, string address, string supplierType) //for update and delete
         {
             SupplierID = id;
             Name = name;
             ContactPerson = contactPerson;
             Phone = phone;
+            Email = email;
+            Address = address;
+            SupplierType = supplierType;
         }
     }
 
@@ -39,13 +48,16 @@ namespace BookHaven.Model
             using (SqlConnection con = DatabaseConnection.GetConnection())
             {
                 con.Open();
-                string query = "INSERT INTO Supplier (Name, ContactPerson, Phone) VALUES (@name, @contact, @phone)";
+                string query = "INSERT INTO Supplier (Name, ContactPerson, Phone, Email, Address, SupplierType) VALUES (@name, @contact, @phone, @email, @address, @type)";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@name", supplier.Name);
                     cmd.Parameters.AddWithValue("@contact", supplier.ContactPerson);
                     cmd.Parameters.AddWithValue("@phone", supplier.Phone);
+                    cmd.Parameters.AddWithValue("@email", supplier.Email);
+                    cmd.Parameters.AddWithValue("@address", supplier.Address);
+                    cmd.Parameters.AddWithValue("@type", supplier.SupplierType);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Supplier added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -59,7 +71,7 @@ namespace BookHaven.Model
             using (SqlConnection con = DatabaseConnection.GetConnection())
             {
                 con.Open();
-                string query = "UPDATE Supplier SET Name = @name, ContactPerson = @contact, Phone = @phone WHERE SupplierID = @id";
+                string query = "UPDATE Supplier SET Name = @name, ContactPerson = @contact, Phone = @phone, Email = @email, Address = @address, SupplierType = @type WHERE SupplierID = @id";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -67,6 +79,9 @@ namespace BookHaven.Model
                     cmd.Parameters.AddWithValue("@contact", supplier.ContactPerson);
                     cmd.Parameters.AddWithValue("@phone", supplier.Phone);
                     cmd.Parameters.AddWithValue("@id", supplier.SupplierID);
+                    cmd.Parameters.AddWithValue("@email", supplier.Email);
+                    cmd.Parameters.AddWithValue("@address", supplier.Address);
+                    cmd.Parameters.AddWithValue("@type", supplier.SupplierType);
 
                     int affected = cmd.ExecuteNonQuery();
                     return affected > 0;
@@ -115,8 +130,12 @@ namespace BookHaven.Model
                                 Convert.ToInt32(reader["SupplierID"]),
                                 reader["Name"].ToString(),
                                 reader["ContactPerson"].ToString(),
-                                reader["Phone"].ToString()
+                                reader["Phone"].ToString(),
+                                reader["Email"]?.ToString(),
+                                reader["Address"]?.ToString(),
+                                reader["SupplierType"]?.ToString()
                             ));
+
                         }
                     }
                 }
