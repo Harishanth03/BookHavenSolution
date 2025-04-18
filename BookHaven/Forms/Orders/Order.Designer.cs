@@ -28,44 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.bookDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.CusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cancle = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.orderDataGridview = new Guna.UI2.WinForms.Guna2DataGridView();
             this.addOrderBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.orderHistoryBtn = new Guna.UI2.WinForms.Guna2Button();
             this.orderBtn = new Guna.UI2.WinForms.Guna2Button();
             this.addOrderPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.totalPriceTextBox = new System.Windows.Forms.Label();
+            this.deliveryDatePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.PriceLable = new System.Windows.Forms.Label();
+            this.selectedBookComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookDataSet = new BookHaven.BookDataSet();
+            this.deliveryOptionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.customerComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerDataSet = new BookHaven.CustomerDataSet();
             this.clearButton = new Guna.UI2.WinForms.Guna2Button();
-            this.addCustomerButton = new Guna.UI2.WinForms.Guna2Button();
+            this.placeOrderBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.addressTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.quantityTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.closePictureBoc = new System.Windows.Forms.PictureBox();
             this.orderSearchSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.customerTableAdapter = new BookHaven.CustomerDataSetTableAdapters.CustomerTableAdapter();
+            this.tableAdapterManager = new BookHaven.CustomerDataSetTableAdapters.TableAdapterManager();
+            this.bookTableAdapter = new BookHaven.BookDataSetTableAdapters.BookTableAdapter();
+            this.tableAdapterManager1 = new BookHaven.BookDataSetTableAdapters.TableAdapterManager();
+            this.OrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeliveryOption = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstimatedDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderDataGridview)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.addOrderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBoc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,15 +110,15 @@
             this.label1.Text = "Book Order Managment";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // bookDataGridView
+            // orderDataGridview
             // 
-            this.bookDataGridView.AllowUserToAddRows = false;
+            this.orderDataGridview.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.bookDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bookDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.orderDataGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.orderDataGridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bookDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.orderDataGridview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,89 +126,57 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bookDataGridView.ColumnHeadersHeight = 50;
-            this.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CusName,
+            this.orderDataGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.orderDataGridview.ColumnHeadersHeight = 50;
+            this.orderDataGridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.orderDataGridview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OrderID,
+            this.CustomerID,
+            this.BookID,
             this.Quantity,
             this.Price,
-            this.SubTotal,
-            this.Cancle});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bookDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
-            this.bookDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.bookDataGridView.Location = new System.Drawing.Point(35, 186);
-            this.bookDataGridView.Margin = new System.Windows.Forms.Padding(0);
-            this.bookDataGridView.Name = "bookDataGridView";
-            this.bookDataGridView.RowHeadersVisible = false;
-            this.bookDataGridView.RowHeadersWidth = 100;
-            this.bookDataGridView.RowTemplate.Height = 70;
-            this.bookDataGridView.Size = new System.Drawing.Size(1264, 601);
-            this.bookDataGridView.TabIndex = 4;
-            this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.bookDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.bookDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.bookDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.bookDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.bookDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bookDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.bookDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.bookDataGridView.ThemeStyle.HeaderStyle.Height = 50;
-            this.bookDataGridView.ThemeStyle.ReadOnly = false;
-            this.bookDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.bookDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.bookDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bookDataGridView.ThemeStyle.RowsStyle.Height = 70;
-            this.bookDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.bookDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // CusName
-            // 
-            this.CusName.HeaderText = "Book Name";
-            this.CusName.MinimumWidth = 6;
-            this.CusName.Name = "CusName";
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantiyu";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.MinimumWidth = 6;
-            this.Price.Name = "Price";
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.HeaderText = "SubTotal";
-            this.SubTotal.MinimumWidth = 6;
-            this.SubTotal.Name = "SubTotal";
-            // 
-            // Cancle
-            // 
-            dataGridViewCellStyle3.NullValue = "Pending";
-            this.Cancle.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Cancle.HeaderText = "Order Status";
-            this.Cancle.Items.AddRange(new object[] {
-            "Pending",
-            "Completed",
-            "Canceled"});
-            this.Cancle.MinimumWidth = 6;
-            this.Cancle.Name = "Cancle";
+            this.TotalPrice,
+            this.DeliveryOption,
+            this.EstimatedDelivery});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.orderDataGridview.DefaultCellStyle = dataGridViewCellStyle3;
+            this.orderDataGridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.orderDataGridview.Location = new System.Drawing.Point(35, 186);
+            this.orderDataGridview.Margin = new System.Windows.Forms.Padding(0);
+            this.orderDataGridview.Name = "orderDataGridview";
+            this.orderDataGridview.RowHeadersVisible = false;
+            this.orderDataGridview.RowHeadersWidth = 100;
+            this.orderDataGridview.RowTemplate.Height = 70;
+            this.orderDataGridview.Size = new System.Drawing.Size(1264, 601);
+            this.orderDataGridview.TabIndex = 4;
+            this.orderDataGridview.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.orderDataGridview.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.orderDataGridview.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.orderDataGridview.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.orderDataGridview.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.orderDataGridview.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.orderDataGridview.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.orderDataGridview.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.orderDataGridview.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.orderDataGridview.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderDataGridview.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.orderDataGridview.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.orderDataGridview.ThemeStyle.HeaderStyle.Height = 50;
+            this.orderDataGridview.ThemeStyle.ReadOnly = false;
+            this.orderDataGridview.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.orderDataGridview.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.orderDataGridview.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderDataGridview.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.orderDataGridview.ThemeStyle.RowsStyle.Height = 70;
+            this.orderDataGridview.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.orderDataGridview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.orderDataGridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.orderDataGridview_CellContentClick);
             // 
             // addOrderBtn
             // 
@@ -275,17 +258,17 @@
             // addOrderPanel
             // 
             this.addOrderPanel.BackColor = System.Drawing.Color.Transparent;
-            this.addOrderPanel.Controls.Add(this.label9);
-            this.addOrderPanel.Controls.Add(this.guna2DateTimePicker1);
+            this.addOrderPanel.Controls.Add(this.totalPriceTextBox);
+            this.addOrderPanel.Controls.Add(this.deliveryDatePicker);
             this.addOrderPanel.Controls.Add(this.label7);
-            this.addOrderPanel.Controls.Add(this.label8);
-            this.addOrderPanel.Controls.Add(this.guna2ComboBox3);
-            this.addOrderPanel.Controls.Add(this.guna2ComboBox2);
-            this.addOrderPanel.Controls.Add(this.guna2ComboBox1);
+            this.addOrderPanel.Controls.Add(this.PriceLable);
+            this.addOrderPanel.Controls.Add(this.selectedBookComboBox);
+            this.addOrderPanel.Controls.Add(this.deliveryOptionComboBox);
+            this.addOrderPanel.Controls.Add(this.customerComboBox);
             this.addOrderPanel.Controls.Add(this.clearButton);
-            this.addOrderPanel.Controls.Add(this.addCustomerButton);
+            this.addOrderPanel.Controls.Add(this.placeOrderBtn);
             this.addOrderPanel.Controls.Add(this.label5);
-            this.addOrderPanel.Controls.Add(this.addressTextBox);
+            this.addOrderPanel.Controls.Add(this.quantityTextBox);
             this.addOrderPanel.Controls.Add(this.label6);
             this.addOrderPanel.Controls.Add(this.label4);
             this.addOrderPanel.Controls.Add(this.label3);
@@ -302,36 +285,36 @@
             this.addOrderPanel.Size = new System.Drawing.Size(639, 754);
             this.addOrderPanel.TabIndex = 10;
             // 
-            // label9
+            // totalPriceTextBox
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.totalPriceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(329, 446);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(255, 42);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Total Price: 1400.00";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.totalPriceTextBox.AutoSize = true;
+            this.totalPriceTextBox.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalPriceTextBox.ForeColor = System.Drawing.Color.DimGray;
+            this.totalPriceTextBox.Location = new System.Drawing.Point(329, 446);
+            this.totalPriceTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.totalPriceTextBox.Name = "totalPriceTextBox";
+            this.totalPriceTextBox.Size = new System.Drawing.Size(260, 42);
+            this.totalPriceTextBox.TabIndex = 28;
+            this.totalPriceTextBox.Text = "Total Price: රු.00.00";
+            this.totalPriceTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2DateTimePicker1
+            // deliveryDatePicker
             // 
-            this.guna2DateTimePicker1.BorderRadius = 2;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(23, 549);
-            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(596, 47);
-            this.guna2DateTimePicker1.TabIndex = 27;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2025, 3, 7, 11, 20, 0, 434);
+            this.deliveryDatePicker.BorderRadius = 2;
+            this.deliveryDatePicker.Checked = true;
+            this.deliveryDatePicker.FillColor = System.Drawing.Color.White;
+            this.deliveryDatePicker.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.deliveryDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.deliveryDatePicker.Location = new System.Drawing.Point(23, 549);
+            this.deliveryDatePicker.Margin = new System.Windows.Forms.Padding(4);
+            this.deliveryDatePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.deliveryDatePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.deliveryDatePicker.Name = "deliveryDatePicker";
+            this.deliveryDatePicker.Size = new System.Drawing.Size(596, 47);
+            this.deliveryDatePicker.TabIndex = 27;
+            this.deliveryDatePicker.Value = new System.DateTime(2025, 3, 7, 11, 20, 0, 434);
             // 
             // label7
             // 
@@ -345,71 +328,101 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "Delivery Date (Optional)";
             // 
-            // label8
+            // PriceLable
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PriceLable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(329, 306);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(188, 42);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Price: 1400.00";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PriceLable.AutoSize = true;
+            this.PriceLable.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceLable.ForeColor = System.Drawing.Color.DimGray;
+            this.PriceLable.Location = new System.Drawing.Point(329, 306);
+            this.PriceLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PriceLable.Name = "PriceLable";
+            this.PriceLable.Size = new System.Drawing.Size(259, 42);
+            this.PriceLable.TabIndex = 25;
+            this.PriceLable.Text = "Book Price: රු.00.00";
+            this.PriceLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2ComboBox3
+            // selectedBookComboBox
             // 
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.BorderRadius = 2;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox3.ItemHeight = 30;
-            this.guna2ComboBox3.Location = new System.Drawing.Point(23, 306);
-            this.guna2ComboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.Size = new System.Drawing.Size(284, 36);
-            this.guna2ComboBox3.TabIndex = 20;
+            this.selectedBookComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.selectedBookComboBox.BorderRadius = 2;
+            this.selectedBookComboBox.DataSource = this.bookBindingSource;
+            this.selectedBookComboBox.DisplayMember = "Title";
+            this.selectedBookComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.selectedBookComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectedBookComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.selectedBookComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.selectedBookComboBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.selectedBookComboBox.ForeColor = System.Drawing.Color.Black;
+            this.selectedBookComboBox.ItemHeight = 30;
+            this.selectedBookComboBox.Location = new System.Drawing.Point(23, 306);
+            this.selectedBookComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.selectedBookComboBox.Name = "selectedBookComboBox";
+            this.selectedBookComboBox.Size = new System.Drawing.Size(284, 36);
+            this.selectedBookComboBox.TabIndex = 20;
+            this.selectedBookComboBox.ValueMember = "BookID";
+            this.selectedBookComboBox.SelectedIndexChanged += new System.EventHandler(this.selectedBookComboBox_SelectedIndexChanged);
             // 
-            // guna2ComboBox2
+            // bookBindingSource
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 2;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(333, 186);
-            this.guna2ComboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(284, 36);
-            this.guna2ComboBox2.TabIndex = 19;
+            this.bookBindingSource.DataMember = "Book";
+            this.bookBindingSource.DataSource = this.bookDataSet;
             // 
-            // guna2ComboBox1
+            // bookDataSet
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 2;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(23, 186);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(284, 36);
-            this.guna2ComboBox1.TabIndex = 18;
+            this.bookDataSet.DataSetName = "BookDataSet";
+            this.bookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // deliveryOptionComboBox
+            // 
+            this.deliveryOptionComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.deliveryOptionComboBox.BorderRadius = 2;
+            this.deliveryOptionComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.deliveryOptionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.deliveryOptionComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.deliveryOptionComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.deliveryOptionComboBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.deliveryOptionComboBox.ForeColor = System.Drawing.Color.Black;
+            this.deliveryOptionComboBox.ItemHeight = 30;
+            this.deliveryOptionComboBox.Items.AddRange(new object[] {
+            "PickUp",
+            "HomeDelivery"});
+            this.deliveryOptionComboBox.Location = new System.Drawing.Point(333, 186);
+            this.deliveryOptionComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.deliveryOptionComboBox.Name = "deliveryOptionComboBox";
+            this.deliveryOptionComboBox.Size = new System.Drawing.Size(284, 36);
+            this.deliveryOptionComboBox.TabIndex = 19;
+            // 
+            // customerComboBox
+            // 
+            this.customerComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.customerComboBox.BorderRadius = 2;
+            this.customerComboBox.DataSource = this.customerBindingSource;
+            this.customerComboBox.DisplayMember = "FullName";
+            this.customerComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.customerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.customerComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.customerComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.customerComboBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.customerComboBox.ForeColor = System.Drawing.Color.Black;
+            this.customerComboBox.ItemHeight = 30;
+            this.customerComboBox.Location = new System.Drawing.Point(23, 186);
+            this.customerComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.customerComboBox.Name = "customerComboBox";
+            this.customerComboBox.Size = new System.Drawing.Size(284, 36);
+            this.customerComboBox.TabIndex = 18;
+            this.customerComboBox.ValueMember = "CustomerID";
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.customerDataSet;
+            // 
+            // customerDataSet
+            // 
+            this.customerDataSet.DataSetName = "CustomerDataSet";
+            this.customerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // clearButton
             // 
@@ -433,24 +446,25 @@
             this.clearButton.TabIndex = 14;
             this.clearButton.Text = "Clear";
             // 
-            // addCustomerButton
+            // placeOrderBtn
             // 
-            this.addCustomerButton.BorderRadius = 4;
-            this.addCustomerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addCustomerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.addCustomerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.addCustomerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.addCustomerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.addCustomerButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            this.addCustomerButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addCustomerButton.ForeColor = System.Drawing.Color.White;
-            this.addCustomerButton.Location = new System.Drawing.Point(17, 613);
-            this.addCustomerButton.Margin = new System.Windows.Forms.Padding(4);
-            this.addCustomerButton.Name = "addCustomerButton";
-            this.addCustomerButton.PressedColor = System.Drawing.Color.DarkGray;
-            this.addCustomerButton.Size = new System.Drawing.Size(601, 55);
-            this.addCustomerButton.TabIndex = 13;
-            this.addCustomerButton.Text = "Add Customer";
+            this.placeOrderBtn.BorderRadius = 4;
+            this.placeOrderBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.placeOrderBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.placeOrderBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.placeOrderBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.placeOrderBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.placeOrderBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            this.placeOrderBtn.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.placeOrderBtn.ForeColor = System.Drawing.Color.White;
+            this.placeOrderBtn.Location = new System.Drawing.Point(17, 613);
+            this.placeOrderBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.placeOrderBtn.Name = "placeOrderBtn";
+            this.placeOrderBtn.PressedColor = System.Drawing.Color.DarkGray;
+            this.placeOrderBtn.Size = new System.Drawing.Size(601, 55);
+            this.placeOrderBtn.TabIndex = 13;
+            this.placeOrderBtn.Text = "Place Order";
+            this.placeOrderBtn.Click += new System.EventHandler(this.placeOrderBtn_Click);
             // 
             // label5
             // 
@@ -464,27 +478,28 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Quantity";
             // 
-            // addressTextBox
+            // quantityTextBox
             // 
-            this.addressTextBox.BorderRadius = 2;
-            this.addressTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.addressTextBox.DefaultText = "";
-            this.addressTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.addressTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.addressTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.addressTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.addressTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.addressTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
-            this.addressTextBox.ForeColor = System.Drawing.Color.Black;
-            this.addressTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.addressTextBox.Location = new System.Drawing.Point(23, 443);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.PasswordChar = '\0';
-            this.addressTextBox.PlaceholderText = "";
-            this.addressTextBox.SelectedText = "";
-            this.addressTextBox.Size = new System.Drawing.Size(285, 47);
-            this.addressTextBox.TabIndex = 4;
+            this.quantityTextBox.BorderRadius = 2;
+            this.quantityTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.quantityTextBox.DefaultText = "";
+            this.quantityTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.quantityTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.quantityTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.quantityTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.quantityTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.quantityTextBox.Font = new System.Drawing.Font("Poppins", 11.25F);
+            this.quantityTextBox.ForeColor = System.Drawing.Color.Black;
+            this.quantityTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.quantityTextBox.Location = new System.Drawing.Point(23, 443);
+            this.quantityTextBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.quantityTextBox.Name = "quantityTextBox";
+            this.quantityTextBox.PasswordChar = '\0';
+            this.quantityTextBox.PlaceholderText = "";
+            this.quantityTextBox.SelectedText = "";
+            this.quantityTextBox.Size = new System.Drawing.Size(285, 47);
+            this.quantityTextBox.TabIndex = 4;
+            this.quantityTextBox.TextChanged += new System.EventHandler(this.quantityTextBox_TextChanged);
             // 
             // label6
             // 
@@ -575,6 +590,74 @@
             this.orderSearchSearchBox.Size = new System.Drawing.Size(443, 55);
             this.orderSearchSearchBox.TabIndex = 8;
             // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CustomerTableAdapter = this.customerTableAdapter;
+            this.tableAdapterManager.UpdateOrder = BookHaven.CustomerDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // bookTableAdapter
+            // 
+            this.bookTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.BookTableAdapter = this.bookTableAdapter;
+            this.tableAdapterManager1.UpdateOrder = BookHaven.BookDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // OrderID
+            // 
+            this.OrderID.HeaderText = "Order ID";
+            this.OrderID.MinimumWidth = 6;
+            this.OrderID.Name = "OrderID";
+            // 
+            // CustomerID
+            // 
+            this.CustomerID.HeaderText = "Customer Name";
+            this.CustomerID.MinimumWidth = 6;
+            this.CustomerID.Name = "CustomerID";
+            // 
+            // BookID
+            // 
+            this.BookID.HeaderText = "Book Title";
+            this.BookID.MinimumWidth = 6;
+            this.BookID.Name = "BookID";
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Unit Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            // 
+            // TotalPrice
+            // 
+            this.TotalPrice.HeaderText = "Total Price";
+            this.TotalPrice.MinimumWidth = 6;
+            this.TotalPrice.Name = "TotalPrice";
+            // 
+            // DeliveryOption
+            // 
+            this.DeliveryOption.HeaderText = "Delivery Option";
+            this.DeliveryOption.MinimumWidth = 6;
+            this.DeliveryOption.Name = "DeliveryOption";
+            // 
+            // EstimatedDelivery
+            // 
+            this.EstimatedDelivery.HeaderText = "Delivery Date";
+            this.EstimatedDelivery.MinimumWidth = 6;
+            this.EstimatedDelivery.Name = "EstimatedDelivery";
+            // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -583,17 +666,22 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.orderSearchSearchBox);
             this.Controls.Add(this.addOrderBtn);
-            this.Controls.Add(this.bookDataGridView);
+            this.Controls.Add(this.orderDataGridview);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Order";
             this.Size = new System.Drawing.Size(1333, 836);
+            this.Load += new System.EventHandler(this.Order_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderDataGridview)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.addOrderPanel.ResumeLayout(false);
             this.addOrderPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBoc)).EndInit();
             this.ResumeLayout(false);
 
@@ -603,33 +691,44 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2DataGridView bookDataGridView;
+        private Guna.UI2.WinForms.Guna2DataGridView orderDataGridview;
         private Guna.UI2.WinForms.Guna2TextBox orderSearchSearchBox;
         private Guna.UI2.WinForms.Guna2Button addOrderBtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button orderHistoryBtn;
         private Guna.UI2.WinForms.Guna2Button orderBtn;
         private Guna.UI2.WinForms.Guna2ShadowPanel addOrderPanel;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox selectedBookComboBox;
+        private Guna.UI2.WinForms.Guna2ComboBox deliveryOptionComboBox;
+        private Guna.UI2.WinForms.Guna2ComboBox customerComboBox;
         private Guna.UI2.WinForms.Guna2Button clearButton;
-        private Guna.UI2.WinForms.Guna2Button addCustomerButton;
+        private Guna.UI2.WinForms.Guna2Button placeOrderBtn;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2TextBox addressTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox quantityTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox closePictureBoc;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker deliveryDatePicker;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CusName;
+        private System.Windows.Forms.Label PriceLable;
+        private System.Windows.Forms.Label totalPriceTextBox;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private CustomerDataSet customerDataSet;
+        private CustomerDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
+        private CustomerDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource bookBindingSource;
+        private BookDataSet bookDataSet;
+        private BookDataSetTableAdapters.BookTableAdapter bookTableAdapter;
+        private BookDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BookID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Cancle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryOption;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstimatedDelivery;
     }
 }
