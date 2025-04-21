@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.reportDataGridview = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.generateReportButton = new Guna.UI2.WinForms.Guna2Button();
             this.ReportToDateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.reportFromDateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -53,29 +52,29 @@
             // 
             this.reportDataGridview.AllowUserToAddRows = false;
             this.reportDataGridview.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.reportDataGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
+            this.reportDataGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
             this.reportDataGridview.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.reportDataGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.reportDataGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.reportDataGridview.ColumnHeadersHeight = 50;
             this.reportDataGridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.reportDataGridview.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.reportDataGridview.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.reportDataGridview.DefaultCellStyle = dataGridViewCellStyle24;
             this.reportDataGridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.reportDataGridview.Location = new System.Drawing.Point(18, 201);
             this.reportDataGridview.Margin = new System.Windows.Forms.Padding(0);
@@ -106,7 +105,7 @@
             this.reportDataGridview.ThemeStyle.RowsStyle.Height = 35;
             this.reportDataGridview.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.reportDataGridview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.reportDataGridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffDataGridview_CellContentClick);
+            //this.reportDataGridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffDataGridview_CellContentClick);
             // 
             // panel2
             // 
@@ -114,7 +113,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.ReportTypeComboBox);
-            this.panel2.Controls.Add(this.generateReportButton);
             this.panel2.Controls.Add(this.ReportToDateTimePicker);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.reportFromDateTimePicker);
@@ -125,25 +123,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1297, 76);
             this.panel2.TabIndex = 9;
-            // 
-            // generateReportButton
-            // 
-            this.generateReportButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.generateReportButton.BorderRadius = 4;
-            this.generateReportButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.generateReportButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.generateReportButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.generateReportButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.generateReportButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.generateReportButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
-            this.generateReportButton.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generateReportButton.ForeColor = System.Drawing.Color.White;
-            this.generateReportButton.Location = new System.Drawing.Point(1069, 11);
-            this.generateReportButton.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
-            this.generateReportButton.Name = "generateReportButton";
-            this.generateReportButton.Size = new System.Drawing.Size(217, 55);
-            this.generateReportButton.TabIndex = 17;
-            this.generateReportButton.Text = "Generate Report";
+            //this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // ReportToDateTimePicker
             // 
@@ -163,6 +143,7 @@
             this.ReportToDateTimePicker.Size = new System.Drawing.Size(299, 55);
             this.ReportToDateTimePicker.TabIndex = 10;
             this.ReportToDateTimePicker.Value = new System.DateTime(2025, 3, 6, 21, 28, 40, 803);
+            this.ReportToDateTimePicker.ValueChanged += new System.EventHandler(this.ReportToDateTimePicker_ValueChanged);
             // 
             // label3
             // 
@@ -194,6 +175,7 @@
             this.reportFromDateTimePicker.Size = new System.Drawing.Size(299, 55);
             this.reportFromDateTimePicker.TabIndex = 8;
             this.reportFromDateTimePicker.Value = new System.DateTime(2025, 3, 6, 21, 28, 40, 803);
+            this.reportFromDateTimePicker.ValueChanged += new System.EventHandler(this.reportFromDateTimePicker_ValueChanged);
             // 
             // label2
             // 
@@ -263,6 +245,7 @@
             this.DownloadReportButton.Size = new System.Drawing.Size(380, 55);
             this.DownloadReportButton.TabIndex = 17;
             this.DownloadReportButton.Text = "Download Report";
+            this.DownloadReportButton.Click += new System.EventHandler(this.DownloadReportButton_Click);
             // 
             // ReportTypeComboBox
             // 
@@ -282,8 +265,9 @@
             "Customer Purchase History"});
             this.ReportTypeComboBox.Location = new System.Drawing.Point(759, 20);
             this.ReportTypeComboBox.Name = "ReportTypeComboBox";
-            this.ReportTypeComboBox.Size = new System.Drawing.Size(291, 36);
+            this.ReportTypeComboBox.Size = new System.Drawing.Size(519, 36);
             this.ReportTypeComboBox.TabIndex = 18;
+            this.ReportTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.ReportTypeComboBox_SelectedIndexChanged);
             // 
             // ReportForm
             // 
@@ -295,6 +279,7 @@
             this.Controls.Add(this.reportDataGridview);
             this.Name = "ReportForm";
             this.Size = new System.Drawing.Size(1333, 836);
+            this.Load += new System.EventHandler(this.ReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.reportDataGridview)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -315,7 +300,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button generateReportButton;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2Button DownloadReportButton;
         private Guna.UI2.WinForms.Guna2ComboBox ReportTypeComboBox;
