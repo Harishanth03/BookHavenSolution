@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,12 +67,24 @@
             this.bookQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.bookDataSet = new BookHaven.BookDataSet();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookTableAdapter = new BookHaven.BookDataSetTableAdapters.BookTableAdapter();
+            this.tableAdapterManager = new BookHaven.BookDataSetTableAdapters.TableAdapterManager();
+            this.customerDataSet = new BookHaven.CustomerDataSet();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTableAdapter = new BookHaven.CustomerDataSetTableAdapters.CustomerTableAdapter();
+            this.tableAdapterManager1 = new BookHaven.CustomerDataSetTableAdapters.TableAdapterManager();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.summaryDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -187,6 +200,7 @@
             this.QuantityTextBox.SelectedText = "";
             this.QuantityTextBox.Size = new System.Drawing.Size(306, 44);
             this.QuantityTextBox.TabIndex = 21;
+            //this.QuantityTextBox.TextChanged += new System.EventHandler(this.QuantityTextBox_TextChanged_1);
             // 
             // label6
             // 
@@ -206,6 +220,8 @@
             this.bookNameComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bookNameComboBox.BackColor = System.Drawing.Color.Transparent;
             this.bookNameComboBox.BorderRadius = 2;
+            this.bookNameComboBox.DataSource = this.bookBindingSource;
+            this.bookNameComboBox.DisplayMember = "Title";
             this.bookNameComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.bookNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bookNameComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -218,6 +234,7 @@
             this.bookNameComboBox.Name = "bookNameComboBox";
             this.bookNameComboBox.Size = new System.Drawing.Size(308, 36);
             this.bookNameComboBox.TabIndex = 20;
+            this.bookNameComboBox.ValueMember = "BookID";
             this.bookNameComboBox.SelectedIndexChanged += new System.EventHandler(this.bookNameComboBox_SelectedIndexChanged);
             // 
             // label5
@@ -330,6 +347,8 @@
             this.customerComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.customerComboBox.BackColor = System.Drawing.Color.Transparent;
             this.customerComboBox.BorderRadius = 2;
+            this.customerComboBox.DataSource = this.customerBindingSource;
+            this.customerComboBox.DisplayMember = "FullName";
             this.customerComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.customerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.customerComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -342,6 +361,7 @@
             this.customerComboBox.Name = "customerComboBox";
             this.customerComboBox.Size = new System.Drawing.Size(308, 36);
             this.customerComboBox.TabIndex = 25;
+            this.customerComboBox.ValueMember = "CustomerID";
             this.customerComboBox.SelectedIndexChanged += new System.EventHandler(this.customerComboBox_SelectedIndexChanged);
             // 
             // processSalesButton
@@ -473,9 +493,9 @@
             this.netRevenueLable.Location = new System.Drawing.Point(636, 19);
             this.netRevenueLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.netRevenueLable.Name = "netRevenueLable";
-            this.netRevenueLable.Size = new System.Drawing.Size(287, 42);
+            this.netRevenueLable.Size = new System.Drawing.Size(292, 42);
             this.netRevenueLable.TabIndex = 28;
-            this.netRevenueLable.Text = "Net Revenue : 1400.00";
+            this.netRevenueLable.Text = "Net Revenue : රු.00.00";
             this.netRevenueLable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
@@ -501,9 +521,9 @@
             this.totalAmountLable.Location = new System.Drawing.Point(4, 19);
             this.totalAmountLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalAmountLable.Name = "totalAmountLable";
-            this.totalAmountLable.Size = new System.Drawing.Size(293, 42);
+            this.totalAmountLable.Size = new System.Drawing.Size(298, 42);
             this.totalAmountLable.TabIndex = 25;
-            this.totalAmountLable.Text = "Total Amount: 1400.00";
+            this.totalAmountLable.Text = "Total Amount: රු.00.00";
             this.totalAmountLable.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // paymentMethodComboBox
@@ -556,18 +576,18 @@
             // 
             this.summaryDataGridView.AllowUserToAddRows = false;
             this.summaryDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.summaryDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.summaryDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.summaryDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.summaryDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(92)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.summaryDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.summaryDataGridView.ColumnHeadersHeight = 50;
             this.summaryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.summaryDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -579,14 +599,14 @@
             this.Price,
             this.delete});
             this.summaryDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.summaryDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.summaryDataGridView.DefaultCellStyle = dataGridViewCellStyle9;
             this.summaryDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.summaryDataGridView.Location = new System.Drawing.Point(37, 348);
             this.summaryDataGridView.Margin = new System.Windows.Forms.Padding(0);
@@ -663,6 +683,46 @@
             this.delete.Name = "delete";
             this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // bookDataSet
+            // 
+            this.bookDataSet.DataSetName = "BookDataSet";
+            this.bookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataMember = "Book";
+            this.bookBindingSource.DataSource = this.bookDataSet;
+            // 
+            // bookTableAdapter
+            // 
+            this.bookTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BookTableAdapter = this.bookTableAdapter;
+            this.tableAdapterManager.UpdateOrder = BookHaven.BookDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // customerDataSet
+            // 
+            this.customerDataSet.DataSetName = "CustomerDataSet";
+            this.customerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.customerDataSet;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.CustomerTableAdapter = this.customerTableAdapter;
+            this.tableAdapterManager1.UpdateOrder = BookHaven.CustomerDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -687,6 +747,10 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.summaryDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -729,5 +793,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bookQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewImageColumn delete;
+        private System.Windows.Forms.BindingSource bookBindingSource;
+        private BookDataSet bookDataSet;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private CustomerDataSet customerDataSet;
+        private BookDataSetTableAdapters.BookTableAdapter bookTableAdapter;
+        private BookDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private CustomerDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
+        private CustomerDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
     }
 }

@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.chartSales = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartOrders = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.totalBookLable = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -55,11 +55,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.totalOrderLable = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartOrders)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2CustomGradientPanel4.SuspendLayout();
@@ -70,41 +71,47 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // chart2
+            // chartSales
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(640, 239);
-            this.chart2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(609, 369);
-            this.chart2.TabIndex = 4;
-            this.chart2.Text = "chart2";
+            this.chartSales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea3.Name = "ChartArea1";
+            this.chartSales.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartSales.Legends.Add(legend3);
+            this.chartSales.Location = new System.Drawing.Point(9, 4);
+            this.chartSales.Margin = new System.Windows.Forms.Padding(4);
+            this.chartSales.Name = "chartSales";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartSales.Series.Add(series3);
+            this.chartSales.Size = new System.Drawing.Size(609, 387);
+            this.chartSales.TabIndex = 4;
+            this.chartSales.Text = "chart2";
             // 
-            // chart1
+            // chartOrders
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(17, 226);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(616, 369);
-            this.chart1.TabIndex = 2;
-            this.chart1.Text = "chart1";
+            this.chartOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea4.Name = "ChartArea1";
+            this.chartOrders.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartOrders.Legends.Add(legend4);
+            this.chartOrders.Location = new System.Drawing.Point(626, 4);
+            this.chartOrders.Margin = new System.Windows.Forms.Padding(4);
+            this.chartOrders.Name = "chartOrders";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartOrders.Series.Add(series4);
+            this.chartOrders.Size = new System.Drawing.Size(614, 387);
+            this.chartOrders.TabIndex = 2;
+            this.chartOrders.Text = "chart1";
             // 
             // panel2
             // 
@@ -113,7 +120,7 @@
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.tableLayoutPanel1);
             this.panel2.Location = new System.Drawing.Point(7, 17);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1244, 202);
             this.panel2.TabIndex = 3;
@@ -133,7 +140,7 @@
             this.tableLayoutPanel1.Controls.Add(this.guna2CustomGradientPanel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2CustomGradientPanel2, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 15);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -145,12 +152,12 @@
             this.guna2CustomGradientPanel4.BorderRadius = 15;
             this.guna2CustomGradientPanel4.BorderThickness = 1;
             this.guna2CustomGradientPanel4.Controls.Add(this.label11);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label12);
+            this.guna2CustomGradientPanel4.Controls.Add(this.totalBookLable);
             this.guna2CustomGradientPanel4.Controls.Add(this.label13);
             this.guna2CustomGradientPanel4.Controls.Add(this.pictureBox4);
             this.guna2CustomGradientPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(919, 4);
-            this.guna2CustomGradientPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(297, 164);
             this.guna2CustomGradientPanel4.TabIndex = 3;
@@ -168,18 +175,18 @@
             this.label11.TabIndex = 13;
             this.label11.Text = "Last 30 days";
             // 
-            // label12
+            // totalBookLable
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Poppins SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(9, 86);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 42);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "260";
+            this.totalBookLable.AutoSize = true;
+            this.totalBookLable.BackColor = System.Drawing.Color.White;
+            this.totalBookLable.Font = new System.Drawing.Font("Poppins SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalBookLable.ForeColor = System.Drawing.Color.Black;
+            this.totalBookLable.Location = new System.Drawing.Point(9, 86);
+            this.totalBookLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.totalBookLable.Name = "totalBookLable";
+            this.totalBookLable.Size = new System.Drawing.Size(63, 42);
+            this.totalBookLable.TabIndex = 12;
+            this.totalBookLable.Text = "260";
             // 
             // label13
             // 
@@ -199,7 +206,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.Image = global::BookHaven.Properties.Resources.total_Book;
             this.pictureBox4.Location = new System.Drawing.Point(17, 16);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(33, 31);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -216,7 +223,7 @@
             this.guna2CustomGradientPanel3.Controls.Add(this.pictureBox3);
             this.guna2CustomGradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(614, 4);
-            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(297, 164);
             this.guna2CustomGradientPanel3.TabIndex = 2;
@@ -265,7 +272,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = global::BookHaven.Properties.Resources.Sales;
             this.pictureBox3.Location = new System.Drawing.Point(23, 16);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(33, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -282,7 +289,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox1);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(4, 4);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(297, 164);
             this.guna2CustomGradientPanel1.TabIndex = 0;
@@ -331,7 +338,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::BookHaven.Properties.Resources.user;
             this.pictureBox1.Location = new System.Drawing.Point(24, 16);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -345,11 +352,11 @@
             this.guna2CustomGradientPanel2.BorderRadius = 15;
             this.guna2CustomGradientPanel2.BorderThickness = 1;
             this.guna2CustomGradientPanel2.Controls.Add(this.label5);
-            this.guna2CustomGradientPanel2.Controls.Add(this.label6);
+            this.guna2CustomGradientPanel2.Controls.Add(this.totalOrderLable);
             this.guna2CustomGradientPanel2.Controls.Add(this.label7);
             this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox2);
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(309, 4);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(297, 164);
             this.guna2CustomGradientPanel2.TabIndex = 1;
@@ -367,18 +374,18 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Last 30 days";
             // 
-            // label6
+            // totalOrderLable
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Poppins SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(11, 86);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 42);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "260";
+            this.totalOrderLable.AutoSize = true;
+            this.totalOrderLable.BackColor = System.Drawing.Color.White;
+            this.totalOrderLable.Font = new System.Drawing.Font("Poppins SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalOrderLable.ForeColor = System.Drawing.Color.Black;
+            this.totalOrderLable.Location = new System.Drawing.Point(11, 86);
+            this.totalOrderLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.totalOrderLable.Name = "totalOrderLable";
+            this.totalOrderLable.Size = new System.Drawing.Size(63, 42);
+            this.totalOrderLable.TabIndex = 6;
+            this.totalOrderLable.Text = "260";
             // 
             // label7
             // 
@@ -398,26 +405,42 @@
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = global::BookHaven.Properties.Resources.orders;
             this.pictureBox2.Location = new System.Drawing.Point(19, 16);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.chartSales, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.chartOrders, 1, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(7, 232);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1244, 395);
+            this.tableLayoutPanel3.TabIndex = 6;
+            // 
             // GraphView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.chart2);
-            this.Controls.Add(this.chart1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GraphView";
             this.Size = new System.Drawing.Size(1260, 630);
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.Load += new System.EventHandler(this.GraphView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chartSales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartOrders)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel4.ResumeLayout(false);
@@ -432,19 +455,20 @@
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartSales;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartOrders;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label totalBookLable;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
@@ -459,8 +483,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label totalOrderLable;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }
